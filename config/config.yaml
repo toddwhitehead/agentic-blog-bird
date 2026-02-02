@@ -1,0 +1,81 @@
+# Configuration for Agentic Blog Bird
+# Multi-agent system for generating blog posts from bird detection events
+
+# Researcher Agent Configuration
+researcher:
+  # Microsoft Fabric connection settings
+  fabric_workspace: ""
+  fabric_endpoint: ""
+  fabric_lakehouse: ""
+  
+  # Data collection settings
+  data_retention_days: 7
+  min_detections_for_post: 1
+  
+  # Query settings
+  query_timeout_seconds: 30
+
+# CopyWriter Agent Configuration
+copywriter:
+  # Writing style preferences
+  style: "informative-entertaining"
+  target_audience: "general"
+  
+  # Content length targets
+  word_count_target: 800
+  word_count_min: 400
+  word_count_max: 1500
+  
+  # Tone and voice
+  tone: "enthusiastic"
+  include_humor: true
+  technical_level: "accessible"
+
+# Publisher Agent Configuration
+publisher:
+  # Hugo site settings
+  output_dir: "content/posts"
+  hugo_base_url: ""
+  
+  # Default metadata
+  default_author: "Backyard Bird AI"
+  default_categories:
+    - "Daily Updates"
+    - "Bird Watching"
+  default_tags:
+    - "birds"
+    - "wildlife"
+    - "backyard"
+    - "AI monitoring"
+  
+  # Publishing options
+  draft_by_default: false
+  include_featured_image: true
+
+# Editor Agent Configuration
+editor:
+  # Quality control settings
+  quality_threshold: 0.8
+  auto_publish: false
+  review_required: true
+  
+  # Workflow settings
+  max_revision_rounds: 2
+  require_minimum_detections: true
+
+# LLM Configuration (for future integration with actual LLM providers)
+llm:
+  provider: "openai"  # or "azure" for Azure OpenAI
+  model: "gpt-4"
+  temperature: 0.7
+  max_tokens: 2000
+  
+  # Azure OpenAI specific (if using Azure)
+  azure_deployment: ""
+  azure_api_version: "2024-02-01"
+
+# Logging Configuration
+logging:
+  level: "INFO"
+  log_to_file: true
+  log_file: "logs/blog_bird.log"
