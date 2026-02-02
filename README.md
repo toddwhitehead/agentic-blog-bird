@@ -20,7 +20,7 @@ The agents are powered by **Microsoft Agent Framework** running on **Azure AI Fo
 - 🔵 Built on Azure AI Foundry for enterprise-grade AI orchestration
 - 📊 Integration with Microsoft Fabric for data collection
 - 📝 Automated content generation with engaging narratives
-- 🎨 Cartoon-style image generation inspired by Wiley Coyote and Road Runner
+- 🎨 Cartoon-style image generation inspired by Wile E. Coyote and Road Runner
 - 🖼️ Hugo-compatible markdown output with featured images
 - 🔄 Workflow orchestration and quality control
 - 📈 Configurable writing styles and content parameters
@@ -149,7 +149,7 @@ Required environment variables:
 
 **Artist Agent** (`src/agents/artist.py`)
 - Generates original cartoon-style images
-- Inspired by Wiley Coyote and Road Runner aesthetics
+- Inspired by Wile E. Coyote and Road Runner aesthetics
 - Creates visuals based on blog post content
 - Integrates images with Hugo front matter
 

@@ -139,7 +139,7 @@ Agentic Blog Bird is a multi-agent system designed to automatically generate blo
 **Responsibilities**:
 - Analyze blog post content for visual themes
 - Generate image prompts based on content
-- Create cartoon-style images inspired by Wiley Coyote and Road Runner
+- Create cartoon-style images inspired by Wile E. Coyote and Road Runner
 - Integrate images with Hugo front matter
 - Save images to appropriate directories
 

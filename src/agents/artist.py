@@ -2,7 +2,7 @@
 Artist Agent Module
 
 This agent is responsible for generating original cartoon-style images
-to accompany blog posts using Wiley Coyote and Road Runner cartoon inspiration.
+to accompany blog posts using Wile E. Coyote and Road Runner cartoon inspiration.
 """
 
 from typing import Dict, Any, Optional
@@ -15,7 +15,7 @@ from .base_agent import BaseAgent
 class ArtistAgent(BaseAgent):
     """
     Artist agent that generates cartoon-style images for blog posts.
-    Inspired by Wiley Coyote and Road Runner cartoons.
+    Inspired by Wile E. Coyote and Road Runner cartoons.
     """
     
     def __init__(self, config: Dict[str, Any] = None):
@@ -211,7 +211,7 @@ scattered clouds, and typical backyard setting. Comedic and entertaining mood.""
             Dictionary containing image generation results
         """
         print("\nArtist: Creating cartoon-style image for blog post...")
-        print("Artist: Using Wiley Coyote and Road Runner cartoon inspiration")
+        print("Artist: Using Wile E. Coyote and Road Runner cartoon inspiration")
         
         # Extract content from blog post
         full_content = blog_post_data.get('full_content', '')
@@ -236,7 +236,7 @@ scattered clouds, and typical backyard setting. Comedic and entertaining mood.""
         
         # Add metadata
         result['headline'] = headline
-        result['style'] = 'Wiley Coyote and Road Runner cartoon style'
+        result['style'] = 'Wile E. Coyote and Road Runner cartoon style'
         
         return result
     

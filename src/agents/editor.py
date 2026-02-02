@@ -260,7 +260,7 @@ meets publication standards.
     def _generate_image(self, blog_post: Dict[str, Any]) -> Dict[str, Any]:
         """Generate image using Artist agent."""
         print("Editor: Requesting image from Artist agent...")
-        print("Editor: Style: Wiley Coyote and Road Runner cartoon inspiration")
+        print("Editor: Style: Wile E. Coyote and Road Runner cartoon inspiration")
         
         image_result = self.artist.create_blog_image(blog_post)
         
