@@ -5,8 +5,8 @@
 - Python 3.8 or higher
 - pip package manager
 - Git (for cloning the repository)
+- Azure subscription with Azure AI Foundry access
 - (Optional) Microsoft Fabric access for real data integration
-- (Optional) OpenAI API key or Azure OpenAI access for LLM integration
 
 ## Installation Steps
 
@@ -36,7 +36,33 @@ venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-### 4. Configure Environment
+### 4. Set Up Azure AI Foundry
+
+#### Create Azure AI Foundry Project
+
+1. Go to [Azure AI Foundry Portal](https://ai.azure.com)
+2. Create a new project or select an existing one
+3. Note your project connection string and project name
+4. Deploy a model (e.g., GPT-4, GPT-3.5-turbo) for the agents to use
+
+#### Create Service Principal for Authentication
+
+```bash
+# Login to Azure
+az login
+
+# Create a service principal
+az ad sp create-for-rbac --name "agentic-blog-bird-sp" \
+  --role "Cognitive Services User" \
+  --scopes /subscriptions/{subscription-id}/resourceGroups/{resource-group}
+
+# Note the output:
+# - appId (AZURE_CLIENT_ID)
+# - password (AZURE_CLIENT_SECRET)
+# - tenant (AZURE_TENANT_ID)
+```
+
+### 5. Configure Environment
 
 ```bash
 # Copy the environment template
@@ -49,15 +75,17 @@ nano config/.env  # or use your preferred editor
 Fill in the following values in `.env`:
 
 ```env
-# OpenAI Configuration (if using OpenAI)
-OPENAI_API_KEY=sk-your-key-here
+# Azure AI Foundry Configuration
+AZURE_AI_PROJECT_CONNECTION_STRING=your_connection_string
+AZURE_AI_PROJECT_NAME=your_project_name
+AZURE_AI_DEPLOYMENT_NAME=your_model_deployment_name
 
-# Azure OpenAI Configuration (if using Azure)
-AZURE_OPENAI_KEY=your-azure-key
-AZURE_OPENAI_ENDPOINT=https://your-endpoint.openai.azure.com/
-AZURE_OPENAI_DEPLOYMENT=your-deployment-name
+# Azure Authentication
+AZURE_TENANT_ID=your_tenant_id
+AZURE_CLIENT_ID=your_client_id
+AZURE_CLIENT_SECRET=your_client_secret
 
-# Microsoft Fabric Configuration
+# Microsoft Fabric Configuration (Optional)
 FABRIC_WORKSPACE=your-workspace-id
 FABRIC_TOKEN=your-access-token
 FABRIC_LAKEHOUSE=your-lakehouse-name
@@ -67,15 +95,16 @@ HUGO_BASE_URL=https://yourblog.com
 HUGO_OUTPUT_DIR=content/posts
 ```
 
-### 5. Configure Agent Settings (Optional)
+### 6. Configure Agent Settings (Optional)
 
 Edit `config/config.yaml` to customize:
 - Agent behavior and parameters
 - Writing style and tone
 - Output formats and paths
 - Quality thresholds
+- Azure AI Foundry deployment settings
 
-### 6. Test the Installation
+### 7. Test the Installation
 
 Run the demo script to verify everything is working:
 
@@ -84,8 +113,8 @@ python examples/demo.py
 ```
 
 This will:
-- Test all four agents individually
-- Run a complete workflow
+- Test all four agents individually using Microsoft Agent Framework
+- Run a complete workflow orchestrated by the Editor agent
 - Generate sample blog posts in `examples/output/`
 
 ## Usage
@@ -129,7 +158,26 @@ If you're using Hugo for your blog:
    hugo            # For production build
    ```
 
-## Microsoft Fabric Integration
+## Azure AI Foundry Integration
+
+### Model Deployment
+
+The system uses Azure AI Foundry for AI agent orchestration and model inference:
+
+1. **Choose a Model**: In Azure AI Foundry, deploy a model suitable for your needs:
+   - GPT-4 for high-quality content
+   - GPT-3.5-turbo for faster, cost-effective generation
+   
+2. **Update Configuration**: Set the deployment name in `config/config.yaml`:
+   ```yaml
+   llm:
+     provider: "azure_ai_foundry"
+     deployment_name: "gpt-4"
+   ```
+
+3. **Test Connection**: The base agent will automatically connect to Azure AI Foundry using your credentials
+
+### Microsoft Fabric Integration
 
 To connect to Microsoft Fabric for real bird detection data:
 
@@ -161,6 +209,24 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
+**Azure Authentication Errors**
+```bash
+# Verify your Azure credentials
+az account show
+
+# Test service principal authentication
+az login --service-principal \
+  -u $AZURE_CLIENT_ID \
+  -p $AZURE_CLIENT_SECRET \
+  --tenant $AZURE_TENANT_ID
+```
+
+**Azure AI Foundry Connection Issues**
+- Verify your project connection string is correct
+- Check that your service principal has the necessary permissions
+- Ensure your subscription is active and has available quota
+- Verify the deployment name matches your Azure AI Foundry deployment
+
 **Permission Errors**
 ```bash
 # Make sure output directories are writable
@@ -177,10 +243,47 @@ mkdir -p config
 cp config/.env.template config/.env
 ```
 
+## Advanced Configuration
+
+### Using Managed Identity (Recommended for Production)
+
+Instead of service principal credentials, use Azure Managed Identity:
+
+1. Enable managed identity on your Azure resource (VM, App Service, etc.)
+2. Grant the managed identity access to your Azure AI Foundry project
+3. Remove client credentials from `.env`:
+   ```env
+   # Remove or comment out:
+   # AZURE_CLIENT_ID=...
+   # AZURE_CLIENT_SECRET=...
+   ```
+4. The `azure-identity` library will automatically use managed identity
+
+### Monitoring and Logging
+
+Enable Azure Application Insights for monitoring:
+
+1. Create an Application Insights resource in Azure
+2. Add the connection string to your `.env`:
+   ```env
+   APPLICATIONINSIGHTS_CONNECTION_STRING=your_connection_string
+   ```
+3. The agents will automatically send telemetry to Application Insights
+
 ## Next Steps
 
 1. **Customize Your Agents**: Modify the system messages and behavior in each agent
-2. **Add Real Data**: Integrate with your actual bird detection system
-3. **Enhance Content**: Implement LLM integration for better content generation
-4. **Automate**: Set up cron jobs or scheduled tasks to run daily
-5. **Deploy**: Set up CI/CD to automatically publish to your Hugo site
+2. **Add Real Data**: Integrate with your actual bird detection system via Microsoft Fabric
+3. **Enhance Content**: Leverage Azure AI models for better content generation
+4. **Automate**: Set up Azure Functions or Logic Apps to run on a schedule
+5. **Deploy**: Use Azure DevOps or GitHub Actions for CI/CD
+6. **Monitor**: Set up alerts and dashboards in Application Insights
+
+## Security Best Practices
+
+- Store credentials in Azure Key Vault instead of `.env` files
+- Use managed identities for authentication when possible
+- Rotate service principal secrets regularly
+- Enable Azure RBAC for fine-grained access control
+- Use private endpoints for Azure services when available
+- Enable audit logging for compliance requirements
