@@ -8,9 +8,10 @@ about bird detection events and data throughout the day.
 from typing import Dict, List, Any
 import json
 from datetime import datetime
+from .base_agent import BaseAgent
 
 
-class ResearcherAgent:
+class ResearcherAgent(BaseAgent):
     """
     Researcher agent that collects bird detection data from Microsoft Fabric.
     """
@@ -22,8 +23,8 @@ class ResearcherAgent:
         Args:
             config: Configuration dictionary for Fabric connection and queries
         """
-        self.config = config or {}
-        self.name = "Researcher"
+        super().__init__(name="Researcher", config=config)
+        self._initialize_agent_client()
         
     def get_system_message(self) -> str:
         """Return the system message for the researcher agent."""

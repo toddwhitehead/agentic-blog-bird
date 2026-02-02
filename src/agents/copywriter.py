@@ -6,9 +6,10 @@ from bird detection data and events.
 """
 
 from typing import Dict, Any
+from .base_agent import BaseAgent
 
 
-class CopyWriterAgent:
+class CopyWriterAgent(BaseAgent):
     """
     CopyWriter agent that creates entertaining narratives from bird data.
     """
@@ -20,8 +21,8 @@ class CopyWriterAgent:
         Args:
             config: Configuration dictionary for writing style and preferences
         """
-        self.config = config or {}
-        self.name = "CopyWriter"
+        super().__init__(name="CopyWriter", config=config)
+        self._initialize_agent_client()
         
     def get_system_message(self) -> str:
         """Return the system message for the copywriter agent."""

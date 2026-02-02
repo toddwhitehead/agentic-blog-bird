@@ -1,6 +1,12 @@
-pyautogen>=0.2.0
-python-dotenv>=1.0.0
-openai>=1.0.0
+# Microsoft Agent Framework
+azure-ai-agent>=0.1.0
+azure-ai-projects>=1.0.0
 azure-identity>=1.15.0
-requests>=2.31.0
+
+# Core dependencies
+python-dotenv>=1.0.0
 pyyaml>=6.0.0
+requests>=2.31.0
+
+# Azure AI Foundry integration
+azure-ai-inference>=1.0.0

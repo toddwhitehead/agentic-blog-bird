@@ -92,8 +92,8 @@ class Config:
                 "review_required": True
             },
             "llm": {
-                "provider": "openai",
-                "model": "gpt-4",
+                "provider": "azure_ai_foundry",
+                "deployment_name": "",
                 "temperature": 0.7,
                 "max_tokens": 2000
             }
@@ -103,9 +103,12 @@ class Config:
 def load_env_config() -> Dict[str, Any]:
     """Load configuration from environment variables."""
     return {
-        "openai_api_key": os.getenv("OPENAI_API_KEY"),
-        "azure_openai_key": os.getenv("AZURE_OPENAI_KEY"),
-        "azure_openai_endpoint": os.getenv("AZURE_OPENAI_ENDPOINT"),
+        "azure_ai_project_connection_string": os.getenv("AZURE_AI_PROJECT_CONNECTION_STRING"),
+        "azure_ai_project_name": os.getenv("AZURE_AI_PROJECT_NAME"),
+        "azure_ai_deployment_name": os.getenv("AZURE_AI_DEPLOYMENT_NAME"),
+        "azure_tenant_id": os.getenv("AZURE_TENANT_ID"),
+        "azure_client_id": os.getenv("AZURE_CLIENT_ID"),
+        "azure_client_secret": os.getenv("AZURE_CLIENT_SECRET"),
         "fabric_workspace": os.getenv("FABRIC_WORKSPACE"),
         "fabric_token": os.getenv("FABRIC_TOKEN"),
     }
