@@ -11,6 +11,7 @@ This system uses a team of specialized AI agents working together to produce hig
 3. **CopyWriter Agent** - Creates engaging narratives from the data
 4. **Artist Agent** - Generates original cartoon-style images for blog posts
 5. **Publisher Agent** - Formats content for Hugo-based static sites
+6. **Delivery Agent** - Deploys blog posts to Azure Static Web Apps via Git
 
 The agents are powered by **Microsoft Agent Framework** running on **Azure AI Foundry**, providing robust orchestration and AI capabilities.
 
@@ -22,6 +23,7 @@ The agents are powered by **Microsoft Agent Framework** running on **Azure AI Fo
 - 📝 Automated content generation with engaging narratives
 - 🎨 Cartoon-style image generation inspired by Wile E. Coyote and Road Runner
 - 🖼️ Hugo-compatible markdown output with featured images
+- 🚀 Automatic deployment to Azure Static Web Apps via Git
 - 🔄 Workflow orchestration and quality control
 - 📈 Configurable writing styles and content parameters
 - 🔍 Built-in validation and quality checks
@@ -31,8 +33,10 @@ The agents are powered by **Microsoft Agent Framework** running on **Azure AI Fo
 ### Prerequisites
 
 - Python 3.8 or higher
+- Git (for delivery to Azure Static Web Apps)
 - Azure subscription with Azure AI Foundry access
 - Microsoft Fabric workspace (for data collection)
+- Azure Static Web App (optional, for automatic deployment)
 
 ### Setup Steps
 
@@ -107,8 +111,36 @@ The configuration file controls all aspects of the agent system:
 - **CopyWriter**: Writing style, tone, word count targets
 - **Artist**: Image generation settings, cartoon style preferences
 - **Publisher**: Hugo settings, output paths, metadata
+- **Delivery**: Git repository settings, Azure Static Web App deployment
 - **Editor**: Quality thresholds, workflow settings
 - **LLM**: Azure AI Foundry configuration (deployment name, parameters)
+
+### Delivery Agent Configuration
+
+To enable automatic deployment to Azure Static Web Apps, configure the delivery agent in `config/config.yaml`:
+
+```yaml
+delivery:
+  # Target git repository for blog deployment
+  target_repo_url: "https://github.com/yourusername/your-hugo-blog.git"
+  target_repo_branch: "main"
+  target_repo_path: "/tmp/blog-delivery-repo"
+  
+  # Hugo site structure paths
+  content_subdir: "content/posts"
+  images_subdir: "content/posts/images"
+  
+  # Git commit configuration
+  git_user_name: "Blog Bird Agent"
+  git_user_email: "blogbird@example.com"
+  commit_message_template: "Add blog post: {title}"
+  
+  # Delivery options
+  auto_deliver: false  # Set to true to automatically deliver after publishing
+  validate_before_push: true
+```
+
+**Important**: Configure Git authentication credentials as environment variables or use SSH keys for the target repository.
 
 ### Environment Variables (`.env`)
 
@@ -159,6 +191,13 @@ Required environment variables:
 - Creates SEO-friendly URLs
 - Validates output format
 
+**Delivery Agent** (`src/agents/delivery.py`)
+- Manages git repository operations (clone, pull, push)
+- Copies blog posts and images to target repository
+- Commits and pushes changes to trigger deployment
+- Integrates with Azure Static Web Apps for automatic publishing
+- Handles git authentication and error recovery
+
 All agents inherit from `BaseAgent` which provides common functionality for Microsoft Agent Framework integration.
 
 ### Technology Stack
@@ -177,15 +216,16 @@ All agents inherit from `BaseAgent` which provides common functionality for Micr
 │         (Orchestrates Workflow)                 │
 └─────────────────────────────────────────────────┘
                       │
-      ┌───────────────┼───────────────┬──────────┐
-      ▼               ▼               ▼          ▼
-┌──────────┐   ┌──────────┐   ┌──────────┐ ┌──────────┐
-│Researcher│──▶│CopyWriter│──▶│  Artist  │─│Publisher │
-└──────────┘   └──────────┘   └──────────┘ └──────────┘
-     │              │              │             │
-     ▼              ▼              ▼             ▼
-  Data          Content        Cartoon         Hugo
-Collection     Generation      Images          Output
+      ┌───────────────┼───────────────┬──────────┬──────────┐
+      ▼               ▼               ▼          ▼          ▼
+┌──────────┐   ┌──────────┐   ┌──────────┐ ┌──────────┐ ┌──────────┐
+│Researcher│──▶│CopyWriter│──▶│  Artist  │─│Publisher │─│ Delivery │
+└──────────┘   └──────────┘   └──────────┘ └──────────┘ └──────────┘
+     │              │              │             │            │
+     ▼              ▼              ▼             ▼            ▼
+  Data          Content        Cartoon         Hugo       Azure
+Collection     Generation      Images          Output     Static Web
+                                                           App Deploy
 ```
 
 ## Output Format
@@ -218,7 +258,8 @@ agentic-blog-bird/
 │   │   ├── researcher.py    # Researcher agent
 │   │   ├── copywriter.py    # CopyWriter agent
 │   │   ├── artist.py        # Artist agent (image generation)
-│   │   └── publisher.py     # Publisher agent
+│   │   ├── publisher.py     # Publisher agent
+│   │   └── delivery.py      # Delivery agent (Azure Static Web Apps)
 │   └── utils/
 │       ├── __init__.py
 │       └── config.py         # Configuration management
