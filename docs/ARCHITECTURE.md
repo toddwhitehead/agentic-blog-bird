@@ -24,23 +24,23 @@ Agentic Blog Bird is a multi-agent system designed to automatically generate blo
 │  - Reviews content quality                                  │
 │  - Validates final output                                   │
 └─────────────────────────────────────────────────────────────┘
-        │                    │                    │
-        ▼                    ▼                    ▼
-┌──────────────┐    ┌──────────────┐    ┌──────────────┐
-│  Researcher  │───▶│  CopyWriter  │───▶│   Artist     │
-│    Agent     │    │    Agent     │    │    Agent     │
-│ (BaseAgent)  │    │ (BaseAgent)  │    │ (BaseAgent)  │
-└──────────────┘    └──────────────┘    └──────────────┘
-        │                    │                    │
-        │                    │                    ▼
-        │                    │            ┌──────────────┐
-        │                    │            │  Publisher   │
-        │                    │            │    Agent     │
-        │                    │            │ (BaseAgent)  │
-        │                    │            └──────────────┘
-        ▼                    ▼                    ▼
-  Data Query         Content Creation      Hugo Output
-  & Analysis         & Narrative          & Images
+        │                    │                    │            │
+        ▼                    ▼                    ▼            ▼
+┌──────────────┐    ┌──────────────┐    ┌──────────────┐ ┌──────────────┐
+│  Researcher  │───▶│  CopyWriter  │───▶│   Artist     │─│  Publisher   │
+│    Agent     │    │    Agent     │    │    Agent     │ │    Agent     │
+│ (BaseAgent)  │    │ (BaseAgent)  │    │ (BaseAgent)  │ │ (BaseAgent)  │
+└──────────────┘    └──────────────┘    └──────────────┘ └──────────────┘
+        │                    │                    │                │
+        │                    │                    │                ▼
+        │                    │                    │        ┌──────────────┐
+        │                    │                    │        │  Delivery    │
+        │                    │                    │        │    Agent     │
+        │                    │                    │        │ (BaseAgent)  │
+        │                    │                    │        └──────────────┘
+        ▼                    ▼                    ▼                ▼
+  Data Query         Content Creation      Hugo Output    Azure Static
+  & Analysis         & Narrative          & Images        Web App Deploy
 ```
 
 ## Agent Specifications
@@ -176,6 +176,38 @@ Agentic Blog Bird is a multi-agent system designed to automatically generate blo
 - `publish_post(post_data: Dict)` - Write formatted post to file
 - `validate_hugo_format(filepath: str)` - Validate output
 
+### 6. Delivery Agent
+
+**Location**: `src/agents/delivery.py`
+
+**Purpose**: Deploy Hugo-formatted blog posts to a git repository for automatic publication to Azure Static Web Apps.
+
+**Inherits**: `BaseAgent`
+
+**Responsibilities**:
+- Manage git repository operations (clone, pull, push)
+- Copy blog post files and images to target repository
+- Configure git identity for automated commits
+- Commit changes with descriptive messages
+- Push to remote repository to trigger Azure Static Web Apps deployment
+- Handle git authentication and error recovery
+- Validate delivery configuration
+
+**Key Methods**:
+- `deliver_blog_post(post_file_path: str, post_metadata: Dict)` - Main delivery workflow
+- `_ensure_repo_ready()` - Clone or update target repository
+- `_configure_git_identity()` - Configure git user for commits
+- `_copy_blog_post_files(post_file_path: str, image_path: str)` - Copy files to repository
+- `_run_git_command(command: list)` - Execute git commands
+- `get_delivery_status()` - Get current repository status
+- `validate_configuration()` - Validate delivery configuration
+
+**Integration with Azure Static Web Apps**:
+- When files are pushed to the configured branch, Azure Static Web Apps automatically detects the changes
+- The platform builds the Hugo site and deploys it
+- No manual intervention required after initial Azure Static Web App setup
+- Supports continuous deployment workflow
+
 ## Workflow Sequence
 
 1. **Research Phase** - Researcher collects data from Microsoft Fabric
@@ -185,6 +217,7 @@ Agentic Blog Bird is a multi-agent system designed to automatically generate blo
 5. **Image Generation** - Artist creates cartoon-style featured image
 6. **Publishing** - Publisher formats and saves Hugo markdown with image
 7. **Validation** - Editor validates final output format
+8. **Delivery (Optional)** - Delivery agent pushes to git repository for Azure Static Web App deployment
 
 ## Data Flow
 
@@ -196,6 +229,8 @@ Raw Data (Fabric) → Researcher → Research Summary
                                    Artist → Featured Image
                                        ↓
                                Publisher → Hugo Markdown File + Image
+                                       ↓
+                                 Delivery → Git Push to Azure Static Web App
 ```
 
 ## Configuration System
@@ -238,6 +273,16 @@ Modify `researcher.py` to add new data source integrations (Azure Data Explorer,
 ### Custom Output Formats
 
 Extend `publisher.py` for additional output format support (WordPress, Medium, etc.).
+
+### Custom Delivery Targets
+
+Extend `delivery.py` to support additional deployment targets beyond Azure Static Web Apps:
+- GitHub Pages
+- Netlify
+- Vercel
+- Self-hosted Hugo servers
+- WordPress via REST API
+- Medium via API
 
 ## Future Enhancements
 

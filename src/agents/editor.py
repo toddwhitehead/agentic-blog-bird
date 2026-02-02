@@ -12,6 +12,7 @@ from .researcher import ResearcherAgent
 from .copywriter import CopyWriterAgent
 from .artist import ArtistAgent
 from .publisher import PublisherAgent
+from .delivery import DeliveryAgent
 
 
 class EditorAgent(BaseAgent):
@@ -34,6 +35,7 @@ class EditorAgent(BaseAgent):
         self.copywriter = CopyWriterAgent(self.config.get('copywriter', {}))
         self.artist = ArtistAgent(self.config.get('artist', {}))
         self.publisher = PublisherAgent(self.config.get('publisher', {}))
+        self.delivery = DeliveryAgent(self.config.get('delivery', {}))
         
         self.workflow_history = []
         self._initialize_agent_client()
@@ -180,6 +182,28 @@ meets publication standards.
             "validation_result": validation
         })
         
+        # Step 8: Delivery (optional, based on configuration)
+        auto_deliver = self.config.get('delivery', {}).get('auto_deliver', False)
+        if auto_deliver:
+            print("\nStep 8: Delivery Phase")
+            print("-" * 60)
+            delivery_result = self._deliver_content(published_path, blog_post)
+            workflow_result["steps"].append({
+                "phase": "delivery",
+                "status": delivery_result.get("status"),
+                "deployment_triggered": delivery_result.get("deployment_triggered", False)
+            })
+        else:
+            print("\nStep 8: Delivery Phase (Skipped)")
+            print("-" * 60)
+            print("Delivery: Auto-delivery is disabled. To deliver manually, use:")
+            print(f"  delivery.deliver_blog_post('{published_path}', post_metadata)")
+            workflow_result["steps"].append({
+                "phase": "delivery",
+                "status": "skipped",
+                "note": "Auto-delivery is disabled in configuration"
+            })
+        
         workflow_result["status"] = "completed"
         workflow_result["final_post"] = {
             "headline": blog_post.get("headline"),
@@ -303,6 +327,29 @@ meets publication standards.
                 print(f"  - Warning: {warning}")
         
         return validation
+    
+    def _deliver_content(self, published_path: str, blog_post: Dict[str, Any]) -> Dict[str, Any]:
+        """Deliver content using Delivery agent."""
+        print("Editor: Requesting delivery from Delivery agent...")
+        
+        # Prepare post metadata for delivery
+        post_metadata = {
+            'headline': blog_post.get('headline'),
+            'featured_image': blog_post.get('featured_image')
+        }
+        
+        # Deliver
+        delivery_result = self.delivery.deliver_blog_post(published_path, post_metadata)
+        
+        if delivery_result.get('status') == 'completed':
+            print("Editor: Content delivered successfully ✓")
+            print("Editor: Azure Static Web App deployment triggered")
+        else:
+            print("Editor: Delivery encountered issues:")
+            for error in delivery_result.get('errors', []):
+                print(f"  - Error: {error}")
+        
+        return delivery_result
     
     def get_workflow_summary(self) -> str:
         """

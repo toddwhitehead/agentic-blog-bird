@@ -68,6 +68,26 @@ publisher:
   draft_by_default: false
   include_featured_image: true
 
+# Delivery Agent Configuration
+delivery:
+  # Target git repository for blog deployment
+  target_repo_url: ""  # Set to your Azure Static Web App git repository URL
+  target_repo_branch: "main"
+  target_repo_path: "/tmp/blog-delivery-repo"
+  
+  # Hugo site structure paths
+  content_subdir: "content/posts"
+  images_subdir: "content/posts/images"
+  
+  # Git commit configuration
+  git_user_name: "Blog Bird Agent"
+  git_user_email: "blogbird@example.com"
+  commit_message_template: "Add blog post: {title}"
+  
+  # Delivery options
+  auto_deliver: false  # Set to true to automatically deliver after publishing
+  validate_before_push: true
+
 # Editor Agent Configuration
 editor:
   # Quality control settings
