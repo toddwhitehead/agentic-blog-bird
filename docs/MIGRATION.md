@@ -129,10 +129,13 @@ requests>=2.31.0
 
 2. **Set Up Service Principal**
    ```bash
-   # Create a service principal for authentication
+   # Create a service principal with least privilege
+   # Use specific role for Azure AI services
    az ad sp create-for-rbac --name "agentic-blog-bird-sp" \
-     --role Contributor \
-     --scopes /subscriptions/{subscription-id}/resourceGroups/{resource-group}
+     --role "Cognitive Services OpenAI User" \
+     --scopes /subscriptions/{subscription-id}/resourceGroups/{resource-group}/providers/Microsoft.CognitiveServices/accounts/{account-name}
+   
+   # Note the output for .env configuration
    ```
 
 3. **Configure Environment**

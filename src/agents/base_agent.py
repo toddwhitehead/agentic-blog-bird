@@ -50,8 +50,14 @@ class BaseAgent:
     def _initialize_agent_client(self):
         """
         Initialize the Microsoft Agent Framework client.
-        This method will be implemented when the agent framework is ready.
-        For now, it's a placeholder for future integration.
+        
+        TODO: Complete integration when Microsoft Agent Framework SDK is fully available.
+        This method will be implemented to:
+        - Initialize AIAgentClient with connection string
+        - Configure agent settings and capabilities
+        - Set up authentication and authorization
+        
+        Tracking: Awaiting Microsoft Agent Framework SDK public release
         """
         # When Microsoft Agent Framework SDK is available, initialize it here:
         # from azure.ai.agent import AIAgentClient
@@ -95,14 +101,25 @@ class BaseAgent:
             
         Returns:
             Agent response as string
+            
+        Note:
+            This is a placeholder implementation pending Microsoft Agent Framework SDK.
+            In production, ensure the SDK is properly integrated before deployment.
         """
+        import logging
+        logging.warning(
+            f"{self.name} agent: Using placeholder implementation. "
+            "Microsoft Agent Framework SDK integration pending."
+        )
+        
         # This is a placeholder implementation
         # When Microsoft Agent Framework is fully integrated, this will use the actual SDK
         
         # For now, we'll use the system message and prompt to structure a response
         system_msg = self.get_system_message()
         
-        # In the future, this would call the Azure AI Foundry agent:
+        # TODO: Replace with actual Azure AI Foundry agent invocation
+        # Future implementation:
         # response = self._client.invoke_agent(
         #     agent_id=self._agent.id,
         #     messages=[
@@ -113,7 +130,7 @@ class BaseAgent:
         # )
         # return response.content
         
-        # For now, return a formatted placeholder
+        # Placeholder response
         return f"[{self.name} Agent Response]\n\nPrompt processed successfully."
     
     def get_metadata(self) -> Dict[str, Any]:

@@ -48,13 +48,16 @@ pip install -r requirements.txt
 #### Create Service Principal for Authentication
 
 ```bash
-# Login to Azure
-az login
-
-# Create a service principal
+# Create a service principal with minimal permissions
+# Use a more specific role for Azure AI Foundry
 az ad sp create-for-rbac --name "agentic-blog-bird-sp" \
-  --role "Cognitive Services User" \
-  --scopes /subscriptions/{subscription-id}/resourceGroups/{resource-group}
+  --role "Cognitive Services OpenAI User" \
+  --scopes /subscriptions/{subscription-id}/resourceGroups/{resource-group}/providers/Microsoft.CognitiveServices/accounts/{account-name}
+
+# Alternatively, use Azure AI Developer role (if available)
+# az ad sp create-for-rbac --name "agentic-blog-bird-sp" \
+#   --role "Azure AI Developer" \
+#   --scopes /subscriptions/{subscription-id}/resourceGroups/{resource-group}
 
 # Note the output:
 # - appId (AZURE_CLIENT_ID)
