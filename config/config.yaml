@@ -31,6 +31,22 @@ copywriter:
   include_humor: true
   technical_level: "accessible"
 
+# Artist Agent Configuration
+artist:
+  # Image generation settings
+  image_style: "cartoon"
+  image_size: "1024x1024"
+  output_dir: "content/posts/images"
+  
+  # Style inspiration
+  style_reference: "Wiley Coyote and Road Runner cartoons"
+  color_palette: "vibrant"
+  mood: "playful-energetic"
+  
+  # Image generation preferences
+  enable_image_generation: true
+  image_quality: "standard"
+
 # Publisher Agent Configuration
 publisher:
   # Hugo site settings

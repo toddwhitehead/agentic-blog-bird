@@ -70,6 +70,7 @@ Ensure all markdown is properly formatted and Hugo shortcodes are correctly used
         tags = post_data.get('tags', ['birds', 'wildlife', 'backyard', 'AI monitoring'])
         categories = post_data.get('categories', ['Daily Updates'])
         draft = post_data.get('draft', False)
+        featured_image = post_data.get('featured_image', '')
         
         frontmatter = f"""---
 title: "{title}"
@@ -78,9 +79,17 @@ draft: {str(draft).lower()}
 author: "{author}"
 description: "{description}"
 tags: [{', '.join(f'"{tag}"' for tag in tags)}]
-categories: [{', '.join(f'"{cat}"' for cat in categories)}]
----
-"""
+categories: [{', '.join(f'"{cat}"' for cat in categories)}]"""
+        
+        # Add featured_image if available
+        if featured_image:
+            # Convert absolute path to relative path for Hugo
+            if featured_image.startswith('/'):
+                featured_image = featured_image.lstrip('/')
+            frontmatter += f'\nfeatured_image: "{featured_image}"'
+        
+        frontmatter += "\n---\n"
+        
         return frontmatter
     
     def format_content(self, content: str) -> str:
