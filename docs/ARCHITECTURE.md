@@ -2,19 +2,21 @@
 
 ## Overview
 
-Agentic Blog Bird is a multi-agent system designed to automatically generate blog posts from bird detection events. The system follows a collaborative agent architecture where specialized agents work together under the coordination of an Editor agent.
+Agentic Blog Bird is a multi-agent system designed to automatically generate blog posts from bird detection events. The system follows a collaborative agent architecture where specialized agents work together under the coordination of an Editor agent, powered by **Microsoft Agent Framework on Azure AI Foundry**.
 
 ## System Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │                     Agentic Blog Bird                        │
-│                  Multi-Agent System                          │
+│         Multi-Agent System (Microsoft Agent Framework)       │
+│                    Azure AI Foundry                          │
 └─────────────────────────────────────────────────────────────┘
                               │
                               ▼
 ┌─────────────────────────────────────────────────────────────┐
 │                      Editor Agent                            │
+│                  (BaseAgent subclass)                        │
 │                                                              │
 │  Role: Workflow Orchestration & Quality Control             │
 │  - Coordinates all other agents                             │
@@ -27,6 +29,7 @@ Agentic Blog Bird is a multi-agent system designed to automatically generate blo
 ┌──────────────┐    ┌──────────────┐    ┌──────────────┐
 │  Researcher  │───▶│  CopyWriter  │───▶│  Publisher   │
 │    Agent     │    │    Agent     │    │    Agent     │
+│ (BaseAgent)  │    │ (BaseAgent)  │    │ (BaseAgent)  │
 └──────────────┘    └──────────────┘    └──────────────┘
         │                    │                    │
         ▼                    ▼                    ▼
@@ -36,11 +39,32 @@ Agentic Blog Bird is a multi-agent system designed to automatically generate blo
 
 ## Agent Specifications
 
+### Base Agent Class
+
+**Location**: `src/agents/base_agent.py`
+
+**Purpose**: Provides common functionality for all agents using Microsoft Agent Framework.
+
+**Key Features**:
+- Azure AI Foundry client initialization
+- Credential management for Azure services
+- Common agent invocation methods
+- Metadata tracking
+
+**Key Methods**:
+- `_get_azure_credentials()` - Retrieve Azure credentials from environment
+- `_initialize_agent_client()` - Initialize Microsoft Agent Framework client
+- `get_system_message()` - Define agent system prompt
+- `_invoke_agent(prompt, context)` - Invoke agent with Microsoft Agent Framework
+- `get_metadata()` - Get agent metadata
+
 ### 1. Editor Agent
 
 **Location**: `src/agents/editor.py`
 
-**Purpose**: Central orchestrator responsible for coordinating all other agents and ensuring quality standards.
+**Purpose**: Central orchestrator responsible for coordinating all other agents and ensuring quality standards using Microsoft Agent Framework.
+
+**Inherits**: `BaseAgent`
 
 **Responsibilities**:
 - Initiate and manage the blog creation workflow
@@ -63,6 +87,8 @@ Agentic Blog Bird is a multi-agent system designed to automatically generate blo
 
 **Purpose**: Collect and analyze bird detection data from Microsoft Fabric.
 
+**Inherits**: `BaseAgent`
+
 **Responsibilities**:
 - Query Microsoft Fabric for bird detection events
 - Aggregate and analyze detection data
@@ -79,6 +105,8 @@ Agentic Blog Bird is a multi-agent system designed to automatically generate blo
 **Location**: `src/agents/copywriter.py`
 
 **Purpose**: Transform research data into engaging blog post narratives.
+
+**Inherits**: `BaseAgent`
 
 **Responsibilities**:
 - Create compelling headlines
@@ -99,6 +127,8 @@ Agentic Blog Bird is a multi-agent system designed to automatically generate blo
 **Location**: `src/agents/publisher.py`
 
 **Purpose**: Format and publish blog posts in Hugo-compatible markdown format.
+
+**Inherits**: `BaseAgent`
 
 **Responsibilities**:
 - Generate Hugo front matter with metadata
@@ -134,31 +164,51 @@ Raw Data (Fabric) → Researcher → Research Summary
 
 ## Configuration System
 
-The system uses YAML-based configuration with environment variable support:
+The system uses YAML-based configuration with environment variable support for Azure AI Foundry:
 
 - `config/config.yaml` - Main configuration file
-- `config/.env` - Environment-specific secrets and credentials
+- `config/.env` - Environment-specific secrets and credentials (Azure AI Foundry, Fabric, etc.)
 - `src/utils/config.py` - Configuration management utilities
+
+## Technology Stack
+
+- **Agent Framework**: Microsoft Agent Framework
+- **Platform**: Azure AI Foundry
+- **Data Source**: Microsoft Fabric
+- **Programming Language**: Python 3.8+
+- **Output Format**: Hugo-compatible Markdown
+- **Authentication**: Azure Identity (service principal, managed identity)
 
 ## Extension Points
 
 ### Adding New Agents
 
-Create agent class in `src/agents/` and integrate with Editor agent.
+Create agent class in `src/agents/` by inheriting from `BaseAgent` and integrate with Editor agent.
+
+Example:
+```python
+from .base_agent import BaseAgent
+
+class NewAgent(BaseAgent):
+    def __init__(self, config=None):
+        super().__init__(name="NewAgent", config=config)
+        self._initialize_agent_client()
+```
 
 ### Custom Data Sources
 
-Modify `researcher.py` to add new data source integrations.
+Modify `researcher.py` to add new data source integrations (Azure Data Explorer, other Fabric sources).
 
 ### Custom Output Formats
 
-Extend `publisher.py` for additional output format support.
+Extend `publisher.py` for additional output format support (WordPress, Medium, etc.).
 
 ## Future Enhancements
 
-- LLM integration for enhanced content generation
-- Multi-language support
-- Image generation from detection data
+- Enhanced LLM integration with Azure AI Foundry
+- Multi-language support using Microsoft Translator
+- Image generation from detection data using DALL-E
 - Social media auto-posting
-- Analytics integration
-- Real-time generation capabilities
+- Analytics integration with Azure Application Insights
+- Real-time generation capabilities using Azure Functions
+- Advanced agent collaboration patterns with Microsoft Agent Framework

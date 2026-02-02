@@ -2,19 +2,21 @@
 Editor Agent Module
 
 This agent is responsible for orchestrating other agents to ensure
-quality blog post production.
+quality blog post production using Microsoft Agent Framework.
 """
 
 from typing import Dict, Any, List
 from datetime import datetime
+from .base_agent import BaseAgent
 from .researcher import ResearcherAgent
 from .copywriter import CopyWriterAgent
 from .publisher import PublisherAgent
 
 
-class EditorAgent:
+class EditorAgent(BaseAgent):
     """
-    Editor agent that orchestrates the blog post creation workflow.
+    Editor agent that orchestrates the blog post creation workflow
+    using Microsoft Agent Framework on Azure AI Foundry.
     """
     
     def __init__(self, config: Dict[str, Any] = None):
@@ -24,8 +26,7 @@ class EditorAgent:
         Args:
             config: Configuration dictionary for all agents and workflow
         """
-        self.config = config or {}
-        self.name = "Editor"
+        super().__init__(name="Editor", config=config)
         
         # Initialize other agents
         self.researcher = ResearcherAgent(self.config.get('researcher', {}))
@@ -33,11 +34,13 @@ class EditorAgent:
         self.publisher = PublisherAgent(self.config.get('publisher', {}))
         
         self.workflow_history = []
+        self._initialize_agent_client()
         
     def get_system_message(self) -> str:
         """Return the system message for the editor agent."""
-        return """You are an Editor agent responsible for orchestrating a team of specialized agents 
-to produce high-quality blog posts about bird detection events.
+        return """You are an Editor agent running on Microsoft Agent Framework in Azure AI Foundry, 
+responsible for orchestrating a team of specialized agents to produce high-quality blog posts 
+about bird detection events.
 
 Your responsibilities:
 1. Coordinate the workflow between Researcher, CopyWriter, and Publisher agents

@@ -63,16 +63,16 @@ editor:
   max_revision_rounds: 2
   require_minimum_detections: true
 
-# LLM Configuration (for future integration with actual LLM providers)
+# LLM Configuration for Azure AI Foundry
 llm:
-  provider: "openai"  # or "azure" for Azure OpenAI
-  model: "gpt-4"
+  provider: "azure_ai_foundry"
+  deployment_name: ""
   temperature: 0.7
   max_tokens: 2000
   
-  # Azure OpenAI specific (if using Azure)
-  azure_deployment: ""
-  azure_api_version: "2024-02-01"
+  # Azure AI Foundry specific
+  project_connection_string: ""
+  project_name: ""
 
 # Logging Configuration
 logging:

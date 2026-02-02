@@ -7,9 +7,10 @@ This agent is responsible for formatting blog posts for Hugo-based sites.
 from typing import Dict, Any
 from datetime import datetime
 import os
+from .base_agent import BaseAgent
 
 
-class PublisherAgent:
+class PublisherAgent(BaseAgent):
     """
     Publisher agent that formats blog posts for Hugo static site generator.
     """
@@ -21,9 +22,9 @@ class PublisherAgent:
         Args:
             config: Configuration dictionary for Hugo settings and output paths
         """
-        self.config = config or {}
-        self.name = "Publisher"
+        super().__init__(name="Publisher", config=config)
         self.output_dir = self.config.get('output_dir', 'content/posts')
+        self._initialize_agent_client()
         
     def get_system_message(self) -> str:
         """Return the system message for the publisher agent."""

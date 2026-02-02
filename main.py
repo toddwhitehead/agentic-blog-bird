@@ -2,7 +2,7 @@
 Main entry point for the Agentic Blog Bird system.
 
 This module provides the main interface for running the multi-agent
-blog post generation workflow.
+blog post generation workflow using Microsoft Agent Framework on Azure AI Foundry.
 """
 
 import argparse
@@ -63,6 +63,7 @@ def main():
     # Initialize Editor agent (which manages all other agents)
     print("\n" + "="*60)
     print("Agentic Blog Bird - Multi-Agent Blog Post Generator")
+    print("Powered by Microsoft Agent Framework on Azure AI Foundry")
     print("="*60 + "\n")
     
     editor = EditorAgent(config.config_data)

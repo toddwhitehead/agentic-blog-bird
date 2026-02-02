@@ -3,7 +3,8 @@
 Example script demonstrating the Agentic Blog Bird system.
 
 This script shows how to use the multi-agent system to generate
-blog posts from bird detection events.
+blog posts from bird detection events using Microsoft Agent Framework
+on Azure AI Foundry.
 """
 
 import sys
@@ -120,6 +121,8 @@ def main():
     print("\n" + "="*70)
     print(" "*15 + "AGENTIC BLOG BIRD DEMO")
     print(" "*10 + "Multi-Agent Blog Post Generation System")
+    print(" "*8 + "Powered by Microsoft Agent Framework")
+    print(" "*12 + "on Azure AI Foundry")
     print("="*70)
     
     # Demo 1: Individual agents

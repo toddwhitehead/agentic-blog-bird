@@ -1,6 +1,6 @@
 # Agentic Blog Bird 🐦
 
-A multi-agent system for automatically generating entertaining blog posts based on bird detection events and telemetry data from backyard AI and IoT monitoring systems.
+A multi-agent system for automatically generating entertaining blog posts based on bird detection events and telemetry data from backyard AI and IoT monitoring systems. Built with **Microsoft Agent Framework on Azure AI Foundry**.
 
 ## Overview
 
@@ -11,9 +11,12 @@ This system uses a team of specialized AI agents working together to produce hig
 3. **CopyWriter Agent** - Creates engaging narratives from the data
 4. **Publisher Agent** - Formats content for Hugo-based static sites
 
+The agents are powered by **Microsoft Agent Framework** running on **Azure AI Foundry**, providing robust orchestration and AI capabilities.
+
 ## Features
 
-- ✨ Multi-agent architecture with specialized roles
+- ✨ Multi-agent architecture with specialized roles using Microsoft Agent Framework
+- 🔵 Built on Azure AI Foundry for enterprise-grade AI orchestration
 - 📊 Integration with Microsoft Fabric for data collection
 - 📝 Automated content generation with engaging narratives
 - 🎨 Hugo-compatible markdown output
@@ -22,6 +25,14 @@ This system uses a team of specialized AI agents working together to produce hig
 - 🔍 Built-in validation and quality checks
 
 ## Installation
+
+### Prerequisites
+
+- Python 3.8 or higher
+- Azure subscription with Azure AI Foundry access
+- Microsoft Fabric workspace (for data collection)
+
+### Setup Steps
 
 1. Clone the repository:
 ```bash
@@ -34,11 +45,18 @@ cd agentic-blog-bird
 pip install -r requirements.txt
 ```
 
-3. Configure your environment:
+3. Configure your Azure AI Foundry environment:
 ```bash
 cp config/.env.template config/.env
-# Edit config/.env with your API keys and credentials
+# Edit config/.env with your Azure AI Foundry credentials and API keys
 ```
+
+Required environment variables:
+- `AZURE_AI_PROJECT_CONNECTION_STRING` - Your Azure AI Foundry project connection string
+- `AZURE_AI_PROJECT_NAME` - Your Azure AI Foundry project name
+- `AZURE_AI_DEPLOYMENT_NAME` - Your model deployment name
+- `FABRIC_WORKSPACE` - Microsoft Fabric workspace
+- `FABRIC_TOKEN` - Fabric authentication token
 
 4. Update configuration (optional):
 ```bash
@@ -86,13 +104,17 @@ The configuration file controls all aspects of the agent system:
 - **CopyWriter**: Writing style, tone, word count targets
 - **Publisher**: Hugo settings, output paths, metadata
 - **Editor**: Quality thresholds, workflow settings
-- **LLM**: AI model configuration (OpenAI/Azure)
+- **LLM**: Azure AI Foundry configuration (deployment name, parameters)
 
 ### Environment Variables (`.env`)
 
 Required environment variables:
-- `OPENAI_API_KEY` - OpenAI API key (if using OpenAI)
-- `AZURE_OPENAI_KEY` - Azure OpenAI key (if using Azure)
+- `AZURE_AI_PROJECT_CONNECTION_STRING` - Azure AI Foundry project connection string
+- `AZURE_AI_PROJECT_NAME` - Azure AI Foundry project name
+- `AZURE_AI_DEPLOYMENT_NAME` - Model deployment name
+- `AZURE_TENANT_ID` - Azure tenant ID
+- `AZURE_CLIENT_ID` - Azure client ID (for service principal auth)
+- `AZURE_CLIENT_SECRET` - Azure client secret (for service principal auth)
 - `FABRIC_WORKSPACE` - Microsoft Fabric workspace
 - `FABRIC_TOKEN` - Fabric authentication token
 
@@ -101,8 +123,8 @@ Required environment variables:
 ### Agent Roles
 
 **Editor Agent** (`src/agents/editor.py`)
-- Coordinates all other agents
-- Manages workflow execution
+- Coordinates all other agents using Microsoft Agent Framework
+- Manages workflow execution on Azure AI Foundry
 - Reviews content for quality
 - Tracks workflow history
 
@@ -123,6 +145,16 @@ Required environment variables:
 - Formats markdown content
 - Creates SEO-friendly URLs
 - Validates output format
+
+All agents inherit from `BaseAgent` which provides common functionality for Microsoft Agent Framework integration.
+
+### Technology Stack
+
+- **Framework**: Microsoft Agent Framework
+- **Platform**: Azure AI Foundry
+- **Data Source**: Microsoft Fabric
+- **Output**: Hugo static site generator
+- **Language**: Python 3.8+
 
 ### Workflow
 
@@ -168,36 +200,39 @@ agentic-blog-bird/
 ├── src/
 │   ├── agents/
 │   │   ├── __init__.py
-│   │   ├── editor.py       # Editor agent
-│   │   ├── researcher.py   # Researcher agent
-│   │   ├── copywriter.py   # CopyWriter agent
-│   │   └── publisher.py    # Publisher agent
+│   │   ├── base_agent.py    # Base agent class for Microsoft Agent Framework
+│   │   ├── editor.py        # Editor agent
+│   │   ├── researcher.py    # Researcher agent
+│   │   ├── copywriter.py    # CopyWriter agent
+│   │   └── publisher.py     # Publisher agent
 │   └── utils/
 │       ├── __init__.py
-│       └── config.py        # Configuration management
+│       └── config.py         # Configuration management
 ├── config/
-│   ├── config.yaml          # Main configuration
-│   └── .env.template        # Environment template
+│   ├── config.yaml           # Main configuration
+│   └── .env.template         # Environment template
 ├── examples/
-│   └── demo.py              # Demo script
+│   └── demo.py               # Demo script
 ├── content/
-│   └── posts/               # Generated blog posts
-├── main.py                  # Main entry point
-├── requirements.txt         # Python dependencies
-└── README.md               # This file
+│   └── posts/                # Generated blog posts
+├── main.py                   # Main entry point
+├── requirements.txt          # Python dependencies
+└── README.md                # This file
 ```
 
 ## Development
 
 ### Adding Custom Agents
 
-To add a new agent, create a new class in `src/agents/`:
+To add a new agent using Microsoft Agent Framework, create a new class in `src/agents/`:
 
 ```python
-class CustomAgent:
+from .base_agent import BaseAgent
+
+class CustomAgent(BaseAgent):
     def __init__(self, config=None):
-        self.config = config or {}
-        self.name = "CustomAgent"
+        super().__init__(name="CustomAgent", config=config)
+        self._initialize_agent_client()
     
     def get_system_message(self):
         return "System message defining agent role..."
@@ -219,6 +254,7 @@ Contributions are welcome! Please feel free to submit pull requests or open issu
 
 ## Acknowledgments
 
-- Built for integration with Microsoft Fabric for data collection
+- Built with Microsoft Agent Framework on Azure AI Foundry
+- Integrated with Microsoft Fabric for data collection
 - Designed for Hugo static site generator
 - Inspired by multi-agent AI systems and autonomous workflows
