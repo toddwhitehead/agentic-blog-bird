@@ -134,19 +134,19 @@ class DataCollectorAgent(BaseAgent):
         sensor_readings = sum(1 for e in events if e.get("type") == "sensor_reading")
         notifications = sum(1 for e in events if e.get("type") == "notification")
         
-        summary_parts = [
-            f"Collected {len(events)} events from the backyard monitoring system."
-        ]
+        # Build summary sentence
+        summary = f"Collected {len(events)} events from the backyard monitoring system"
         
-        if sensor_readings > 0:
-            summary_parts.append(f" {sensor_readings} sensor readings were recorded")
+        if sensor_readings > 0 and notifications > 0:
+            summary += f". {sensor_readings} sensor readings were recorded and {notifications} notifications were received."
+        elif sensor_readings > 0:
+            summary += f". {sensor_readings} sensor readings were recorded."
+        elif notifications > 0:
+            summary += f". {notifications} notifications were received."
+        else:
+            summary += "."
         
-        if notifications > 0:
-            summary_parts.append(f" and {notifications} notifications were received")
-        
-        summary_parts.append(".")
-        
-        return "".join(summary_parts)
+        return summary
     
     def get_collected_data(self) -> List[Dict[str, Any]]:
         """Get all collected data"""
