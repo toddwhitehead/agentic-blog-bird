@@ -49,3 +49,9 @@ resources/
 tmp/
 temp/
 *.tmp
+
+# Example output (test files)
+examples/output/
+
+# Generated content (exclude from repo)
+content/posts/*.md
