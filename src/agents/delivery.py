@@ -344,7 +344,7 @@ Error handling:
             return delivery_result
         
         # Step 6: Commit changes
-        print("\nStep 5: Committing changes")
+        print("\nStep 6: Committing changes")
         print("-" * 60)
         title = post_metadata.get('headline', 'New blog post') if post_metadata else 'New blog post'
         commit_message = self.commit_message_template.format(title=title)
@@ -363,7 +363,7 @@ Error handling:
         print(f"Delivery: Changes committed: {commit_message}")
         
         # Step 7: Push to remote
-        print("\nStep 6: Pushing to remote repository")
+        print("\nStep 7: Pushing to remote repository")
         print("-" * 60)
         push_result = self._run_git_command([
             'git', 'push', 'origin', self.target_repo_branch
@@ -382,7 +382,7 @@ Error handling:
         print(f"Delivery: Successfully pushed to {self.target_repo_branch}")
         print("\nAzure Static Web App deployment should be triggered automatically")
         
-        # Step 8: Success
+        # Mark as completed
         delivery_result['status'] = 'completed'
         delivery_result['message'] = 'Blog post delivered successfully'
         delivery_result['deployment_triggered'] = True
