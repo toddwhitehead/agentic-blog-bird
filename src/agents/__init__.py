@@ -9,6 +9,7 @@ from .base_agent import BaseAgent
 from .researcher import ResearcherAgent
 from .copywriter import CopyWriterAgent
 from .publisher import PublisherAgent
+from .artist import ArtistAgent
 from .editor import EditorAgent
 
 __all__ = [
@@ -16,5 +17,6 @@ __all__ = [
     'ResearcherAgent',
     'CopyWriterAgent',
     'PublisherAgent',
+    'ArtistAgent',
     'EditorAgent'
 ]

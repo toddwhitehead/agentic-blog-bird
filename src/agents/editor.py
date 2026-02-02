@@ -10,6 +10,7 @@ from datetime import datetime
 from .base_agent import BaseAgent
 from .researcher import ResearcherAgent
 from .copywriter import CopyWriterAgent
+from .artist import ArtistAgent
 from .publisher import PublisherAgent
 
 
@@ -31,6 +32,7 @@ class EditorAgent(BaseAgent):
         # Initialize other agents
         self.researcher = ResearcherAgent(self.config.get('researcher', {}))
         self.copywriter = CopyWriterAgent(self.config.get('copywriter', {}))
+        self.artist = ArtistAgent(self.config.get('artist', {}))
         self.publisher = PublisherAgent(self.config.get('publisher', {}))
         
         self.workflow_history = []
@@ -43,17 +45,19 @@ responsible for orchestrating a team of specialized agents to produce high-quali
 about bird detection events.
 
 Your responsibilities:
-1. Coordinate the workflow between Researcher, CopyWriter, and Publisher agents
+1. Coordinate the workflow between Researcher, CopyWriter, Artist, and Publisher agents
 2. Ensure data quality and accuracy from research phase
 3. Review and approve blog post content for quality and tone
-4. Provide constructive feedback to improve content
-5. Manage the publishing pipeline
-6. Maintain quality standards across all blog posts
+4. Oversee image generation for visual appeal
+5. Provide constructive feedback to improve content
+6. Manage the publishing pipeline
+7. Maintain quality standards across all blog posts
 
 Workflow management:
 - Request research data from the Researcher agent
 - Review research for completeness and interesting content
 - Direct the CopyWriter to create engaging narratives
+- Coordinate with Artist to create accompanying cartoon-style images
 - Review drafts and provide feedback for improvements
 - Coordinate with Publisher for proper formatting
 - Ensure final output meets all quality standards
@@ -61,6 +65,7 @@ Workflow management:
 Quality criteria:
 - Accuracy: All data must be factually correct
 - Engagement: Content must be interesting and readable
+- Visual Appeal: Images should complement the narrative
 - Structure: Clear beginning, middle, and end
 - Formatting: Proper Hugo markdown format
 - SEO: Appropriate metadata and descriptions
@@ -141,8 +146,22 @@ meets publication standards.
             # In a full implementation, this would loop back for revisions
             print("Content needs revision (would request changes in full implementation)")
         
-        # Step 5: Publishing
-        print("\nStep 5: Publishing Phase")
+        # Step 5: Image Generation
+        print("\nStep 5: Image Generation Phase")
+        print("-" * 60)
+        image_result = self._generate_image(blog_post)
+        workflow_result["steps"].append({
+            "phase": "image_generation",
+            "status": "completed" if image_result.get("success") else "skipped",
+            "image_path": image_result.get("image_path")
+        })
+        
+        # Add image to blog post data if generated successfully
+        if image_result.get("success"):
+            blog_post['featured_image'] = image_result.get('image_path')
+        
+        # Step 6: Publishing
+        print("\nStep 6: Publishing Phase")
         print("-" * 60)
         published_path = self._publish_content(blog_post, date)
         workflow_result["steps"].append({
@@ -151,8 +170,8 @@ meets publication standards.
             "output_path": published_path
         })
         
-        # Step 6: Final Validation
-        print("\nStep 6: Final Validation")
+        # Step 7: Final Validation
+        print("\nStep 7: Final Validation")
         print("-" * 60)
         validation = self._validate_output(published_path)
         workflow_result["steps"].append({
@@ -237,6 +256,23 @@ meets publication standards.
                 print(f"  - {check}: {'✓' if result else '✗'}")
         
         return passed
+    
+    def _generate_image(self, blog_post: Dict[str, Any]) -> Dict[str, Any]:
+        """Generate image using Artist agent."""
+        print("Editor: Requesting image from Artist agent...")
+        print("Editor: Style: Wile E. Coyote and Road Runner cartoon inspiration")
+        
+        image_result = self.artist.create_blog_image(blog_post)
+        
+        if image_result.get("success"):
+            print(f"Editor: Image generated successfully!")
+            print(f"Editor: Image path: {image_result.get('image_path')}")
+        else:
+            print(f"Editor: Image generation skipped or failed")
+            if image_result.get("note"):
+                print(f"Editor: {image_result.get('note')}")
+        
+        return image_result
     
     def _publish_content(self, blog_post: Dict[str, Any], date: str) -> str:
         """Publish content using Publisher agent."""

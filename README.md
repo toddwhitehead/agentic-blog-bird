@@ -9,7 +9,8 @@ This system uses a team of specialized AI agents working together to produce hig
 1. **Editor Agent** - Orchestrates the entire workflow and ensures quality
 2. **Researcher Agent** - Collects and analyzes data from Microsoft Fabric
 3. **CopyWriter Agent** - Creates engaging narratives from the data
-4. **Publisher Agent** - Formats content for Hugo-based static sites
+4. **Artist Agent** - Generates original cartoon-style images for blog posts
+5. **Publisher Agent** - Formats content for Hugo-based static sites
 
 The agents are powered by **Microsoft Agent Framework** running on **Azure AI Foundry**, providing robust orchestration and AI capabilities.
 
@@ -19,7 +20,8 @@ The agents are powered by **Microsoft Agent Framework** running on **Azure AI Fo
 - 🔵 Built on Azure AI Foundry for enterprise-grade AI orchestration
 - 📊 Integration with Microsoft Fabric for data collection
 - 📝 Automated content generation with engaging narratives
-- 🎨 Hugo-compatible markdown output
+- 🎨 Cartoon-style image generation inspired by Wile E. Coyote and Road Runner
+- 🖼️ Hugo-compatible markdown output with featured images
 - 🔄 Workflow orchestration and quality control
 - 📈 Configurable writing styles and content parameters
 - 🔍 Built-in validation and quality checks
@@ -57,6 +59,7 @@ Required environment variables:
 - `AZURE_AI_DEPLOYMENT_NAME` - Your model deployment name
 - `FABRIC_WORKSPACE` - Microsoft Fabric workspace
 - `FABRIC_TOKEN` - Fabric authentication token
+- `OPENAI_API_KEY` or `AZURE_OPENAI_API_KEY` - API key for image generation (optional)
 
 4. Update configuration (optional):
 ```bash
@@ -102,6 +105,7 @@ The configuration file controls all aspects of the agent system:
 
 - **Researcher**: Data collection settings, Fabric connection
 - **CopyWriter**: Writing style, tone, word count targets
+- **Artist**: Image generation settings, cartoon style preferences
 - **Publisher**: Hugo settings, output paths, metadata
 - **Editor**: Quality thresholds, workflow settings
 - **LLM**: Azure AI Foundry configuration (deployment name, parameters)
@@ -117,6 +121,9 @@ Required environment variables:
 - `AZURE_CLIENT_SECRET` - Azure client secret (for service principal auth)
 - `FABRIC_WORKSPACE` - Microsoft Fabric workspace
 - `FABRIC_TOKEN` - Fabric authentication token
+- `OPENAI_API_KEY` - OpenAI API key for image generation (optional)
+- `AZURE_OPENAI_API_KEY` - Azure OpenAI API key (alternative to OPENAI_API_KEY)
+- `AZURE_OPENAI_ENDPOINT` - Azure OpenAI endpoint (when using Azure OpenAI)
 
 ## Architecture
 
@@ -139,6 +146,12 @@ Required environment variables:
 - Writes introductions, body, and conclusions
 - Maintains consistent tone and style
 - Formats narratives from data
+
+**Artist Agent** (`src/agents/artist.py`)
+- Generates original cartoon-style images
+- Inspired by Wile E. Coyote and Road Runner aesthetics
+- Creates visuals based on blog post content
+- Integrates images with Hugo front matter
 
 **Publisher Agent** (`src/agents/publisher.py`)
 - Generates Hugo front matter
@@ -164,15 +177,15 @@ All agents inherit from `BaseAgent` which provides common functionality for Micr
 │         (Orchestrates Workflow)                 │
 └─────────────────────────────────────────────────┘
                       │
-      ┌───────────────┼───────────────┐
-      ▼               ▼               ▼
-┌──────────┐   ┌──────────┐   ┌──────────┐
-│Researcher│──▶│CopyWriter│──▶│Publisher │
-└──────────┘   └──────────┘   └──────────┘
-     │              │              │
-     ▼              ▼              ▼
-  Data          Content         Hugo
-Collection     Generation       Output
+      ┌───────────────┼───────────────┬──────────┐
+      ▼               ▼               ▼          ▼
+┌──────────┐   ┌──────────┐   ┌──────────┐ ┌──────────┐
+│Researcher│──▶│CopyWriter│──▶│  Artist  │─│Publisher │
+└──────────┘   └──────────┘   └──────────┘ └──────────┘
+     │              │              │             │
+     ▼              ▼              ▼             ▼
+  Data          Content        Cartoon         Hugo
+Collection     Generation      Images          Output
 ```
 
 ## Output Format
@@ -204,6 +217,7 @@ agentic-blog-bird/
 │   │   ├── editor.py        # Editor agent
 │   │   ├── researcher.py    # Researcher agent
 │   │   ├── copywriter.py    # CopyWriter agent
+│   │   ├── artist.py        # Artist agent (image generation)
 │   │   └── publisher.py     # Publisher agent
 │   └── utils/
 │       ├── __init__.py
@@ -215,6 +229,7 @@ agentic-blog-bird/
 │   └── demo.py               # Demo script
 ├── content/
 │   └── posts/                # Generated blog posts
+│       └── images/           # Generated images
 ├── main.py                   # Main entry point
 ├── requirements.txt          # Python dependencies
 └── README.md                # This file

@@ -27,14 +27,20 @@ Agentic Blog Bird is a multi-agent system designed to automatically generate blo
         │                    │                    │
         ▼                    ▼                    ▼
 ┌──────────────┐    ┌──────────────┐    ┌──────────────┐
-│  Researcher  │───▶│  CopyWriter  │───▶│  Publisher   │
+│  Researcher  │───▶│  CopyWriter  │───▶│   Artist     │
 │    Agent     │    │    Agent     │    │    Agent     │
 │ (BaseAgent)  │    │ (BaseAgent)  │    │ (BaseAgent)  │
 └──────────────┘    └──────────────┘    └──────────────┘
         │                    │                    │
+        │                    │                    ▼
+        │                    │            ┌──────────────┐
+        │                    │            │  Publisher   │
+        │                    │            │    Agent     │
+        │                    │            │ (BaseAgent)  │
+        │                    │            └──────────────┘
         ▼                    ▼                    ▼
   Data Query         Content Creation      Hugo Output
-  & Analysis         & Narrative          & Formatting
+  & Analysis         & Narrative          & Images
 ```
 
 ## Agent Specifications
@@ -122,7 +128,34 @@ Agentic Blog Bird is a multi-agent system designed to automatically generate blo
 - `write_conclusion(research_data: str)` - Create ending
 - `generate_blog_post(research_data: str)` - Complete content creation
 
-### 4. Publisher Agent
+### 4. Artist Agent
+
+**Location**: `src/agents/artist.py`
+
+**Purpose**: Generate original cartoon-style images to accompany blog posts.
+
+**Inherits**: `BaseAgent`
+
+**Responsibilities**:
+- Analyze blog post content for visual themes
+- Generate image prompts based on content
+- Create cartoon-style images inspired by Wile E. Coyote and Road Runner
+- Integrate images with Hugo front matter
+- Save images to appropriate directories
+
+**Key Methods**:
+- `generate_image_prompt(blog_post_content: str)` - Create AI image prompt
+- `generate_image(prompt: str, filename: str)` - Call image generation API
+- `create_blog_image(blog_post_data: Dict)` - Complete image creation workflow
+- `get_image_metadata(image_path: str)` - Get image information
+
+**Image Style**:
+- Vibrant, cartoon aesthetic inspired by classic Looney Tunes
+- Bold colors and exaggerated expressions
+- Dynamic action poses and comedic energy
+- Desert/southwestern landscape elements
+
+### 5. Publisher Agent
 
 **Location**: `src/agents/publisher.py`
 
@@ -149,8 +182,9 @@ Agentic Blog Bird is a multi-agent system designed to automatically generate blo
 2. **Research Review** - Editor validates research quality
 3. **Content Creation** - CopyWriter creates blog post narrative
 4. **Content Review** - Editor validates content quality
-5. **Publishing** - Publisher formats and saves Hugo markdown
-6. **Validation** - Editor validates final output format
+5. **Image Generation** - Artist creates cartoon-style featured image
+6. **Publishing** - Publisher formats and saves Hugo markdown with image
+7. **Validation** - Editor validates final output format
 
 ## Data Flow
 
@@ -159,7 +193,9 @@ Raw Data (Fabric) → Researcher → Research Summary
                                        ↓
                                CopyWriter → Blog Post Content
                                        ↓
-                               Publisher → Hugo Markdown File
+                                   Artist → Featured Image
+                                       ↓
+                               Publisher → Hugo Markdown File + Image
 ```
 
 ## Configuration System
@@ -207,7 +243,7 @@ Extend `publisher.py` for additional output format support (WordPress, Medium, e
 
 - Enhanced LLM integration with Azure AI Foundry
 - Multi-language support using Microsoft Translator
-- Image generation from detection data using DALL-E
+- Advanced image generation with custom fine-tuned models
 - Social media auto-posting
 - Analytics integration with Azure Application Insights
 - Real-time generation capabilities using Azure Functions
