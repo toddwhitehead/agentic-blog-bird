@@ -73,6 +73,21 @@ publisher:
   draft_by_default: false
   include_featured_image: true
 
+# Committer Agent Configuration
+committer:
+  # Azure DevOps Git settings
+  azure_devops_repo_url: ""  # e.g., https://dev.azure.com/{organization}/{project}/_git/{repository}
+  repo_path: "content/posts"  # Path within the repository to commit files
+  branch: "main"  # Target branch for commits
+  
+  # Git author information
+  author_name: "Backyard Bird AI"
+  author_email: "ai@backyardbird.com"
+  
+  # Committer options
+  enable_auto_commit: true  # Automatically commit after publishing
+  commit_message_template: "Add blog post: {filename}"
+
 # Editor Agent Configuration
 editor:
   # Quality control settings

@@ -13,6 +13,7 @@ from .researcher import ResearcherAgent
 from .copywriter import CopyWriterAgent
 from .artist import ArtistAgent
 from .publisher import PublisherAgent
+from .committer import CommitterAgent
 
 
 class EditorAgent(BaseAgent):
@@ -35,6 +36,7 @@ class EditorAgent(BaseAgent):
         self.copywriter = CopyWriterAgent(self.config.get('copywriter', {}))
         self.artist = ArtistAgent(self.config.get('artist', {}))
         self.publisher = PublisherAgent(self.config.get('publisher', {}))
+        self.committer = CommitterAgent(self.config.get('committer', {}))
         
         self.workflow_history = []
         self._initialize_agent_client()
@@ -181,11 +183,25 @@ meets publication standards.
             "validation_result": validation
         })
         
+        # Step 8: Commit to Azure DevOps
+        print("\nStep 8: Commit to Azure DevOps")
+        print("-" * 60)
+        commit_result = self._commit_to_repository(published_path, blog_post)
+        workflow_result["steps"].append({
+            "phase": "commit_to_devops",
+            "status": commit_result.get("status"),
+            "commit_details": {
+                "commit_sha": commit_result.get("commit_sha"),
+                "target_path": commit_result.get("target_path")
+            }
+        })
+        
         workflow_result["status"] = "completed"
         workflow_result["final_post"] = {
             "headline": blog_post.get("headline"),
             "output_path": published_path,
-            "date": date
+            "date": date,
+            "committed": commit_result.get("status") == "completed"
         }
         
         print(f"\n{'='*60}")
@@ -296,13 +312,19 @@ meets publication standards.
                 print("-" * 60)
                 validation = self._validate_output(published_path)
                 
+                # Step 8: Commit to Azure DevOps
+                print("\nStep 8: Commit to Azure DevOps")
+                print("-" * 60)
+                commit_result = self._commit_to_repository(published_path, blog_post)
+                
                 # Record success
                 workflow_result["posts_created"] += 1
                 workflow_result["posts"].append({
                     "file": blob_name,
                     "status": "completed",
                     "headline": blog_post.get("headline"),
-                    "output_path": published_path
+                    "output_path": published_path,
+                    "committed": commit_result.get("status") == "completed"
                 })
                 
                 print(f"\n✓ Successfully created blog post for {blob_name}")
@@ -436,6 +458,53 @@ meets publication standards.
                 print(f"  - Warning: {warning}")
         
         return validation
+    
+    def _commit_to_repository(self, published_path: str, blog_post: Dict[str, Any]) -> Dict[str, Any]:
+        """Commit the published post to Azure DevOps repository."""
+        print("Editor: Requesting commit from Committer agent...")
+        
+        # Check if auto-commit is enabled
+        auto_commit_enabled = self.config.get('committer', {}).get('enable_auto_commit', True)
+        
+        if not auto_commit_enabled:
+            print("Editor: Auto-commit is disabled in configuration")
+            return {
+                "status": "skipped",
+                "note": "Auto-commit disabled in configuration"
+            }
+        
+        # Validate committer configuration
+        validation = self.committer.validate_configuration()
+        
+        if not validation['valid']:
+            print("Editor: Committer configuration is invalid:")
+            for error in validation['errors']:
+                print(f"  - Error: {error}")
+            return {
+                "status": "skipped",
+                "note": "Committer configuration invalid",
+                "errors": validation['errors']
+            }
+        
+        # Create commit message
+        headline = blog_post.get('headline', 'Untitled Post')
+        commit_message = f"Add blog post: {headline}"
+        
+        # Commit the file
+        commit_result = self.committer.commit_post(published_path, commit_message)
+        
+        if commit_result['status'] == 'completed':
+            print(f"Editor: Successfully committed to Azure DevOps!")
+            print(f"Editor: Commit SHA: {commit_result.get('commit_sha', 'N/A')}")
+            print(f"Editor: Target path: {commit_result.get('target_path', 'N/A')}")
+        elif commit_result['status'] == 'skipped':
+            print(f"Editor: Commit skipped: {commit_result.get('warnings', ['Unknown reason'])[0]}")
+        else:
+            print(f"Editor: Commit failed!")
+            for error in commit_result.get('errors', []):
+                print(f"  - Error: {error}")
+        
+        return commit_result
     
     def get_workflow_summary(self) -> str:
         """
