@@ -41,6 +41,11 @@ def main():
         default='content/posts'
     )
     parser.add_argument(
+        '--all-files',
+        action='store_true',
+        help='Process all data files from blob storage (one blog post per file)'
+    )
+    parser.add_argument(
         '--verbose',
         action='store_true',
         help='Enable verbose output'
@@ -70,22 +75,47 @@ def main():
     
     # Run the blog creation workflow
     try:
-        result = editor.orchestrate_blog_creation(args.date)
-        
-        if result['status'] == 'completed':
-            print("\n✓ Blog post generation completed successfully!")
-            if result.get('final_post'):
-                post = result['final_post']
-                print(f"\nTitle: {post.get('headline')}")
-                print(f"Date: {post.get('date')}")
-                print(f"Output: {post.get('output_path')}")
+        if args.all_files:
+            # Process all data files from blob storage
+            print(f"Mode: Processing all data files from blob storage\n")
+            result = editor.orchestrate_multiple_blog_creation()
             
-            return 0
+            if result['status'] == 'completed':
+                print("\n✓ Multiple blog post generation completed!")
+                print(f"\nTotal files processed: {result['total_files']}")
+                print(f"Posts created: {result['posts_created']}")
+                print(f"Posts failed: {result['posts_failed']}")
+                
+                if result.get('posts'):
+                    print("\nGenerated posts:")
+                    for post in result['posts']:
+                        if post['status'] == 'completed':
+                            print(f"  ✓ {post['file']} -> {post.get('output_path')}")
+                        else:
+                            print(f"  ✗ {post['file']} - {post.get('reason', post.get('error', 'Unknown error'))}")
+                
+                return 0 if result['posts_failed'] == 0 else 1
+            else:
+                print("\n✗ Multiple blog post generation failed!")
+                return 1
         else:
-            print("\n✗ Blog post generation failed!")
-            if result.get('error'):
-                print(f"Error: {result['error']}")
-            return 1
+            # Single blog post mode (backward compatible)
+            result = editor.orchestrate_blog_creation(args.date)
+            
+            if result['status'] == 'completed':
+                print("\n✓ Blog post generation completed successfully!")
+                if result.get('final_post'):
+                    post = result['final_post']
+                    print(f"\nTitle: {post.get('headline')}")
+                    print(f"Date: {post.get('date')}")
+                    print(f"Output: {post.get('output_path')}")
+                
+                return 0
+            else:
+                print("\n✗ Blog post generation failed!")
+                if result.get('error'):
+                    print(f"Error: {result['error']}")
+                return 1
             
     except Exception as e:
         print(f"\n✗ Error during blog post generation: {str(e)}")
