@@ -5,6 +5,7 @@ This agent is responsible for orchestrating other agents to ensure
 quality blog post production using Microsoft Agent Framework.
 """
 
+import os
 from typing import Dict, Any, List
 from datetime import datetime
 from .base_agent import BaseAgent
@@ -190,6 +191,138 @@ meets publication standards.
         print(f"\n{'='*60}")
         print(f"Editor: Workflow completed successfully!")
         print(f"Blog post published to: {published_path}")
+        print(f"{'='*60}\n")
+        
+        # Store in history
+        self.workflow_history.append(workflow_result)
+        
+        return workflow_result
+    
+    def orchestrate_multiple_blog_creation(self) -> Dict[str, Any]:
+        """
+        Orchestrate blog post creation for all data files in blob storage.
+        Creates one blog post per data file found.
+        
+        Returns:
+            Dictionary containing workflow results for all posts
+        """
+        workflow_result = {
+            "status": "started",
+            "total_files": 0,
+            "posts_created": 0,
+            "posts_failed": 0,
+            "posts": []
+        }
+        
+        print(f"\n{'='*60}")
+        print(f"Editor: Starting multiple blog post creation workflow")
+        print(f"{'='*60}\n")
+        
+        # Get all data files from researcher
+        print("Step 1: Discovering Data Files")
+        print("-" * 60)
+        data_files = self.researcher.list_data_files()
+        workflow_result["total_files"] = len(data_files)
+        
+        if not data_files:
+            print("Editor: No data files found in blob storage")
+            workflow_result["status"] = "completed"
+            workflow_result["note"] = "No data files found"
+            return workflow_result
+        
+        print(f"Editor: Found {len(data_files)} data files")
+        print()
+        
+        # Process each data file
+        for i, blob_name in enumerate(data_files, 1):
+            print(f"\n{'='*60}")
+            print(f"Editor: Processing file {i}/{len(data_files)}: {blob_name}")
+            print(f"{'='*60}\n")
+            
+            try:
+                # Step 1: Research Phase for this file
+                print(f"Step 1: Research Phase for {blob_name}")
+                print("-" * 60)
+                research_summary = self.researcher.generate_research_summary_for_file(blob_name)
+                print(f"Editor: Received research summary ({len(research_summary)} characters)")
+                
+                # Step 2: Review Research
+                print("\nStep 2: Review Research")
+                print("-" * 60)
+                research_approved = self._review_research(research_summary)
+                
+                if not research_approved:
+                    print(f"Editor: Research for {blob_name} did not meet quality standards - skipping")
+                    workflow_result["posts_failed"] += 1
+                    workflow_result["posts"].append({
+                        "file": blob_name,
+                        "status": "failed",
+                        "reason": "Research quality check failed"
+                    })
+                    continue
+                
+                # Step 3: Content Creation
+                print("\nStep 3: Content Creation Phase")
+                print("-" * 60)
+                blog_post = self._create_content(research_summary)
+                
+                # Step 4: Editorial Review
+                print("\nStep 4: Editorial Review")
+                print("-" * 60)
+                content_approved = self._review_content(blog_post)
+                
+                if not content_approved:
+                    print("Content needs revision (would request changes in full implementation)")
+                
+                # Step 5: Image Generation
+                print("\nStep 5: Image Generation Phase")
+                print("-" * 60)
+                image_result = self._generate_image(blog_post)
+                
+                if image_result.get("success"):
+                    blog_post['featured_image'] = image_result.get('image_path')
+                
+                # Step 6: Publishing
+                print("\nStep 6: Publishing Phase")
+                print("-" * 60)
+                # Generate a unique filename based on the blob name
+                base_name = os.path.splitext(os.path.basename(blob_name))[0]
+                blog_post['slug'] = base_name
+                
+                published_path = self._publish_content(blog_post, None)
+                
+                # Step 7: Final Validation
+                print("\nStep 7: Final Validation")
+                print("-" * 60)
+                validation = self._validate_output(published_path)
+                
+                # Record success
+                workflow_result["posts_created"] += 1
+                workflow_result["posts"].append({
+                    "file": blob_name,
+                    "status": "completed",
+                    "headline": blog_post.get("headline"),
+                    "output_path": published_path
+                })
+                
+                print(f"\n✓ Successfully created blog post for {blob_name}")
+                
+            except Exception as e:
+                print(f"\n✗ Error processing {blob_name}: {str(e)}")
+                workflow_result["posts_failed"] += 1
+                workflow_result["posts"].append({
+                    "file": blob_name,
+                    "status": "failed",
+                    "error": str(e)
+                })
+        
+        workflow_result["status"] = "completed"
+        
+        print(f"\n{'='*60}")
+        print(f"Editor: Multiple blog post workflow completed!")
+        print(f"Total files: {workflow_result['total_files']}")
+        print(f"Posts created: {workflow_result['posts_created']}")
+        print(f"Posts failed: {workflow_result['posts_failed']}")
         print(f"{'='*60}\n")
         
         # Store in history

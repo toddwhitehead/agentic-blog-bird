@@ -3,7 +3,12 @@
 
 # Researcher Agent Configuration
 researcher:
-  # Microsoft Fabric connection settings
+  # Azure Blob Storage settings
+  blob_storage_account: ""
+  blob_container_name: "bird-detection-data"
+  blob_storage_connection_string: ""
+  
+  # Microsoft Fabric connection settings (legacy - now using blob storage)
   fabric_workspace: ""
   fabric_endpoint: ""
   fabric_lakehouse: ""

@@ -32,7 +32,7 @@ The agents are powered by **Microsoft Agent Framework** running on **Azure AI Fo
 
 - Python 3.8 or higher
 - Azure subscription with Azure AI Foundry access
-- Microsoft Fabric workspace (for data collection)
+- Azure Blob Storage account with bird detection data files
 
 ### Setup Steps
 
@@ -57,8 +57,9 @@ Required environment variables:
 - `AZURE_AI_PROJECT_CONNECTION_STRING` - Your Azure AI Foundry project connection string
 - `AZURE_AI_PROJECT_NAME` - Your Azure AI Foundry project name
 - `AZURE_AI_DEPLOYMENT_NAME` - Your model deployment name
-- `FABRIC_WORKSPACE` - Microsoft Fabric workspace
-- `FABRIC_TOKEN` - Fabric authentication token
+- `AZURE_STORAGE_CONNECTION_STRING` - Azure Storage connection string for blob storage
+- `AZURE_STORAGE_ACCOUNT_NAME` - Azure Storage account name
+- `BLOB_CONTAINER_NAME` - Blob container name (default: bird-detection-data)
 - `OPENAI_API_KEY` or `AZURE_OPENAI_API_KEY` - API key for image generation (optional)
 
 4. Update configuration (optional):
@@ -80,11 +81,16 @@ Generate a blog post for a specific date:
 python main.py --date 2024-01-15
 ```
 
+Generate blog posts for all data files in blob storage:
+```bash
+python main.py --all-files
+```
+
 ### Advanced Options
 
 ```bash
 python main.py \
-  --date 2024-01-15 \
+  --all-files \
   --config config/custom_config.yaml \
   --output-dir content/posts \
   --verbose
@@ -103,7 +109,7 @@ python examples/demo.py
 
 The configuration file controls all aspects of the agent system:
 
-- **Researcher**: Data collection settings, Fabric connection
+- **Researcher**: Data collection settings, Azure Blob Storage connection
 - **CopyWriter**: Writing style, tone, word count targets
 - **Artist**: Image generation settings, cartoon style preferences
 - **Publisher**: Hugo settings, output paths, metadata
@@ -119,8 +125,9 @@ Required environment variables:
 - `AZURE_TENANT_ID` - Azure tenant ID
 - `AZURE_CLIENT_ID` - Azure client ID (for service principal auth)
 - `AZURE_CLIENT_SECRET` - Azure client secret (for service principal auth)
-- `FABRIC_WORKSPACE` - Microsoft Fabric workspace
-- `FABRIC_TOKEN` - Fabric authentication token
+- `AZURE_STORAGE_CONNECTION_STRING` - Azure Storage connection string for blob storage
+- `AZURE_STORAGE_ACCOUNT_NAME` - Azure Storage account name
+- `BLOB_CONTAINER_NAME` - Blob container name (default: bird-detection-data)
 - `OPENAI_API_KEY` - OpenAI API key for image generation (optional)
 - `AZURE_OPENAI_API_KEY` - Azure OpenAI API key (alternative to OPENAI_API_KEY)
 - `AZURE_OPENAI_ENDPOINT` - Azure OpenAI endpoint (when using Azure OpenAI)
@@ -136,7 +143,8 @@ Required environment variables:
 - Tracks workflow history
 
 **Researcher Agent** (`src/agents/researcher.py`)
-- Queries Microsoft Fabric for bird detection data
+- Retrieves bird detection data from Azure Blob Storage
+- Supports multiple data file formats (JSON, CSV)
 - Analyzes patterns and trends
 - Generates research summaries
 - Identifies notable events
@@ -165,7 +173,7 @@ All agents inherit from `BaseAgent` which provides common functionality for Micr
 
 - **Framework**: Microsoft Agent Framework
 - **Platform**: Azure AI Foundry
-- **Data Source**: Microsoft Fabric
+- **Data Source**: Azure Blob Storage
 - **Output**: Hugo static site generator
 - **Language**: Python 3.8+
 
@@ -255,9 +263,41 @@ class CustomAgent(BaseAgent):
 
 ### Extending Functionality
 
-- **Data Sources**: Modify `researcher.py` to add new data sources
+- **Data Sources**: Modify `researcher.py` to add new data sources or change blob storage patterns
 - **Content Styles**: Update `copywriter.py` for different writing styles
 - **Output Formats**: Extend `publisher.py` for additional formats
+
+### Data File Formats
+
+The Researcher agent supports the following data file formats in blob storage:
+
+**JSON Format:**
+```json
+{
+  "date": "2024-01-15",
+  "total_detections": 42,
+  "species": ["Cardinal", "Blue Jay", "Sparrow"],
+  "detections": [
+    {
+      "species": "Cardinal",
+      "time": "08:30:00",
+      "confidence": 0.95
+    }
+  ],
+  "notable_events": ["First Cardinal sighting of the day"],
+  "environmental_conditions": {
+    "temperature": "45F",
+    "weather": "sunny"
+  }
+}
+```
+
+**CSV Format:**
+```csv
+species,time,confidence
+Cardinal,08:30:00,0.95
+Blue Jay,09:15:00,0.92
+```
 
 ## Contributing
 
