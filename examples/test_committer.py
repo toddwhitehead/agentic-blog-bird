@@ -26,9 +26,13 @@ from agents.committer import CommitterAgent
 
 def create_test_markdown_file():
     """Create a test Hugo markdown file."""
+    # Hugo expects RFC3339 format for dates
+    now = datetime.now()
+    hugo_date = now.strftime('%Y-%m-%dT%H:%M:%S-00:00')  # Using UTC offset
+    
     content = f"""---
 title: "Test Blog Post"
-date: {datetime.now().isoformat()}
+date: {hugo_date}
 draft: false
 author: "Backyard Bird AI"
 description: "A test blog post for CommitterAgent"
@@ -46,7 +50,7 @@ This is a test blog post created to demonstrate the CommitterAgent functionality
 - Azure DevOps integration
 - Hugo markdown support
 
-Generated at: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}
+Generated at: {now.strftime("%Y-%m-%d %H:%M:%S")}
 """
     
     # Create temporary file

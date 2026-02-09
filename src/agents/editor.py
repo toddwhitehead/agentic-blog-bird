@@ -488,7 +488,6 @@ meets publication standards.
         
         # Create commit message
         headline = blog_post.get('headline', 'Untitled Post')
-        filename = os.path.basename(published_path)
         commit_message = f"Add blog post: {headline}"
         
         # Commit the file

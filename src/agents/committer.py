@@ -322,15 +322,20 @@ committed to the Azure DevOps repository for CI/CD pipeline processing.
                 result["success"] = True
                 result["message"] = process.stdout
                 
-                # Extract commit SHA if available
-                if "commit" in process.stdout.lower():
-                    lines = process.stdout.split('\n')
-                    for line in lines:
-                        if '[' in line and ']' in line:
-                            # Extract SHA from output like "[main abc1234]"
-                            parts = line.split(']')[0].split()
-                            if len(parts) > 1:
-                                result["commit_sha"] = parts[-1]
+                # Get commit SHA using rev-parse for reliability
+                try:
+                    sha_process = subprocess.run(
+                        ["git", "rev-parse", "HEAD"],
+                        cwd=repo_dir,
+                        capture_output=True,
+                        text=True,
+                        timeout=10
+                    )
+                    if sha_process.returncode == 0:
+                        result["commit_sha"] = sha_process.stdout.strip()
+                except Exception:
+                    # If we can't get the SHA, it's not critical
+                    pass
             else:
                 result["error"] = process.stderr or process.stdout
                 result["message"] = process.stdout
