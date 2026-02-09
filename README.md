@@ -11,6 +11,7 @@ This system uses a team of specialized AI agents working together to produce hig
 3. **CopyWriter Agent** - Creates engaging narratives from the data
 4. **Artist Agent** - Generates original cartoon-style images for blog posts
 5. **Publisher Agent** - Formats content for Hugo-based static sites
+6. **Committer Agent** - Commits Hugo markdown files to Azure DevOps Git repository
 
 The agents are powered by **Microsoft Agent Framework** running on **Azure AI Foundry**, providing robust orchestration and AI capabilities.
 
@@ -61,6 +62,7 @@ Required environment variables:
 - `AZURE_STORAGE_ACCOUNT_NAME` - Azure Storage account name
 - `BLOB_CONTAINER_NAME` - Blob container name (default: bird-detection-data)
 - `OPENAI_API_KEY` or `AZURE_OPENAI_API_KEY` - API key for image generation (optional)
+- `AZURE_DEVOPS_PAT` - Personal Access Token for Azure DevOps Git (optional)
 
 4. Update configuration (optional):
 ```bash
@@ -131,6 +133,7 @@ Required environment variables:
 - `OPENAI_API_KEY` - OpenAI API key for image generation (optional)
 - `AZURE_OPENAI_API_KEY` - Azure OpenAI API key (alternative to OPENAI_API_KEY)
 - `AZURE_OPENAI_ENDPOINT` - Azure OpenAI endpoint (when using Azure OpenAI)
+- `AZURE_DEVOPS_PAT` - Personal Access Token for Azure DevOps Git (optional, for Committer agent)
 
 ## Architecture
 
@@ -167,6 +170,12 @@ Required environment variables:
 - Creates SEO-friendly URLs
 - Validates output format
 
+**Committer Agent** (`src/agents/committer.py`)
+- Commits Hugo markdown files to Azure DevOps Git
+- Handles authentication with Personal Access Token
+- Manages git operations (clone, add, commit, push)
+- Organizes files in repository structure
+
 All agents inherit from `BaseAgent` which provides common functionality for Microsoft Agent Framework integration.
 
 ### Technology Stack
@@ -185,15 +194,15 @@ All agents inherit from `BaseAgent` which provides common functionality for Micr
 │         (Orchestrates Workflow)                 │
 └─────────────────────────────────────────────────┘
                       │
-      ┌───────────────┼───────────────┬──────────┐
-      ▼               ▼               ▼          ▼
-┌──────────┐   ┌──────────┐   ┌──────────┐ ┌──────────┐
-│Researcher│──▶│CopyWriter│──▶│  Artist  │─│Publisher │
-└──────────┘   └──────────┘   └──────────┘ └──────────┘
-     │              │              │             │
-     ▼              ▼              ▼             ▼
-  Data          Content        Cartoon         Hugo
-Collection     Generation      Images          Output
+      ┌───────────────┼───────────────┬──────────┬──────────┐
+      ▼               ▼               ▼          ▼          ▼
+┌──────────┐   ┌──────────┐   ┌──────────┐ ┌──────────┐ ┌──────────┐
+│Researcher│──▶│CopyWriter│──▶│  Artist  │─│Publisher │─│Committer │
+└──────────┘   └──────────┘   └──────────┘ └──────────┘ └──────────┘
+     │              │              │             │             │
+     ▼              ▼              ▼             ▼             ▼
+  Data          Content        Cartoon         Hugo      Azure DevOps
+Collection     Generation      Images          Output      Git Repo
 ```
 
 ## Output Format

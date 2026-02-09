@@ -38,9 +38,16 @@ Agentic Blog Bird is a multi-agent system designed to automatically generate blo
         │                    │            │    Agent     │
         │                    │            │ (BaseAgent)  │
         │                    │            └──────────────┘
+        │                    │                    │
+        │                    │                    ▼
+        │                    │            ┌──────────────┐
+        │                    │            │  Committer   │
+        │                    │            │    Agent     │
+        │                    │            │ (BaseAgent)  │
+        │                    │            └──────────────┘
         ▼                    ▼                    ▼
-  Data Query         Content Creation      Hugo Output
-  & Analysis         & Narrative          & Images
+  Data Query         Content Creation      Azure DevOps
+  & Analysis         & Narrative          Git Repository
 ```
 
 ## Agent Specifications
@@ -176,6 +183,37 @@ Agentic Blog Bird is a multi-agent system designed to automatically generate blo
 - `publish_post(post_data: Dict)` - Write formatted post to file
 - `validate_hugo_format(filepath: str)` - Validate output
 
+### 6. Committer Agent
+
+**Location**: `src/agents/committer.py`
+
+**Purpose**: Commit Hugo markdown files to an Azure DevOps Git repository.
+
+**Inherits**: `BaseAgent`
+
+**Responsibilities**:
+- Clone Azure DevOps Git repositories
+- Commit Hugo markdown files to the repository
+- Handle authentication with Personal Access Token
+- Push changes to remote repository
+- Manage git operations (clone, add, commit, push)
+- Organize files in repository directory structure
+
+**Key Methods**:
+- `commit_post(markdown_path: str, commit_message: str)` - Commit markdown file to repo
+- `validate_configuration()` - Validate committer settings
+- `_clone_repository(target_dir: str)` - Clone the Azure DevOps repo
+- `_copy_file_to_repo(source_path: str, repo_dir: str)` - Copy file to repo
+- `_git_add(repo_dir: str, file_path: str)` - Add file to git staging
+- `_git_commit(repo_dir: str, message: str)` - Commit staged changes
+- `_git_push(repo_dir: str)` - Push commits to remote
+- `_get_authenticated_url()` - Get repository URL with PAT authentication
+
+**Authentication**:
+- Uses Personal Access Token (PAT) from `AZURE_DEVOPS_PAT` environment variable
+- Embeds PAT in repository URL for authentication
+- Configures git author name and email for commits
+
 ## Workflow Sequence
 
 1. **Research Phase** - Researcher collects data from Microsoft Fabric
@@ -185,6 +223,7 @@ Agentic Blog Bird is a multi-agent system designed to automatically generate blo
 5. **Image Generation** - Artist creates cartoon-style featured image
 6. **Publishing** - Publisher formats and saves Hugo markdown with image
 7. **Validation** - Editor validates final output format
+8. **Commit to Git** - Committer commits the Hugo markdown file to Azure DevOps Git repository
 
 ## Data Flow
 
@@ -196,6 +235,8 @@ Raw Data (Fabric) → Researcher → Research Summary
                                    Artist → Featured Image
                                        ↓
                                Publisher → Hugo Markdown File + Image
+                                       ↓
+                                Committer → Azure DevOps Git Repository
 ```
 
 ## Configuration System
