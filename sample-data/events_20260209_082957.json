@@ -1,0 +1,5002 @@
+[
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_f0855f10_20260209_182142",
+      "timestamp": "2026-02-09T18:21:42.428310+10:00",
+      "camera_id": "backyard_cam_01",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Sulphur-crested Cockatoo",
+        "common_name": "Sulphur-crested Cockatoo",
+        "scientific_name": "Cacatua galerita",
+        "confidence": 0.62,
+        "bounding_box": {
+          "x_min": 1461,
+          "y_min": 446,
+          "x_max": 1563,
+          "y_max": 602,
+          "width": 102,
+          "height": 156
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 31.2,
+        "humidity_percent": 49,
+        "light_level": "evening",
+        "weather": "partly_cloudy"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:21:48.421717+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_a374c3ac_20260209_182147",
+      "timestamp": "2026-02-09T18:21:47.429030+10:00",
+      "camera_id": "front_yard_cam_01",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Sulphur-crested Cockatoo",
+        "common_name": "Sulphur-crested Cockatoo",
+        "scientific_name": "Cacatua galerita",
+        "confidence": 0.69,
+        "bounding_box": {
+          "x_min": 900,
+          "y_min": 266,
+          "x_max": 1110,
+          "y_max": 411,
+          "width": 210,
+          "height": 145
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 33.8,
+        "humidity_percent": 79,
+        "light_level": "evening",
+        "weather": "clear"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:21:48.421975+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_962e9b33_20260209_182152",
+      "timestamp": "2026-02-09T18:21:52.429475+10:00",
+      "camera_id": "backyard_cam_01",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Sulphur-crested Cockatoo",
+        "common_name": "Sulphur-crested Cockatoo",
+        "scientific_name": "Cacatua galerita",
+        "confidence": 0.57,
+        "bounding_box": {
+          "x_min": 232,
+          "y_min": 82,
+          "x_max": 338,
+          "y_max": 172,
+          "width": 106,
+          "height": 90
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 27.9,
+        "humidity_percent": 76,
+        "light_level": "evening",
+        "weather": "partly_cloudy"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:21:52.430253+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_103a5ace_20260209_182157",
+      "timestamp": "2026-02-09T18:21:57.430164+10:00",
+      "camera_id": "backyard_cam_02",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Masked Lapwing",
+        "common_name": "Masked Lapwing",
+        "scientific_name": "Vanellus miles",
+        "confidence": 0.68,
+        "bounding_box": {
+          "x_min": 897,
+          "y_min": 495,
+          "x_max": 998,
+          "y_max": 601,
+          "width": 101,
+          "height": 106
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 31.7,
+        "humidity_percent": 46,
+        "light_level": "evening",
+        "weather": "partly_cloudy"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:21:57.431187+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_ff465736_20260209_182202",
+      "timestamp": "2026-02-09T18:22:02.430813+10:00",
+      "camera_id": "backyard_cam_02",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Masked Lapwing",
+        "common_name": "Masked Lapwing",
+        "scientific_name": "Vanellus miles",
+        "confidence": 0.72,
+        "bounding_box": {
+          "x_min": 814,
+          "y_min": 544,
+          "x_max": 982,
+          "y_max": 732,
+          "width": 168,
+          "height": 188
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 25.4,
+        "humidity_percent": 82,
+        "light_level": "evening",
+        "weather": "partly_cloudy"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:22:02.431804+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_31f624b9_20260209_182207",
+      "timestamp": "2026-02-09T18:22:07.431560+10:00",
+      "camera_id": "backyard_cam_01",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Noisy Miner",
+        "common_name": "Noisy Miner",
+        "scientific_name": "Manorina melanocephala",
+        "confidence": 0.42,
+        "bounding_box": {
+          "x_min": 1258,
+          "y_min": 779,
+          "x_max": 1458,
+          "y_max": 859,
+          "width": 200,
+          "height": 80
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 29.2,
+        "humidity_percent": 80,
+        "light_level": "evening",
+        "weather": "clear"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:22:07.433201+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_e061a7a8_20260209_182212",
+      "timestamp": "2026-02-09T18:22:12.430467+10:00",
+      "camera_id": "backyard_cam_01",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Sulphur-crested Cockatoo",
+        "common_name": "Sulphur-crested Cockatoo",
+        "scientific_name": "Cacatua galerita",
+        "confidence": 0.66,
+        "bounding_box": {
+          "x_min": 885,
+          "y_min": 828,
+          "x_max": 1043,
+          "y_max": 897,
+          "width": 158,
+          "height": 69
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 19.6,
+        "humidity_percent": 80,
+        "light_level": "evening",
+        "weather": "clear"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:22:12.431329+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_47cea28b_20260209_182217",
+      "timestamp": "2026-02-09T18:22:17.431107+10:00",
+      "camera_id": "backyard_cam_02",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Sulphur-crested Cockatoo",
+        "common_name": "Sulphur-crested Cockatoo",
+        "scientific_name": "Cacatua galerita",
+        "confidence": 0.67,
+        "bounding_box": {
+          "x_min": 1150,
+          "y_min": 315,
+          "x_max": 1239,
+          "y_max": 397,
+          "width": 89,
+          "height": 82
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 26.7,
+        "humidity_percent": 59,
+        "light_level": "evening",
+        "weather": "clear"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:22:17.431632+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_384dcacb_20260209_182222",
+      "timestamp": "2026-02-09T18:22:22.431760+10:00",
+      "camera_id": "front_yard_cam_01",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Grey Butcherbird",
+        "common_name": "Grey Butcherbird",
+        "scientific_name": "Cracticus torquatus",
+        "confidence": 0.65,
+        "bounding_box": {
+          "x_min": 1240,
+          "y_min": 901,
+          "x_max": 1403,
+          "y_max": 1020,
+          "width": 163,
+          "height": 119
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 24.9,
+        "humidity_percent": 72,
+        "light_level": "evening",
+        "weather": "clear"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:22:22.432327+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_3b176bb6_20260209_182227",
+      "timestamp": "2026-02-09T18:22:27.432458+10:00",
+      "camera_id": "backyard_cam_02",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Sulphur-crested Cockatoo",
+        "common_name": "Sulphur-crested Cockatoo",
+        "scientific_name": "Cacatua galerita",
+        "confidence": 0.73,
+        "bounding_box": {
+          "x_min": 1452,
+          "y_min": 587,
+          "x_max": 1586,
+          "y_max": 774,
+          "width": 134,
+          "height": 187
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 30.9,
+        "humidity_percent": 73,
+        "light_level": "evening",
+        "weather": "clear"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:22:27.434505+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_fb8eb347_20260209_182232",
+      "timestamp": "2026-02-09T18:22:32.433863+10:00",
+      "camera_id": "backyard_cam_01",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Sulphur-crested Cockatoo",
+        "common_name": "Sulphur-crested Cockatoo",
+        "scientific_name": "Cacatua galerita",
+        "confidence": 0.62,
+        "bounding_box": {
+          "x_min": 616,
+          "y_min": 574,
+          "x_max": 780,
+          "y_max": 742,
+          "width": 164,
+          "height": 168
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 28.7,
+        "humidity_percent": 87,
+        "light_level": "evening",
+        "weather": "partly_cloudy"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:22:32.435609+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_bcf82504_20260209_182237",
+      "timestamp": "2026-02-09T18:22:37.434890+10:00",
+      "camera_id": "backyard_cam_01",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Grey Butcherbird",
+        "common_name": "Grey Butcherbird",
+        "scientific_name": "Cracticus torquatus",
+        "confidence": 0.66,
+        "bounding_box": {
+          "x_min": 239,
+          "y_min": 862,
+          "x_max": 345,
+          "y_max": 1011,
+          "width": 106,
+          "height": 149
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 21.4,
+        "humidity_percent": 79,
+        "light_level": "evening",
+        "weather": "overcast"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:22:37.435672+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_ef30bfe4_20260209_182242",
+      "timestamp": "2026-02-09T18:22:42.432828+10:00",
+      "camera_id": "front_yard_cam_01",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Noisy Miner",
+        "common_name": "Noisy Miner",
+        "scientific_name": "Manorina melanocephala",
+        "confidence": 0.39,
+        "bounding_box": {
+          "x_min": 653,
+          "y_min": 742,
+          "x_max": 838,
+          "y_max": 887,
+          "width": 185,
+          "height": 145
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 22.7,
+        "humidity_percent": 59,
+        "light_level": "evening",
+        "weather": "overcast"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:22:42.433527+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_b88d0a83_20260209_182247",
+      "timestamp": "2026-02-09T18:22:47.433488+10:00",
+      "camera_id": "backyard_cam_02",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Grey Butcherbird",
+        "common_name": "Grey Butcherbird",
+        "scientific_name": "Cracticus torquatus",
+        "confidence": 0.6,
+        "bounding_box": {
+          "x_min": 1573,
+          "y_min": 597,
+          "x_max": 1701,
+          "y_max": 753,
+          "width": 128,
+          "height": 156
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 22.5,
+        "humidity_percent": 49,
+        "light_level": "evening",
+        "weather": "clear"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:22:47.435343+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_5043ab83_20260209_182252",
+      "timestamp": "2026-02-09T18:22:52.434587+10:00",
+      "camera_id": "front_yard_cam_01",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Sulphur-crested Cockatoo",
+        "common_name": "Sulphur-crested Cockatoo",
+        "scientific_name": "Cacatua galerita",
+        "confidence": 0.74,
+        "bounding_box": {
+          "x_min": 1667,
+          "y_min": 770,
+          "x_max": 1883,
+          "y_max": 941,
+          "width": 216,
+          "height": 171
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 29.0,
+        "humidity_percent": 79,
+        "light_level": "evening",
+        "weather": "clear"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:22:52.436120+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_40184ea9_20260209_182257",
+      "timestamp": "2026-02-09T18:22:57.435463+10:00",
+      "camera_id": "backyard_cam_02",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Rainbow Lorikeet",
+        "common_name": "Rainbow Lorikeet",
+        "scientific_name": "Trichoglossus moluccanus",
+        "confidence": 0.52,
+        "bounding_box": {
+          "x_min": 963,
+          "y_min": 55,
+          "x_max": 1110,
+          "y_max": 157,
+          "width": 147,
+          "height": 102
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 24.4,
+        "humidity_percent": 85,
+        "light_level": "evening",
+        "weather": "overcast"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:22:57.436447+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_d1adafd1_20260209_182302",
+      "timestamp": "2026-02-09T18:23:02.436125+10:00",
+      "camera_id": "backyard_cam_02",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Sulphur-crested Cockatoo",
+        "common_name": "Sulphur-crested Cockatoo",
+        "scientific_name": "Cacatua galerita",
+        "confidence": 0.63,
+        "bounding_box": {
+          "x_min": 885,
+          "y_min": 577,
+          "x_max": 984,
+          "y_max": 709,
+          "width": 99,
+          "height": 132
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 27.7,
+        "humidity_percent": 82,
+        "light_level": "evening",
+        "weather": "clear"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:23:02.436780+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_3a8c2148_20260209_182307",
+      "timestamp": "2026-02-09T18:23:07.436694+10:00",
+      "camera_id": "front_yard_cam_01",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Rainbow Lorikeet",
+        "common_name": "Rainbow Lorikeet",
+        "scientific_name": "Trichoglossus moluccanus",
+        "confidence": 0.47,
+        "bounding_box": {
+          "x_min": 1259,
+          "y_min": 165,
+          "x_max": 1448,
+          "y_max": 364,
+          "width": 189,
+          "height": 199
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 29.9,
+        "humidity_percent": 71,
+        "light_level": "evening",
+        "weather": "clear"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:23:07.438008+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_45b7006c_20260209_182312",
+      "timestamp": "2026-02-09T18:23:12.436127+10:00",
+      "camera_id": "front_yard_cam_01",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Grey Butcherbird",
+        "common_name": "Grey Butcherbird",
+        "scientific_name": "Cracticus torquatus",
+        "confidence": 0.67,
+        "bounding_box": {
+          "x_min": 1677,
+          "y_min": 164,
+          "x_max": 1768,
+          "y_max": 303,
+          "width": 91,
+          "height": 139
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 26.2,
+        "humidity_percent": 76,
+        "light_level": "evening",
+        "weather": "light_rain"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:23:12.437091+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_571f5acb_20260209_182317",
+      "timestamp": "2026-02-09T18:23:17.436772+10:00",
+      "camera_id": "backyard_cam_02",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "White-throated Nightjar",
+        "common_name": "White-throated Nightjar",
+        "scientific_name": "Eurostopodus mystacalis",
+        "confidence": 0.49,
+        "bounding_box": {
+          "x_min": 261,
+          "y_min": 459,
+          "x_max": 437,
+          "y_max": 589,
+          "width": 176,
+          "height": 130
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 18.0,
+        "humidity_percent": 61,
+        "light_level": "evening",
+        "weather": "partly_cloudy"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:23:17.437461+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_6922ab6a_20260209_182322",
+      "timestamp": "2026-02-09T18:23:22.437268+10:00",
+      "camera_id": "front_yard_cam_01",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Sulphur-crested Cockatoo",
+        "common_name": "Sulphur-crested Cockatoo",
+        "scientific_name": "Cacatua galerita",
+        "confidence": 0.6,
+        "bounding_box": {
+          "x_min": 355,
+          "y_min": 42,
+          "x_max": 480,
+          "y_max": 180,
+          "width": 125,
+          "height": 138
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 23.8,
+        "humidity_percent": 89,
+        "light_level": "evening",
+        "weather": "clear"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:23:22.437770+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_a21d39f4_20260209_182327",
+      "timestamp": "2026-02-09T18:23:27.437693+10:00",
+      "camera_id": "front_yard_cam_01",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Noisy Miner",
+        "common_name": "Noisy Miner",
+        "scientific_name": "Manorina melanocephala",
+        "confidence": 0.34,
+        "bounding_box": {
+          "x_min": 828,
+          "y_min": 706,
+          "x_max": 928,
+          "y_max": 795,
+          "width": 100,
+          "height": 89
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 27.1,
+        "humidity_percent": 48,
+        "light_level": "evening",
+        "weather": "clear"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:23:27.438222+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_65fcfe1d_20260209_182332",
+      "timestamp": "2026-02-09T18:23:32.438116+10:00",
+      "camera_id": "backyard_cam_01",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Grey Butcherbird",
+        "common_name": "Grey Butcherbird",
+        "scientific_name": "Cracticus torquatus",
+        "confidence": 0.73,
+        "bounding_box": {
+          "x_min": 1513,
+          "y_min": 500,
+          "x_max": 1743,
+          "y_max": 674,
+          "width": 230,
+          "height": 174
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 32.9,
+        "humidity_percent": 88,
+        "light_level": "evening",
+        "weather": "partly_cloudy"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:23:32.438788+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_b4f8db32_20260209_182337",
+      "timestamp": "2026-02-09T18:23:37.438624+10:00",
+      "camera_id": "backyard_cam_01",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Grey Butcherbird",
+        "common_name": "Grey Butcherbird",
+        "scientific_name": "Cracticus torquatus",
+        "confidence": 0.42,
+        "bounding_box": {
+          "x_min": 525,
+          "y_min": 186,
+          "x_max": 628,
+          "y_max": 314,
+          "width": 103,
+          "height": 128
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 24.7,
+        "humidity_percent": 64,
+        "light_level": "evening",
+        "weather": "clear"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:23:37.439178+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_58498f7b_20260209_182342",
+      "timestamp": "2026-02-09T18:23:42.437822+10:00",
+      "camera_id": "backyard_cam_01",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Grey Butcherbird",
+        "common_name": "Grey Butcherbird",
+        "scientific_name": "Cracticus torquatus",
+        "confidence": 0.51,
+        "bounding_box": {
+          "x_min": 869,
+          "y_min": 994,
+          "x_max": 1112,
+          "y_max": 1068,
+          "width": 243,
+          "height": 74
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 23.5,
+        "humidity_percent": 81,
+        "light_level": "evening",
+        "weather": "clear"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:23:42.439710+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_0811b514_20260209_182347",
+      "timestamp": "2026-02-09T18:23:47.439373+10:00",
+      "camera_id": "backyard_cam_02",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "White-throated Nightjar",
+        "common_name": "White-throated Nightjar",
+        "scientific_name": "Eurostopodus mystacalis",
+        "confidence": 0.47,
+        "bounding_box": {
+          "x_min": 1794,
+          "y_min": 352,
+          "x_max": 1882,
+          "y_max": 488,
+          "width": 88,
+          "height": 136
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 19.4,
+        "humidity_percent": 46,
+        "light_level": "evening",
+        "weather": "clear"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:23:47.441111+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_8762d3e9_20260209_182352",
+      "timestamp": "2026-02-09T18:23:52.440741+10:00",
+      "camera_id": "backyard_cam_01",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Sulphur-crested Cockatoo",
+        "common_name": "Sulphur-crested Cockatoo",
+        "scientific_name": "Cacatua galerita",
+        "confidence": 0.69,
+        "bounding_box": {
+          "x_min": 1232,
+          "y_min": 444,
+          "x_max": 1335,
+          "y_max": 635,
+          "width": 103,
+          "height": 191
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 32.9,
+        "humidity_percent": 68,
+        "light_level": "evening",
+        "weather": "partly_cloudy"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:23:52.441452+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_4db6c542_20260209_182357",
+      "timestamp": "2026-02-09T18:23:57.441319+10:00",
+      "camera_id": "backyard_cam_01",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Rainbow Lorikeet",
+        "common_name": "Rainbow Lorikeet",
+        "scientific_name": "Trichoglossus moluccanus",
+        "confidence": 0.41,
+        "bounding_box": {
+          "x_min": 393,
+          "y_min": 709,
+          "x_max": 515,
+          "y_max": 856,
+          "width": 122,
+          "height": 147
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 30.3,
+        "humidity_percent": 73,
+        "light_level": "evening",
+        "weather": "overcast"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:23:57.441824+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_71caf4c8_20260209_182402",
+      "timestamp": "2026-02-09T18:24:02.441849+10:00",
+      "camera_id": "backyard_cam_01",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Sulphur-crested Cockatoo",
+        "common_name": "Sulphur-crested Cockatoo",
+        "scientific_name": "Cacatua galerita",
+        "confidence": 0.59,
+        "bounding_box": {
+          "x_min": 1182,
+          "y_min": 897,
+          "x_max": 1385,
+          "y_max": 1032,
+          "width": 203,
+          "height": 135
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 33.1,
+        "humidity_percent": 82,
+        "light_level": "evening",
+        "weather": "clear"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:24:02.442375+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_352fa68f_20260209_182407",
+      "timestamp": "2026-02-09T18:24:07.442390+10:00",
+      "camera_id": "backyard_cam_02",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "White-throated Nightjar",
+        "common_name": "White-throated Nightjar",
+        "scientific_name": "Eurostopodus mystacalis",
+        "confidence": 0.52,
+        "bounding_box": {
+          "x_min": 979,
+          "y_min": 621,
+          "x_max": 1200,
+          "y_max": 756,
+          "width": 221,
+          "height": 135
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 36.5,
+        "humidity_percent": 63,
+        "light_level": "evening",
+        "weather": "clear"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:24:07.443209+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_f3d1ad53_20260209_182412",
+      "timestamp": "2026-02-09T18:24:12.440463+10:00",
+      "camera_id": "backyard_cam_02",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "White-throated Nightjar",
+        "common_name": "White-throated Nightjar",
+        "scientific_name": "Eurostopodus mystacalis",
+        "confidence": 0.5,
+        "bounding_box": {
+          "x_min": 1296,
+          "y_min": 620,
+          "x_max": 1537,
+          "y_max": 792,
+          "width": 241,
+          "height": 172
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 27.4,
+        "humidity_percent": 74,
+        "light_level": "evening",
+        "weather": "clear"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:24:12.441082+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_01f812fa_20260209_182417",
+      "timestamp": "2026-02-09T18:24:17.440902+10:00",
+      "camera_id": "backyard_cam_01",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Sulphur-crested Cockatoo",
+        "common_name": "Sulphur-crested Cockatoo",
+        "scientific_name": "Cacatua galerita",
+        "confidence": 0.63,
+        "bounding_box": {
+          "x_min": 1250,
+          "y_min": 301,
+          "x_max": 1458,
+          "y_max": 477,
+          "width": 208,
+          "height": 176
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 27.7,
+        "humidity_percent": 65,
+        "light_level": "evening",
+        "weather": "overcast"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:24:17.441430+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_71e342ad_20260209_182422",
+      "timestamp": "2026-02-09T18:24:22.441361+10:00",
+      "camera_id": "backyard_cam_02",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Grey Butcherbird",
+        "common_name": "Grey Butcherbird",
+        "scientific_name": "Cracticus torquatus",
+        "confidence": 0.55,
+        "bounding_box": {
+          "x_min": 1646,
+          "y_min": 433,
+          "x_max": 1733,
+          "y_max": 551,
+          "width": 87,
+          "height": 118
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 30.5,
+        "humidity_percent": 68,
+        "light_level": "evening",
+        "weather": "partly_cloudy"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:24:22.441873+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_0c0006bb_20260209_182427",
+      "timestamp": "2026-02-09T18:24:27.441813+10:00",
+      "camera_id": "backyard_cam_01",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Sulphur-crested Cockatoo",
+        "common_name": "Sulphur-crested Cockatoo",
+        "scientific_name": "Cacatua galerita",
+        "confidence": 0.68,
+        "bounding_box": {
+          "x_min": 1270,
+          "y_min": 648,
+          "x_max": 1431,
+          "y_max": 827,
+          "width": 161,
+          "height": 179
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 29.7,
+        "humidity_percent": 59,
+        "light_level": "evening",
+        "weather": "partly_cloudy"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:24:27.442326+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_dc52e5d2_20260209_182432",
+      "timestamp": "2026-02-09T18:24:32.442289+10:00",
+      "camera_id": "backyard_cam_02",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Australian Magpie",
+        "common_name": "Australian Magpie",
+        "scientific_name": "Gymnorhina tibicen",
+        "confidence": 0.76,
+        "bounding_box": {
+          "x_min": 802,
+          "y_min": 46,
+          "x_max": 950,
+          "y_max": 141,
+          "width": 148,
+          "height": 95
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 23.6,
+        "humidity_percent": 71,
+        "light_level": "evening",
+        "weather": "clear"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:24:32.442804+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_20bcbb98_20260209_182437",
+      "timestamp": "2026-02-09T18:24:37.442770+10:00",
+      "camera_id": "front_yard_cam_01",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Sulphur-crested Cockatoo",
+        "common_name": "Sulphur-crested Cockatoo",
+        "scientific_name": "Cacatua galerita",
+        "confidence": 0.66,
+        "bounding_box": {
+          "x_min": 959,
+          "y_min": 222,
+          "x_max": 1203,
+          "y_max": 334,
+          "width": 244,
+          "height": 112
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 24.0,
+        "humidity_percent": 50,
+        "light_level": "evening",
+        "weather": "clear"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:24:37.443562+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_9eafe6d0_20260209_182442",
+      "timestamp": "2026-02-09T18:24:42.441800+10:00",
+      "camera_id": "front_yard_cam_01",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Noisy Miner",
+        "common_name": "Noisy Miner",
+        "scientific_name": "Manorina melanocephala",
+        "confidence": 0.5,
+        "bounding_box": {
+          "x_min": 227,
+          "y_min": 860,
+          "x_max": 388,
+          "y_max": 934,
+          "width": 161,
+          "height": 74
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 26.6,
+        "humidity_percent": 71,
+        "light_level": "evening",
+        "weather": "clear"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:24:42.443247+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_fcc404b9_20260209_182447",
+      "timestamp": "2026-02-09T18:24:47.442702+10:00",
+      "camera_id": "front_yard_cam_01",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Eurasian Coot",
+        "common_name": "Eurasian Coot",
+        "scientific_name": "Fulica atra",
+        "confidence": 0.42,
+        "bounding_box": {
+          "x_min": 818,
+          "y_min": 306,
+          "x_max": 1049,
+          "y_max": 485,
+          "width": 231,
+          "height": 179
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 24.4,
+        "humidity_percent": 48,
+        "light_level": "evening",
+        "weather": "partly_cloudy"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:24:47.443216+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_b0ef3fee_20260209_182452",
+      "timestamp": "2026-02-09T18:24:52.443196+10:00",
+      "camera_id": "backyard_cam_02",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Sulphur-crested Cockatoo",
+        "common_name": "Sulphur-crested Cockatoo",
+        "scientific_name": "Cacatua galerita",
+        "confidence": 0.5,
+        "bounding_box": {
+          "x_min": 1667,
+          "y_min": 291,
+          "x_max": 1864,
+          "y_max": 408,
+          "width": 197,
+          "height": 117
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 22.6,
+        "humidity_percent": 89,
+        "light_level": "evening",
+        "weather": "partly_cloudy"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:24:52.444007+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_dc59897f_20260209_182457",
+      "timestamp": "2026-02-09T18:24:57.443894+10:00",
+      "camera_id": "front_yard_cam_01",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Sulphur-crested Cockatoo",
+        "common_name": "Sulphur-crested Cockatoo",
+        "scientific_name": "Cacatua galerita",
+        "confidence": 0.47,
+        "bounding_box": {
+          "x_min": 955,
+          "y_min": 941,
+          "x_max": 1058,
+          "y_max": 1060,
+          "width": 103,
+          "height": 119
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 24.4,
+        "humidity_percent": 81,
+        "light_level": "evening",
+        "weather": "clear"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:24:57.445305+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_a8bd68d6_20260209_182502",
+      "timestamp": "2026-02-09T18:25:02.444769+10:00",
+      "camera_id": "backyard_cam_02",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Australasian Figbird",
+        "common_name": "Australasian Figbird",
+        "scientific_name": "Sphecotheres vieilloti",
+        "confidence": 0.66,
+        "bounding_box": {
+          "x_min": 1222,
+          "y_min": 113,
+          "x_max": 1360,
+          "y_max": 268,
+          "width": 138,
+          "height": 155
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 24.2,
+        "humidity_percent": 56,
+        "light_level": "evening",
+        "weather": "clear"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:25:02.445446+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_5883d990_20260209_182507",
+      "timestamp": "2026-02-09T18:25:07.445423+10:00",
+      "camera_id": "backyard_cam_02",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Grey Butcherbird",
+        "common_name": "Grey Butcherbird",
+        "scientific_name": "Cracticus torquatus",
+        "confidence": 0.74,
+        "bounding_box": {
+          "x_min": 1733,
+          "y_min": 485,
+          "x_max": 1830,
+          "y_max": 665,
+          "width": 97,
+          "height": 180
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 24.2,
+        "humidity_percent": 50,
+        "light_level": "evening",
+        "weather": "overcast"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:25:07.445958+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_dde02899_20260209_182512",
+      "timestamp": "2026-02-09T18:25:12.443831+10:00",
+      "camera_id": "backyard_cam_01",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Sulphur-crested Cockatoo",
+        "common_name": "Sulphur-crested Cockatoo",
+        "scientific_name": "Cacatua galerita",
+        "confidence": 0.76,
+        "bounding_box": {
+          "x_min": 992,
+          "y_min": 677,
+          "x_max": 1084,
+          "y_max": 785,
+          "width": 92,
+          "height": 108
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 30.3,
+        "humidity_percent": 77,
+        "light_level": "evening",
+        "weather": "partly_cloudy"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:25:12.444942+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_01d3c405_20260209_182517",
+      "timestamp": "2026-02-09T18:25:17.444528+10:00",
+      "camera_id": "backyard_cam_01",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Grey Butcherbird",
+        "common_name": "Grey Butcherbird",
+        "scientific_name": "Cracticus torquatus",
+        "confidence": 0.66,
+        "bounding_box": {
+          "x_min": 246,
+          "y_min": 225,
+          "x_max": 395,
+          "y_max": 288,
+          "width": 149,
+          "height": 63
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 22.5,
+        "humidity_percent": 86,
+        "light_level": "evening",
+        "weather": "clear"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:25:17.445243+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_b8a00e52_20260209_182522",
+      "timestamp": "2026-02-09T18:25:22.445225+10:00",
+      "camera_id": "backyard_cam_01",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "White-throated Nightjar",
+        "common_name": "White-throated Nightjar",
+        "scientific_name": "Eurostopodus mystacalis",
+        "confidence": 0.58,
+        "bounding_box": {
+          "x_min": 491,
+          "y_min": 511,
+          "x_max": 578,
+          "y_max": 633,
+          "width": 87,
+          "height": 122
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 26.9,
+        "humidity_percent": 75,
+        "light_level": "evening",
+        "weather": "overcast"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:25:22.446536+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_73256237_20260209_182527",
+      "timestamp": "2026-02-09T18:25:27.446045+10:00",
+      "camera_id": "backyard_cam_01",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Grey Butcherbird",
+        "common_name": "Grey Butcherbird",
+        "scientific_name": "Cracticus torquatus",
+        "confidence": 0.71,
+        "bounding_box": {
+          "x_min": 954,
+          "y_min": 477,
+          "x_max": 1141,
+          "y_max": 674,
+          "width": 187,
+          "height": 197
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 22.2,
+        "humidity_percent": 57,
+        "light_level": "evening",
+        "weather": "partly_cloudy"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:25:27.446925+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_0a12766e_20260209_182532",
+      "timestamp": "2026-02-09T18:25:32.446834+10:00",
+      "camera_id": "front_yard_cam_01",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Pied Currawong",
+        "common_name": "Pied Currawong",
+        "scientific_name": "Strepera graculina",
+        "confidence": 0.55,
+        "bounding_box": {
+          "x_min": 1704,
+          "y_min": 455,
+          "x_max": 1848,
+          "y_max": 649,
+          "width": 144,
+          "height": 194
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 30.9,
+        "humidity_percent": 55,
+        "light_level": "evening",
+        "weather": "partly_cloudy"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:25:32.448061+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_1ed44ef5_20260209_182537",
+      "timestamp": "2026-02-09T18:25:37.447626+10:00",
+      "camera_id": "front_yard_cam_01",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Grey Butcherbird",
+        "common_name": "Grey Butcherbird",
+        "scientific_name": "Cracticus torquatus",
+        "confidence": 0.58,
+        "bounding_box": {
+          "x_min": 892,
+          "y_min": 735,
+          "x_max": 1081,
+          "y_max": 868,
+          "width": 189,
+          "height": 133
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 20.9,
+        "humidity_percent": 85,
+        "light_level": "evening",
+        "weather": "overcast"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:25:37.448130+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_61034ed3_20260209_182542",
+      "timestamp": "2026-02-09T18:25:42.446657+10:00",
+      "camera_id": "front_yard_cam_01",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Sulphur-crested Cockatoo",
+        "common_name": "Sulphur-crested Cockatoo",
+        "scientific_name": "Cacatua galerita",
+        "confidence": 0.53,
+        "bounding_box": {
+          "x_min": 1667,
+          "y_min": 399,
+          "x_max": 1771,
+          "y_max": 505,
+          "width": 104,
+          "height": 106
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 23.3,
+        "humidity_percent": 85,
+        "light_level": "evening",
+        "weather": "clear"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:25:42.448050+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_aa7630f8_20260209_182547",
+      "timestamp": "2026-02-09T18:25:47.447632+10:00",
+      "camera_id": "front_yard_cam_01",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "White-throated Nightjar",
+        "common_name": "White-throated Nightjar",
+        "scientific_name": "Eurostopodus mystacalis",
+        "confidence": 0.44,
+        "bounding_box": {
+          "x_min": 1675,
+          "y_min": 338,
+          "x_max": 1761,
+          "y_max": 460,
+          "width": 86,
+          "height": 122
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 21.3,
+        "humidity_percent": 69,
+        "light_level": "evening",
+        "weather": "overcast"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:25:47.448236+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_7b60bfb4_20260209_182552",
+      "timestamp": "2026-02-09T18:25:52.448391+10:00",
+      "camera_id": "backyard_cam_02",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Sulphur-crested Cockatoo",
+        "common_name": "Sulphur-crested Cockatoo",
+        "scientific_name": "Cacatua galerita",
+        "confidence": 0.63,
+        "bounding_box": {
+          "x_min": 818,
+          "y_min": 499,
+          "x_max": 1065,
+          "y_max": 656,
+          "width": 247,
+          "height": 157
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 29.5,
+        "humidity_percent": 67,
+        "light_level": "evening",
+        "weather": "clear"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:25:52.449899+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_7e775f10_20260209_182557",
+      "timestamp": "2026-02-09T18:25:57.449419+10:00",
+      "camera_id": "backyard_cam_01",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Noisy Miner",
+        "common_name": "Noisy Miner",
+        "scientific_name": "Manorina melanocephala",
+        "confidence": 0.47,
+        "bounding_box": {
+          "x_min": 1561,
+          "y_min": 414,
+          "x_max": 1776,
+          "y_max": 584,
+          "width": 215,
+          "height": 170
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 28.4,
+        "humidity_percent": 69,
+        "light_level": "evening",
+        "weather": "clear"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:25:57.451017+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_b30a8227_20260209_182602",
+      "timestamp": "2026-02-09T18:26:02.450658+10:00",
+      "camera_id": "backyard_cam_02",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Pacific Koel",
+        "common_name": "Pacific Koel",
+        "scientific_name": "Eudynamys orientalis",
+        "confidence": 0.7,
+        "bounding_box": {
+          "x_min": 588,
+          "y_min": 143,
+          "x_max": 818,
+          "y_max": 313,
+          "width": 230,
+          "height": 170
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 30.5,
+        "humidity_percent": 88,
+        "light_level": "evening",
+        "weather": "partly_cloudy"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:26:02.452213+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_356f9bdc_20260209_182607",
+      "timestamp": "2026-02-09T18:26:07.451637+10:00",
+      "camera_id": "backyard_cam_01",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "White-throated Nightjar",
+        "common_name": "White-throated Nightjar",
+        "scientific_name": "Eurostopodus mystacalis",
+        "confidence": 0.42,
+        "bounding_box": {
+          "x_min": 1308,
+          "y_min": 913,
+          "x_max": 1388,
+          "y_max": 980,
+          "width": 80,
+          "height": 67
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 23.5,
+        "humidity_percent": 68,
+        "light_level": "evening",
+        "weather": "clear"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:26:07.452609+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_66d6941b_20260209_182612",
+      "timestamp": "2026-02-09T18:26:12.450290+10:00",
+      "camera_id": "backyard_cam_02",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Spotted Pardalote",
+        "common_name": "Spotted Pardalote",
+        "scientific_name": "Pardalotus punctatus",
+        "confidence": 0.8,
+        "bounding_box": {
+          "x_min": 127,
+          "y_min": 42,
+          "x_max": 291,
+          "y_max": 200,
+          "width": 164,
+          "height": 158
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 19.6,
+        "humidity_percent": 69,
+        "light_level": "evening",
+        "weather": "partly_cloudy"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:26:12.451488+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_47dfda8d_20260209_182617",
+      "timestamp": "2026-02-09T18:26:17.451140+10:00",
+      "camera_id": "backyard_cam_02",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Sulphur-crested Cockatoo",
+        "common_name": "Sulphur-crested Cockatoo",
+        "scientific_name": "Cacatua galerita",
+        "confidence": 0.61,
+        "bounding_box": {
+          "x_min": 719,
+          "y_min": 634,
+          "x_max": 950,
+          "y_max": 770,
+          "width": 231,
+          "height": 136
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 29.5,
+        "humidity_percent": 75,
+        "light_level": "evening",
+        "weather": "partly_cloudy"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:26:17.453067+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_082fb770_20260209_182622",
+      "timestamp": "2026-02-09T18:26:22.452348+10:00",
+      "camera_id": "backyard_cam_02",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Grey Butcherbird",
+        "common_name": "Grey Butcherbird",
+        "scientific_name": "Cracticus torquatus",
+        "confidence": 0.78,
+        "bounding_box": {
+          "x_min": 70,
+          "y_min": 314,
+          "x_max": 216,
+          "y_max": 497,
+          "width": 146,
+          "height": 183
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 28.2,
+        "humidity_percent": 63,
+        "light_level": "evening",
+        "weather": "clear"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:26:22.453013+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_d274f7e1_20260209_182627",
+      "timestamp": "2026-02-09T18:26:27.453037+10:00",
+      "camera_id": "backyard_cam_01",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Sulphur-crested Cockatoo",
+        "common_name": "Sulphur-crested Cockatoo",
+        "scientific_name": "Cacatua galerita",
+        "confidence": 0.75,
+        "bounding_box": {
+          "x_min": 324,
+          "y_min": 1011,
+          "x_max": 529,
+          "y_max": 1071,
+          "width": 205,
+          "height": 60
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 21.2,
+        "humidity_percent": 83,
+        "light_level": "evening",
+        "weather": "partly_cloudy"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:26:27.454593+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_2bba230b_20260209_182632",
+      "timestamp": "2026-02-09T18:26:32.454090+10:00",
+      "camera_id": "front_yard_cam_01",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Sulphur-crested Cockatoo",
+        "common_name": "Sulphur-crested Cockatoo",
+        "scientific_name": "Cacatua galerita",
+        "confidence": 0.53,
+        "bounding_box": {
+          "x_min": 1116,
+          "y_min": 699,
+          "x_max": 1261,
+          "y_max": 762,
+          "width": 145,
+          "height": 63
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 22.0,
+        "humidity_percent": 49,
+        "light_level": "evening",
+        "weather": "overcast"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:26:32.455254+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_735766c9_20260209_182637",
+      "timestamp": "2026-02-09T18:26:37.454831+10:00",
+      "camera_id": "front_yard_cam_01",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Sulphur-crested Cockatoo",
+        "common_name": "Sulphur-crested Cockatoo",
+        "scientific_name": "Cacatua galerita",
+        "confidence": 0.63,
+        "bounding_box": {
+          "x_min": 1046,
+          "y_min": 246,
+          "x_max": 1285,
+          "y_max": 435,
+          "width": 239,
+          "height": 189
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 29.4,
+        "humidity_percent": 58,
+        "light_level": "evening",
+        "weather": "clear"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:26:37.455315+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_c8a9f371_20260209_182642",
+      "timestamp": "2026-02-09T18:26:42.453777+10:00",
+      "camera_id": "backyard_cam_02",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Sulphur-crested Cockatoo",
+        "common_name": "Sulphur-crested Cockatoo",
+        "scientific_name": "Cacatua galerita",
+        "confidence": 0.51,
+        "bounding_box": {
+          "x_min": 1467,
+          "y_min": 361,
+          "x_max": 1646,
+          "y_max": 559,
+          "width": 179,
+          "height": 198
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 27.2,
+        "humidity_percent": 80,
+        "light_level": "evening",
+        "weather": "clear"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:26:42.454254+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_d8226bb9_20260209_182647",
+      "timestamp": "2026-02-09T18:26:47.454342+10:00",
+      "camera_id": "front_yard_cam_01",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Noisy Miner",
+        "common_name": "Noisy Miner",
+        "scientific_name": "Manorina melanocephala",
+        "confidence": 0.57,
+        "bounding_box": {
+          "x_min": 1146,
+          "y_min": 420,
+          "x_max": 1228,
+          "y_max": 552,
+          "width": 82,
+          "height": 132
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 33.6,
+        "humidity_percent": 76,
+        "light_level": "evening",
+        "weather": "overcast"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:26:47.454854+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_fabb0915_20260209_182652",
+      "timestamp": "2026-02-09T18:26:52.454979+10:00",
+      "camera_id": "backyard_cam_01",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Sulphur-crested Cockatoo",
+        "common_name": "Sulphur-crested Cockatoo",
+        "scientific_name": "Cacatua galerita",
+        "confidence": 0.66,
+        "bounding_box": {
+          "x_min": 433,
+          "y_min": 665,
+          "x_max": 600,
+          "y_max": 744,
+          "width": 167,
+          "height": 79
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 26.6,
+        "humidity_percent": 87,
+        "light_level": "evening",
+        "weather": "partly_cloudy"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:26:52.456674+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_d1b7f42b_20260209_182657",
+      "timestamp": "2026-02-09T18:26:57.456137+10:00",
+      "camera_id": "backyard_cam_02",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Grey Butcherbird",
+        "common_name": "Grey Butcherbird",
+        "scientific_name": "Cracticus torquatus",
+        "confidence": 0.65,
+        "bounding_box": {
+          "x_min": 38,
+          "y_min": 673,
+          "x_max": 154,
+          "y_max": 863,
+          "width": 116,
+          "height": 190
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 19.8,
+        "humidity_percent": 86,
+        "light_level": "evening",
+        "weather": "clear"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:26:57.457952+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_0981ebd4_20260209_182702",
+      "timestamp": "2026-02-09T18:27:02.457194+10:00",
+      "camera_id": "backyard_cam_02",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Noisy Miner",
+        "common_name": "Noisy Miner",
+        "scientific_name": "Manorina melanocephala",
+        "confidence": 0.47,
+        "bounding_box": {
+          "x_min": 278,
+          "y_min": 175,
+          "x_max": 367,
+          "y_max": 255,
+          "width": 89,
+          "height": 80
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 31.1,
+        "humidity_percent": 75,
+        "light_level": "evening",
+        "weather": "clear"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:27:02.458839+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_5e58aacc_20260209_182707",
+      "timestamp": "2026-02-09T18:27:07.458148+10:00",
+      "camera_id": "backyard_cam_02",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Rainbow Lorikeet",
+        "common_name": "Rainbow Lorikeet",
+        "scientific_name": "Trichoglossus moluccanus",
+        "confidence": 0.55,
+        "bounding_box": {
+          "x_min": 346,
+          "y_min": 582,
+          "x_max": 572,
+          "y_max": 709,
+          "width": 226,
+          "height": 127
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 25.3,
+        "humidity_percent": 64,
+        "light_level": "evening",
+        "weather": "partly_cloudy"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:27:07.459344+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_bf2af90a_20260209_182712",
+      "timestamp": "2026-02-09T18:27:12.455637+10:00",
+      "camera_id": "front_yard_cam_01",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Sulphur-crested Cockatoo",
+        "common_name": "Sulphur-crested Cockatoo",
+        "scientific_name": "Cacatua galerita",
+        "confidence": 0.72,
+        "bounding_box": {
+          "x_min": 227,
+          "y_min": 105,
+          "x_max": 412,
+          "y_max": 211,
+          "width": 185,
+          "height": 106
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 28.8,
+        "humidity_percent": 84,
+        "light_level": "evening",
+        "weather": "partly_cloudy"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:27:12.457098+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_bdfd27fb_20260209_182717",
+      "timestamp": "2026-02-09T18:27:17.456959+10:00",
+      "camera_id": "backyard_cam_02",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Noisy Miner",
+        "common_name": "Noisy Miner",
+        "scientific_name": "Manorina melanocephala",
+        "confidence": 0.5,
+        "bounding_box": {
+          "x_min": 1403,
+          "y_min": 398,
+          "x_max": 1537,
+          "y_max": 530,
+          "width": 134,
+          "height": 132
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 23.2,
+        "humidity_percent": 84,
+        "light_level": "evening",
+        "weather": "partly_cloudy"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:27:17.458256+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_8068c282_20260209_182722",
+      "timestamp": "2026-02-09T18:27:22.457710+10:00",
+      "camera_id": "backyard_cam_01",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Sulphur-crested Cockatoo",
+        "common_name": "Sulphur-crested Cockatoo",
+        "scientific_name": "Cacatua galerita",
+        "confidence": 0.62,
+        "bounding_box": {
+          "x_min": 266,
+          "y_min": 212,
+          "x_max": 414,
+          "y_max": 272,
+          "width": 148,
+          "height": 60
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 27.1,
+        "humidity_percent": 69,
+        "light_level": "evening",
+        "weather": "partly_cloudy"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:27:22.458210+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_9d66bada_20260209_182727",
+      "timestamp": "2026-02-09T18:27:27.458160+10:00",
+      "camera_id": "backyard_cam_02",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Sulphur-crested Cockatoo",
+        "common_name": "Sulphur-crested Cockatoo",
+        "scientific_name": "Cacatua galerita",
+        "confidence": 0.68,
+        "bounding_box": {
+          "x_min": 1264,
+          "y_min": 830,
+          "x_max": 1472,
+          "y_max": 902,
+          "width": 208,
+          "height": 72
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 24.7,
+        "humidity_percent": 70,
+        "light_level": "evening",
+        "weather": "clear"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:27:27.458900+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_10699253_20260209_182732",
+      "timestamp": "2026-02-09T18:27:32.458722+10:00",
+      "camera_id": "backyard_cam_01",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Sulphur-crested Cockatoo",
+        "common_name": "Sulphur-crested Cockatoo",
+        "scientific_name": "Cacatua galerita",
+        "confidence": 0.68,
+        "bounding_box": {
+          "x_min": 485,
+          "y_min": 829,
+          "x_max": 698,
+          "y_max": 1015,
+          "width": 213,
+          "height": 186
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 25.3,
+        "humidity_percent": 87,
+        "light_level": "evening",
+        "weather": "partly_cloudy"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:27:32.459358+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_5065cdde_20260209_182737",
+      "timestamp": "2026-02-09T18:27:37.459392+10:00",
+      "camera_id": "backyard_cam_02",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Noisy Miner",
+        "common_name": "Noisy Miner",
+        "scientific_name": "Manorina melanocephala",
+        "confidence": 0.55,
+        "bounding_box": {
+          "x_min": 1441,
+          "y_min": 721,
+          "x_max": 1632,
+          "y_max": 876,
+          "width": 191,
+          "height": 155
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 19.3,
+        "humidity_percent": 81,
+        "light_level": "evening",
+        "weather": "light_rain"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:27:37.461277+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_689ba8a2_20260209_182742",
+      "timestamp": "2026-02-09T18:27:42.460972+10:00",
+      "camera_id": "backyard_cam_02",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Sulphur-crested Cockatoo",
+        "common_name": "Sulphur-crested Cockatoo",
+        "scientific_name": "Cacatua galerita",
+        "confidence": 0.77,
+        "bounding_box": {
+          "x_min": 1166,
+          "y_min": 889,
+          "x_max": 1256,
+          "y_max": 1035,
+          "width": 90,
+          "height": 146
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 22.7,
+        "humidity_percent": 53,
+        "light_level": "evening",
+        "weather": "light_rain"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:27:42.462729+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_2b431664_20260209_182747",
+      "timestamp": "2026-02-09T18:27:47.461907+10:00",
+      "camera_id": "backyard_cam_01",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Brown Goshawk",
+        "common_name": "Brown Goshawk",
+        "scientific_name": "Accipiter fasciatus",
+        "confidence": 0.65,
+        "bounding_box": {
+          "x_min": 426,
+          "y_min": 930,
+          "x_max": 648,
+          "y_max": 995,
+          "width": 222,
+          "height": 65
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 25.1,
+        "humidity_percent": 81,
+        "light_level": "evening",
+        "weather": "partly_cloudy"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:27:47.462404+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_d9ac450a_20260209_182752",
+      "timestamp": "2026-02-09T18:27:52.462430+10:00",
+      "camera_id": "front_yard_cam_01",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Rainbow Lorikeet",
+        "common_name": "Rainbow Lorikeet",
+        "scientific_name": "Trichoglossus moluccanus",
+        "confidence": 0.54,
+        "bounding_box": {
+          "x_min": 1274,
+          "y_min": 724,
+          "x_max": 1504,
+          "y_max": 844,
+          "width": 230,
+          "height": 120
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 23.2,
+        "humidity_percent": 74,
+        "light_level": "evening",
+        "weather": "clear"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:27:52.464465+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_0eb7e73c_20260209_182757",
+      "timestamp": "2026-02-09T18:27:57.463435+10:00",
+      "camera_id": "backyard_cam_02",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Rainbow Lorikeet",
+        "common_name": "Rainbow Lorikeet",
+        "scientific_name": "Trichoglossus moluccanus",
+        "confidence": 0.51,
+        "bounding_box": {
+          "x_min": 1188,
+          "y_min": 168,
+          "x_max": 1408,
+          "y_max": 328,
+          "width": 220,
+          "height": 160
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 25.8,
+        "humidity_percent": 61,
+        "light_level": "evening",
+        "weather": "partly_cloudy"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:27:57.465586+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_eeba3245_20260209_182802",
+      "timestamp": "2026-02-09T18:28:02.464396+10:00",
+      "camera_id": "front_yard_cam_01",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Channel-billed Cuckoo",
+        "common_name": "Channel-billed Cuckoo",
+        "scientific_name": "Scythrops novaehollandiae",
+        "confidence": 0.44,
+        "bounding_box": {
+          "x_min": 297,
+          "y_min": 261,
+          "x_max": 387,
+          "y_max": 424,
+          "width": 90,
+          "height": 163
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 31.1,
+        "humidity_percent": 53,
+        "light_level": "evening",
+        "weather": "light_rain"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:28:02.465078+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_b5a5fc53_20260209_182807",
+      "timestamp": "2026-02-09T18:28:07.464840+10:00",
+      "camera_id": "backyard_cam_02",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Masked Lapwing",
+        "common_name": "Masked Lapwing",
+        "scientific_name": "Vanellus miles",
+        "confidence": 0.59,
+        "bounding_box": {
+          "x_min": 67,
+          "y_min": 844,
+          "x_max": 166,
+          "y_max": 1016,
+          "width": 99,
+          "height": 172
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 23.4,
+        "humidity_percent": 52,
+        "light_level": "evening",
+        "weather": "partly_cloudy"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:28:07.465608+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_1e605a3d_20260209_182812",
+      "timestamp": "2026-02-09T18:28:12.463548+10:00",
+      "camera_id": "backyard_cam_01",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Sulphur-crested Cockatoo",
+        "common_name": "Sulphur-crested Cockatoo",
+        "scientific_name": "Cacatua galerita",
+        "confidence": 0.66,
+        "bounding_box": {
+          "x_min": 422,
+          "y_min": 159,
+          "x_max": 603,
+          "y_max": 225,
+          "width": 181,
+          "height": 66
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 23.0,
+        "humidity_percent": 65,
+        "light_level": "evening",
+        "weather": "partly_cloudy"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:28:12.464127+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_b3c57879_20260209_182817",
+      "timestamp": "2026-02-09T18:28:17.464102+10:00",
+      "camera_id": "backyard_cam_01",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Grey Butcherbird",
+        "common_name": "Grey Butcherbird",
+        "scientific_name": "Cracticus torquatus",
+        "confidence": 0.57,
+        "bounding_box": {
+          "x_min": 1082,
+          "y_min": 432,
+          "x_max": 1178,
+          "y_max": 516,
+          "width": 96,
+          "height": 84
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 25.2,
+        "humidity_percent": 84,
+        "light_level": "evening",
+        "weather": "partly_cloudy"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:28:17.464931+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_5d881045_20260209_182822",
+      "timestamp": "2026-02-09T18:28:22.464809+10:00",
+      "camera_id": "backyard_cam_02",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Sulphur-crested Cockatoo",
+        "common_name": "Sulphur-crested Cockatoo",
+        "scientific_name": "Cacatua galerita",
+        "confidence": 0.56,
+        "bounding_box": {
+          "x_min": 1557,
+          "y_min": 416,
+          "x_max": 1726,
+          "y_max": 605,
+          "width": 169,
+          "height": 189
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 29.6,
+        "humidity_percent": 85,
+        "light_level": "evening",
+        "weather": "partly_cloudy"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:28:22.465355+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_2b992a0f_20260209_182827",
+      "timestamp": "2026-02-09T18:28:27.465240+10:00",
+      "camera_id": "backyard_cam_01",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Grey Butcherbird",
+        "common_name": "Grey Butcherbird",
+        "scientific_name": "Cracticus torquatus",
+        "confidence": 0.41,
+        "bounding_box": {
+          "x_min": 917,
+          "y_min": 23,
+          "x_max": 1132,
+          "y_max": 108,
+          "width": 215,
+          "height": 85
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 19.3,
+        "humidity_percent": 75,
+        "light_level": "evening",
+        "weather": "partly_cloudy"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:28:27.465767+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_67a2d7cf_20260209_182832",
+      "timestamp": "2026-02-09T18:28:32.465931+10:00",
+      "camera_id": "backyard_cam_02",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Rainbow Lorikeet",
+        "common_name": "Rainbow Lorikeet",
+        "scientific_name": "Trichoglossus moluccanus",
+        "confidence": 0.46,
+        "bounding_box": {
+          "x_min": 618,
+          "y_min": 158,
+          "x_max": 739,
+          "y_max": 284,
+          "width": 121,
+          "height": 126
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 27.8,
+        "humidity_percent": 82,
+        "light_level": "evening",
+        "weather": "light_rain"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:28:32.467376+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_a0a2a061_20260209_182837",
+      "timestamp": "2026-02-09T18:28:37.467009+10:00",
+      "camera_id": "backyard_cam_01",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Caspian Tern",
+        "common_name": "Caspian Tern",
+        "scientific_name": "Hydroprogne caspia",
+        "confidence": 0.33,
+        "bounding_box": {
+          "x_min": 1581,
+          "y_min": 462,
+          "x_max": 1764,
+          "y_max": 583,
+          "width": 183,
+          "height": 121
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 22.1,
+        "humidity_percent": 80,
+        "light_level": "evening",
+        "weather": "partly_cloudy"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:28:37.467547+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_8d4b18b5_20260209_182842",
+      "timestamp": "2026-02-09T18:28:42.465674+10:00",
+      "camera_id": "backyard_cam_01",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Grey Butcherbird",
+        "common_name": "Grey Butcherbird",
+        "scientific_name": "Cracticus torquatus",
+        "confidence": 0.47,
+        "bounding_box": {
+          "x_min": 1715,
+          "y_min": 485,
+          "x_max": 1896,
+          "y_max": 607,
+          "width": 181,
+          "height": 122
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 13.8,
+        "humidity_percent": 87,
+        "light_level": "evening",
+        "weather": "partly_cloudy"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:28:42.466189+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_96238b2f_20260209_182847",
+      "timestamp": "2026-02-09T18:28:47.466170+10:00",
+      "camera_id": "front_yard_cam_01",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Sulphur-crested Cockatoo",
+        "common_name": "Sulphur-crested Cockatoo",
+        "scientific_name": "Cacatua galerita",
+        "confidence": 0.67,
+        "bounding_box": {
+          "x_min": 387,
+          "y_min": 406,
+          "x_max": 531,
+          "y_max": 592,
+          "width": 144,
+          "height": 186
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 25.7,
+        "humidity_percent": 65,
+        "light_level": "evening",
+        "weather": "overcast"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:28:47.467003+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_08e74856_20260209_182852",
+      "timestamp": "2026-02-09T18:28:52.466698+10:00",
+      "camera_id": "backyard_cam_02",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Sulphur-crested Cockatoo",
+        "common_name": "Sulphur-crested Cockatoo",
+        "scientific_name": "Cacatua galerita",
+        "confidence": 0.51,
+        "bounding_box": {
+          "x_min": 1277,
+          "y_min": 844,
+          "x_max": 1413,
+          "y_max": 1042,
+          "width": 136,
+          "height": 198
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 26.2,
+        "humidity_percent": 68,
+        "light_level": "evening",
+        "weather": "clear"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:28:52.467184+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_c3e87113_20260209_182857",
+      "timestamp": "2026-02-09T18:28:57.467089+10:00",
+      "camera_id": "backyard_cam_02",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Sulphur-crested Cockatoo",
+        "common_name": "Sulphur-crested Cockatoo",
+        "scientific_name": "Cacatua galerita",
+        "confidence": 0.78,
+        "bounding_box": {
+          "x_min": 1472,
+          "y_min": 793,
+          "x_max": 1658,
+          "y_max": 904,
+          "width": 186,
+          "height": 111
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 17.7,
+        "humidity_percent": 62,
+        "light_level": "evening",
+        "weather": "overcast"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:28:57.467625+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_39283eb7_20260209_182902",
+      "timestamp": "2026-02-09T18:29:02.467567+10:00",
+      "camera_id": "backyard_cam_02",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Sulphur-crested Cockatoo",
+        "common_name": "Sulphur-crested Cockatoo",
+        "scientific_name": "Cacatua galerita",
+        "confidence": 0.8,
+        "bounding_box": {
+          "x_min": 519,
+          "y_min": 808,
+          "x_max": 620,
+          "y_max": 937,
+          "width": 101,
+          "height": 129
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 27.2,
+        "humidity_percent": 73,
+        "light_level": "evening",
+        "weather": "clear"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:29:02.468066+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_b665c161_20260209_182907",
+      "timestamp": "2026-02-09T18:29:07.468005+10:00",
+      "camera_id": "backyard_cam_01",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Grey Butcherbird",
+        "common_name": "Grey Butcherbird",
+        "scientific_name": "Cracticus torquatus",
+        "confidence": 0.68,
+        "bounding_box": {
+          "x_min": 576,
+          "y_min": 856,
+          "x_max": 809,
+          "y_max": 973,
+          "width": 233,
+          "height": 117
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 24.0,
+        "humidity_percent": 57,
+        "light_level": "evening",
+        "weather": "clear"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:29:07.468795+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_cc0b05e9_20260209_182912",
+      "timestamp": "2026-02-09T18:29:12.467457+10:00",
+      "camera_id": "backyard_cam_01",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Noisy Miner",
+        "common_name": "Noisy Miner",
+        "scientific_name": "Manorina melanocephala",
+        "confidence": 0.58,
+        "bounding_box": {
+          "x_min": 954,
+          "y_min": 681,
+          "x_max": 1193,
+          "y_max": 816,
+          "width": 239,
+          "height": 135
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 26.4,
+        "humidity_percent": 77,
+        "light_level": "evening",
+        "weather": "clear"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:29:12.469082+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_805cda51_20260209_182917",
+      "timestamp": "2026-02-09T18:29:17.468458+10:00",
+      "camera_id": "backyard_cam_02",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Sulphur-crested Cockatoo",
+        "common_name": "Sulphur-crested Cockatoo",
+        "scientific_name": "Cacatua galerita",
+        "confidence": 0.57,
+        "bounding_box": {
+          "x_min": 611,
+          "y_min": 579,
+          "x_max": 734,
+          "y_max": 742,
+          "width": 123,
+          "height": 163
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 18.5,
+        "humidity_percent": 87,
+        "light_level": "evening",
+        "weather": "partly_cloudy"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:29:17.469588+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_59f7127b_20260209_182922",
+      "timestamp": "2026-02-09T18:29:22.469628+10:00",
+      "camera_id": "backyard_cam_02",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Sulphur-crested Cockatoo",
+        "common_name": "Sulphur-crested Cockatoo",
+        "scientific_name": "Cacatua galerita",
+        "confidence": 0.59,
+        "bounding_box": {
+          "x_min": 1285,
+          "y_min": 412,
+          "x_max": 1404,
+          "y_max": 474,
+          "width": 119,
+          "height": 62
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 25.2,
+        "humidity_percent": 63,
+        "light_level": "evening",
+        "weather": "clear"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:29:22.471152+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_2584e11a_20260209_182927",
+      "timestamp": "2026-02-09T18:29:27.470703+10:00",
+      "camera_id": "backyard_cam_02",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "White-throated Nightjar",
+        "common_name": "White-throated Nightjar",
+        "scientific_name": "Eurostopodus mystacalis",
+        "confidence": 0.6,
+        "bounding_box": {
+          "x_min": 1214,
+          "y_min": 275,
+          "x_max": 1417,
+          "y_max": 368,
+          "width": 203,
+          "height": 93
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 28.3,
+        "humidity_percent": 55,
+        "light_level": "evening",
+        "weather": "clear"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:29:27.472301+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_723f196e_20260209_182932",
+      "timestamp": "2026-02-09T18:29:32.472004+10:00",
+      "camera_id": "backyard_cam_02",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Sulphur-crested Cockatoo",
+        "common_name": "Sulphur-crested Cockatoo",
+        "scientific_name": "Cacatua galerita",
+        "confidence": 0.64,
+        "bounding_box": {
+          "x_min": 817,
+          "y_min": 880,
+          "x_max": 1038,
+          "y_max": 1042,
+          "width": 221,
+          "height": 162
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 26.3,
+        "humidity_percent": 85,
+        "light_level": "evening",
+        "weather": "light_rain"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:29:32.473864+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_32fe28b0_20260209_182937",
+      "timestamp": "2026-02-09T18:29:37.473007+10:00",
+      "camera_id": "backyard_cam_01",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Grey Butcherbird",
+        "common_name": "Grey Butcherbird",
+        "scientific_name": "Cracticus torquatus",
+        "confidence": 0.66,
+        "bounding_box": {
+          "x_min": 1571,
+          "y_min": 370,
+          "x_max": 1655,
+          "y_max": 560,
+          "width": 84,
+          "height": 190
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 25.2,
+        "humidity_percent": 84,
+        "light_level": "evening",
+        "weather": "partly_cloudy"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:29:37.473803+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_64a47990_20260209_182942",
+      "timestamp": "2026-02-09T18:29:42.471517+10:00",
+      "camera_id": "front_yard_cam_01",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Sulphur-crested Cockatoo",
+        "common_name": "Sulphur-crested Cockatoo",
+        "scientific_name": "Cacatua galerita",
+        "confidence": 0.58,
+        "bounding_box": {
+          "x_min": 288,
+          "y_min": 288,
+          "x_max": 394,
+          "y_max": 452,
+          "width": 106,
+          "height": 164
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 22.5,
+        "humidity_percent": 53,
+        "light_level": "evening",
+        "weather": "clear"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:29:42.472821+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_b76c40bc_20260209_182947",
+      "timestamp": "2026-02-09T18:29:47.472278+10:00",
+      "camera_id": "backyard_cam_01",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Rainbow Lorikeet",
+        "common_name": "Rainbow Lorikeet",
+        "scientific_name": "Trichoglossus moluccanus",
+        "confidence": 0.61,
+        "bounding_box": {
+          "x_min": 944,
+          "y_min": 143,
+          "x_max": 1083,
+          "y_max": 291,
+          "width": 139,
+          "height": 148
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 28.2,
+        "humidity_percent": 73,
+        "light_level": "evening",
+        "weather": "clear"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:29:47.473057+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_c610d391_20260209_182952",
+      "timestamp": "2026-02-09T18:29:52.472955+10:00",
+      "camera_id": "front_yard_cam_01",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Sulphur-crested Cockatoo",
+        "common_name": "Sulphur-crested Cockatoo",
+        "scientific_name": "Cacatua galerita",
+        "confidence": 0.64,
+        "bounding_box": {
+          "x_min": 575,
+          "y_min": 518,
+          "x_max": 709,
+          "y_max": 601,
+          "width": 134,
+          "height": 83
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 23.0,
+        "humidity_percent": 49,
+        "light_level": "evening",
+        "weather": "partly_cloudy"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:29:52.473613+00:00",
+    "processed_by": "mqtt-proxy"
+  },
+  {
+    "topic": "bird/detection",
+    "data": {
+      "event_id": "evt_44e473c6_20260209_182957",
+      "timestamp": "2026-02-09T18:29:57.473513+10:00",
+      "camera_id": "backyard_cam_02",
+      "location": {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "coordinates": {
+          "latitude": -27.4698,
+          "longitude": 153.0251
+        },
+        "zone": "backyard"
+      },
+      "detection": {
+        "object_type": "bird",
+        "species": "Sulphur-crested Cockatoo",
+        "common_name": "Sulphur-crested Cockatoo",
+        "scientific_name": "Cacatua galerita",
+        "confidence": 0.7,
+        "bounding_box": {
+          "x_min": 930,
+          "y_min": 800,
+          "x_max": 1088,
+          "y_max": 954,
+          "width": 158,
+          "height": 154
+        },
+        "image_dimensions": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "environmental_data": {
+        "temperature_celsius": 20.7,
+        "humidity_percent": 64,
+        "light_level": "evening",
+        "weather": "clear"
+      },
+      "ai_model": {
+        "name": "bird_classifier_v2.1",
+        "version": "2.1.0",
+        "provider": "acme-ai"
+      }
+    },
+    "received_at": "2026-02-09T08:29:57.474448+00:00",
+    "processed_by": "mqtt-proxy"
+  }
+]
