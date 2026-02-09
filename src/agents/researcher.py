@@ -5,6 +5,8 @@ This agent is responsible for collecting information from Azure Blob Storage
 about bird detection events and data files.
 """
 
+import csv
+import io
 from typing import Dict, List, Any
 import json
 import os
@@ -155,7 +157,7 @@ Format your research summary with clear structure including:
     
     def _parse_csv_data(self, csv_content: str) -> Dict[str, Any]:
         """
-        Parse CSV data into structured format.
+        Parse CSV data into structured format using the csv module.
         
         Args:
             csv_content: CSV content as string
@@ -163,25 +165,30 @@ Format your research summary with clear structure including:
         Returns:
             Dictionary containing parsed data
         """
-        lines = csv_content.strip().split('\n')
-        if len(lines) < 2:
-            return {}
-        
-        # Simple CSV parser - assumes first row is headers
-        headers = [h.strip() for h in lines[0].split(',')]
-        rows = []
-        
-        for line in lines[1:]:
-            values = [v.strip() for v in line.split(',')]
-            if len(values) == len(headers):
-                row = dict(zip(headers, values))
-                rows.append(row)
-        
-        return {
-            'data': rows,
-            'format': 'csv',
-            'row_count': len(rows)
-        }
+        try:
+            # Use csv.DictReader for proper CSV parsing
+            csv_file = io.StringIO(csv_content.strip())
+            reader = csv.DictReader(csv_file)
+            
+            rows = []
+            for row in reader:
+                # Strip whitespace from keys and values
+                cleaned_row = {k.strip(): v.strip() for k, v in row.items()}
+                rows.append(cleaned_row)
+            
+            return {
+                'data': rows,
+                'format': 'csv',
+                'row_count': len(rows)
+            }
+        except Exception as e:
+            print(f"Error parsing CSV data: {e}")
+            return {
+                'data': [],
+                'format': 'csv',
+                'row_count': 0,
+                'error': str(e)
+            }
     
     def collect_bird_data_from_file(self, blob_name: str) -> Dict[str, Any]:
         """

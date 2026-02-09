@@ -5,6 +5,7 @@ This agent is responsible for orchestrating other agents to ensure
 quality blog post production using Microsoft Agent Framework.
 """
 
+import os
 from typing import Dict, Any, List
 from datetime import datetime
 from .base_agent import BaseAgent
@@ -285,7 +286,6 @@ meets publication standards.
                 print("\nStep 6: Publishing Phase")
                 print("-" * 60)
                 # Generate a unique filename based on the blob name
-                import os
                 base_name = os.path.splitext(os.path.basename(blob_name))[0]
                 blog_post['slug'] = base_name
                 
