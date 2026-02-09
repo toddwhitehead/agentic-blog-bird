@@ -26,25 +26,47 @@ def demo_individual_agents():
     # Researcher Agent Demo
     print("1. Researcher Agent Demo")
     print("-" * 60)
+    print("Testing data source (Azure Blob Storage or local sample-data)...")
     researcher = ResearcherAgent()
-    research_summary = researcher.generate_research_summary()
-    print(research_summary[:300] + "...\n")
+    
+    # List available data files
+    data_files = researcher.list_data_files()
+    print(f"Found {len(data_files)} data files:")
+    for file in data_files[:3]:  # Show first 3 files
+        print(f"  - {file}")
+    if len(data_files) > 3:
+        print(f"  ... and {len(data_files) - 3} more")
+    print()
+    
+    # Generate research summary
+    if data_files:
+        print(f"Generating research summary for: {data_files[0]}")
+        research_summary = researcher.generate_research_summary_for_file(data_files[0])
+        print(research_summary[:400] + "...\n")
+    else:
+        print("No data files available for analysis.\n")
     
     # CopyWriter Agent Demo
     print("2. CopyWriter Agent Demo")
     print("-" * 60)
     copywriter = CopyWriterAgent()
-    blog_post = copywriter.generate_blog_post(research_summary)
-    print(f"Headline: {blog_post['headline']}")
-    print(f"Content length: {len(blog_post['full_content'])} characters\n")
+    if data_files:
+        blog_post = copywriter.generate_blog_post(research_summary)
+        print(f"Headline: {blog_post['headline']}")
+        print(f"Content length: {len(blog_post['full_content'])} characters\n")
+    else:
+        print("Skipping (no research data available)\n")
     
     # Publisher Agent Demo
     print("3. Publisher Agent Demo")
     print("-" * 60)
     publisher = PublisherAgent({'output_dir': 'examples/output'})
-    frontmatter = publisher.create_frontmatter(blog_post)
-    print("Front matter preview:")
-    print(frontmatter[:200] + "...\n")
+    if data_files:
+        frontmatter = publisher.create_frontmatter(blog_post)
+        print("Front matter preview:")
+        print(frontmatter[:200] + "...\n")
+    else:
+        print("Skipping (no blog post data available)\n")
 
 
 def demo_full_workflow():
@@ -124,6 +146,12 @@ def main():
     print(" "*8 + "Powered by Microsoft Agent Framework")
     print(" "*12 + "on Azure AI Foundry")
     print("="*70)
+    
+    print("\n" + "INFO: This demo can run with or without Azure credentials.")
+    print("INFO: When Azure Blob Storage is not configured, the system")
+    print("INFO: automatically uses sample bird event data from the")
+    print("INFO: 'sample-data' folder for demonstration purposes.")
+    print()
     
     # Demo 1: Individual agents
     demo_individual_agents()
