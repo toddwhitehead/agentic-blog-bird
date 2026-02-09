@@ -1,7 +1,7 @@
 """
 Committer Agent Module
 
-This agent is responsible for committing Hugo markdown files to an Azure DevOps git repository.
+This agent is responsible for committing Hugo markdown files to a GitHub git repository.
 """
 
 import os
@@ -14,7 +14,7 @@ from .base_agent import BaseAgent
 
 class CommitterAgent(BaseAgent):
     """
-    Committer agent that commits Hugo markdown files to Azure DevOps git repository.
+    Committer agent that commits Hugo markdown files to GitHub git repository.
     """
     
     def __init__(self, config: Dict[str, Any] = None):
@@ -22,14 +22,15 @@ class CommitterAgent(BaseAgent):
         Initialize the Committer agent.
         
         Args:
-            config: Configuration dictionary for Azure DevOps git settings
+            config: Configuration dictionary for GitHub git settings
         """
         super().__init__(name="Committer", config=config)
         
-        # Azure DevOps Git configuration
-        self.repo_url = self.config.get('azure_devops_repo_url', '')
+        # GitHub Git configuration
+        # Allow environment variable to override config file
+        self.repo_url = os.getenv('GITHUB_REPO_URL') or self.config.get('github_repo_url', '')
         self.repo_path = self.config.get('repo_path', 'content/posts')
-        self.personal_access_token = os.getenv('AZURE_DEVOPS_PAT', '')
+        self.personal_access_token = os.getenv('GITHUB_TOKEN', '')
         self.author_name = self.config.get('author_name', 'Backyard Bird AI')
         self.author_email = self.config.get('author_email', 'ai@backyardbird.com')
         self.branch = self.config.get('branch', 'main')
@@ -38,13 +39,13 @@ class CommitterAgent(BaseAgent):
         
     def get_system_message(self) -> str:
         """Return the system message for the committer agent."""
-        return """You are a Committer agent specialized in managing git operations for Azure DevOps.
+        return """You are a Committer agent specialized in managing git operations for GitHub.
 
 Your responsibilities:
-1. Clone or access Azure DevOps git repositories
+1. Clone or access GitHub git repositories
 2. Commit Hugo markdown files to the repository
 3. Push changes to the remote repository
-4. Handle authentication with Azure DevOps
+4. Handle authentication with GitHub
 5. Manage commit messages and metadata
 6. Ensure proper file organization in the repository
 7. Handle git conflicts and errors gracefully
@@ -59,12 +60,12 @@ Git operation requirements:
 - Validate successful push operations
 
 You work with Hugo-formatted markdown files and ensure they are properly
-committed to the Azure DevOps repository for CI/CD pipeline processing.
+committed to the GitHub repository for CI/CD pipeline processing.
 """
     
     def commit_post(self, markdown_path: str, commit_message: str = None) -> Dict[str, Any]:
         """
-        Commit a Hugo markdown file to Azure DevOps git repository.
+        Commit a Hugo markdown file to GitHub git repository.
         
         Args:
             markdown_path: Path to the Hugo markdown file to commit
@@ -83,12 +84,12 @@ committed to the Azure DevOps repository for CI/CD pipeline processing.
         # Validate inputs
         if not self.repo_url:
             result["status"] = "failed"
-            result["errors"].append("Azure DevOps repository URL not configured")
+            result["errors"].append("GitHub repository URL not configured")
             return result
         
         if not self.personal_access_token:
             result["status"] = "failed"
-            result["errors"].append("Azure DevOps Personal Access Token not found in environment")
+            result["errors"].append("GitHub Personal Access Token not found in environment")
             return result
         
         if not os.path.exists(markdown_path):
@@ -163,7 +164,7 @@ committed to the Azure DevOps repository for CI/CD pipeline processing.
                 result["target_path"] = copy_result["target_path"]
                 result["commit_message"] = commit_message
                 
-                print(f"Committer: Successfully committed and pushed to Azure DevOps")
+                print(f"Committer: Successfully committed and pushed to GitHub")
                 
         except Exception as e:
             result["status"] = "failed"
@@ -173,7 +174,7 @@ committed to the Azure DevOps repository for CI/CD pipeline processing.
     
     def _clone_repository(self, target_dir: str) -> Dict[str, Any]:
         """
-        Clone the Azure DevOps repository.
+        Clone the GitHub repository.
         
         Args:
             target_dir: Directory to clone into
@@ -388,8 +389,8 @@ committed to the Azure DevOps repository for CI/CD pipeline processing.
         Returns:
             Authenticated repository URL
         """
-        # Azure DevOps URL format with PAT
-        # https://{PAT}@dev.azure.com/{organization}/{project}/_git/{repository}
+        # GitHub URL format with PAT
+        # https://{PAT}@github.com/{owner}/{repository}
         
         if '@' in self.repo_url:
             # URL already has authentication
@@ -418,11 +419,11 @@ committed to the Azure DevOps repository for CI/CD pipeline processing.
         
         if not self.repo_url:
             validation["valid"] = False
-            validation["errors"].append("Azure DevOps repository URL not configured")
+            validation["errors"].append("GitHub repository URL not configured")
         
         if not self.personal_access_token:
             validation["valid"] = False
-            validation["errors"].append("Azure DevOps Personal Access Token not found")
+            validation["errors"].append("GitHub Personal Access Token not found")
         
         if not self.author_name:
             validation["warnings"].append("Author name not configured (using default)")

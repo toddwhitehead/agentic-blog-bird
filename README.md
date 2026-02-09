@@ -11,7 +11,7 @@ This system uses a team of specialized AI agents working together to produce hig
 3. **CopyWriter Agent** - Creates engaging narratives from the data
 4. **Artist Agent** - Generates original cartoon-style images for blog posts
 5. **Publisher Agent** - Formats content for Hugo-based static sites
-6. **Committer Agent** - Commits Hugo markdown files to Azure DevOps Git repository
+6. **Committer Agent** - Commits Hugo markdown files to GitHub Git repository
 
 The agents are powered by **Microsoft Agent Framework** running on **Azure AI Foundry**, providing robust orchestration and AI capabilities.
 
@@ -62,7 +62,7 @@ Required environment variables:
 - `AZURE_STORAGE_ACCOUNT_NAME` - Azure Storage account name
 - `BLOB_CONTAINER_NAME` - Blob container name (default: bird-detection-data)
 - `OPENAI_API_KEY` or `AZURE_OPENAI_API_KEY` - API key for image generation (optional)
-- `AZURE_DEVOPS_PAT` - Personal Access Token for Azure DevOps Git (optional)
+- `GITHUB_TOKEN` - Personal Access Token for GitHub (optional)
 
 4. Update configuration (optional):
 ```bash
@@ -115,13 +115,13 @@ The configuration file controls all aspects of the agent system:
 - **CopyWriter**: Writing style, tone, word count targets
 - **Artist**: Image generation settings, cartoon style preferences
 - **Publisher**: Hugo settings, output paths, metadata
-- **Committer**: Azure DevOps Git repository settings, auto-commit options
+- **Committer**: GitHub Git repository settings, auto-commit options
 - **Editor**: Quality thresholds, workflow settings
 - **LLM**: Azure AI Foundry configuration (deployment name, parameters)
 
-### Azure DevOps Git Integration
+### GitHub Git Integration
 
-To enable automatic commits to Azure DevOps, see the [Azure DevOps Setup Guide](docs/AZURE_DEVOPS_SETUP.md) for detailed configuration instructions.
+To enable automatic commits to GitHub, see the [GitHub Setup Guide](docs/GITHUB_SETUP.md) for detailed configuration instructions.
 
 ### Environment Variables (`.env`)
 
@@ -138,7 +138,7 @@ Required environment variables:
 - `OPENAI_API_KEY` - OpenAI API key for image generation (optional)
 - `AZURE_OPENAI_API_KEY` - Azure OpenAI API key (alternative to OPENAI_API_KEY)
 - `AZURE_OPENAI_ENDPOINT` - Azure OpenAI endpoint (when using Azure OpenAI)
-- `AZURE_DEVOPS_PAT` - Personal Access Token for Azure DevOps Git (optional, for Committer agent)
+- `GITHUB_TOKEN` - Personal Access Token for GitHub (optional, for Committer agent)
 
 ## Architecture
 
@@ -176,7 +176,7 @@ Required environment variables:
 - Validates output format
 
 **Committer Agent** (`src/agents/committer.py`)
-- Commits Hugo markdown files to Azure DevOps Git
+- Commits Hugo markdown files to GitHub Git
 - Handles authentication with Personal Access Token
 - Manages git operations (clone, add, commit, push)
 - Organizes files in repository structure
@@ -321,7 +321,7 @@ Contributions are welcome! Please feel free to submit pull requests or open issu
 
 - [Architecture Overview](docs/ARCHITECTURE.md) - Detailed system architecture and agent specifications
 - [Setup Guide](docs/SETUP.md) - General setup and configuration instructions
-- [Azure DevOps Git Integration](docs/AZURE_DEVOPS_SETUP.md) - Setup guide for CommitterAgent
+- [GitHub Git Integration](docs/GITHUB_SETUP.md) - Setup guide for CommitterAgent
 - [Blob Storage Guide](docs/BLOB_STORAGE_GUIDE.md) - Azure Blob Storage configuration
 - [Migration Guide](docs/MIGRATION.md) - Migration information
 
