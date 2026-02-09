@@ -36,6 +36,9 @@ Add the GitHub Personal Access Token to your `.env` file:
 ```bash
 # GitHub Configuration (Committer Agent)
 GITHUB_TOKEN=your_personal_access_token_here
+
+# Optional: Set the repository URL (can also be set in config.yaml)
+GITHUB_REPO_URL=https://github.com/toddwhitehead/acme-giyt-web
 ```
 
 Example `.env` file:
@@ -43,20 +46,25 @@ Example `.env` file:
 # Required for CommitterAgent
 GITHUB_TOKEN=ghp_abcdef1234567890abcdef1234567890abcdef
 
+# Repository URL (overrides config.yaml if set)
+GITHUB_REPO_URL=https://github.com/toddwhitehead/acme-giyt-web
+
 # Other environment variables...
 AZURE_AI_PROJECT_CONNECTION_STRING=...
 AZURE_STORAGE_CONNECTION_STRING=...
 ```
 
+**Note**: You can set the repository URL either in the `.env` file (as `GITHUB_REPO_URL`) or in `config/config.yaml`. The environment variable takes precedence if both are set.
+
 ## Step 3: Configure Repository Settings
 
-Edit `config/config.yaml` to specify your GitHub repository:
+Edit `config/config.yaml` to specify your GitHub repository (if not using environment variable):
 
 ```yaml
 # Committer Agent Configuration
 committer:
   # GitHub Git settings
-  github_repo_url: "https://github.com/toddwhitehead/acme-giyt-web"
+  github_repo_url: "https://github.com/{owner}/{repository}"
   repo_path: "content/posts"  # Path within the repository
   branch: "main"  # Target branch
   
@@ -73,7 +81,7 @@ committer:
 
 | Parameter | Description | Example |
 |-----------|-------------|---------|
-| `github_repo_url` | Full URL to your GitHub Git repository | `https://github.com/toddwhitehead/acme-giyt-web` |
+| `github_repo_url` | Full URL to your GitHub Git repository (can be overridden by `GITHUB_REPO_URL` env var) | `https://github.com/{owner}/{repository}` |
 | `repo_path` | Directory path within the repository where posts should be committed | `content/posts` or `hugo/content/posts` |
 | `branch` | Target branch for commits | `main`, `master`, or `develop` |
 | `author_name` | Git commit author name | `Backyard Bird AI` |

@@ -27,7 +27,8 @@ class CommitterAgent(BaseAgent):
         super().__init__(name="Committer", config=config)
         
         # GitHub Git configuration
-        self.repo_url = self.config.get('github_repo_url', '')
+        # Allow environment variable to override config file
+        self.repo_url = os.getenv('GITHUB_REPO_URL') or self.config.get('github_repo_url', '')
         self.repo_path = self.config.get('repo_path', 'content/posts')
         self.personal_access_token = os.getenv('GITHUB_TOKEN', '')
         self.author_name = self.config.get('author_name', 'Backyard Bird AI')

@@ -76,7 +76,7 @@ publisher:
 # Committer Agent Configuration
 committer:
   # GitHub Git settings
-  github_repo_url: "https://github.com/toddwhitehead/acme-giyt-web"  # GitHub repository URL
+  github_repo_url: ""  # e.g., https://github.com/{owner}/{repository}
   repo_path: "content/posts"  # Path within the repository to commit files
   branch: "main"  # Target branch for commits
   
