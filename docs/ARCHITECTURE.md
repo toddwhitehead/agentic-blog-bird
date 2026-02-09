@@ -46,7 +46,7 @@ Agentic Blog Bird is a multi-agent system designed to automatically generate blo
         │                    │            │ (BaseAgent)  │
         │                    │            └──────────────┘
         ▼                    ▼                    ▼
-  Data Query         Content Creation      Azure DevOps
+  Data Query         Content Creation        GitHub
   & Analysis         & Narrative          Git Repository
 ```
 
@@ -187,12 +187,12 @@ Agentic Blog Bird is a multi-agent system designed to automatically generate blo
 
 **Location**: `src/agents/committer.py`
 
-**Purpose**: Commit Hugo markdown files to an Azure DevOps Git repository.
+**Purpose**: Commit Hugo markdown files to a GitHub Git repository.
 
 **Inherits**: `BaseAgent`
 
 **Responsibilities**:
-- Clone Azure DevOps Git repositories
+- Clone GitHub Git repositories
 - Commit Hugo markdown files to the repository
 - Handle authentication with Personal Access Token
 - Push changes to remote repository
@@ -202,7 +202,7 @@ Agentic Blog Bird is a multi-agent system designed to automatically generate blo
 **Key Methods**:
 - `commit_post(markdown_path: str, commit_message: str)` - Commit markdown file to repo
 - `validate_configuration()` - Validate committer settings
-- `_clone_repository(target_dir: str)` - Clone the Azure DevOps repo
+- `_clone_repository(target_dir: str)` - Clone the GitHub repo
 - `_copy_file_to_repo(source_path: str, repo_dir: str)` - Copy file to repo
 - `_git_add(repo_dir: str, file_path: str)` - Add file to git staging
 - `_git_commit(repo_dir: str, message: str)` - Commit staged changes
@@ -210,7 +210,7 @@ Agentic Blog Bird is a multi-agent system designed to automatically generate blo
 - `_get_authenticated_url()` - Get repository URL with PAT authentication
 
 **Authentication**:
-- Uses Personal Access Token (PAT) from `AZURE_DEVOPS_PAT` environment variable
+- Uses Personal Access Token (PAT) from `GITHUB_TOKEN` environment variable
 - Embeds PAT in repository URL for authentication
 - Configures git author name and email for commits
 
@@ -223,7 +223,7 @@ Agentic Blog Bird is a multi-agent system designed to automatically generate blo
 5. **Image Generation** - Artist creates cartoon-style featured image
 6. **Publishing** - Publisher formats and saves Hugo markdown with image
 7. **Validation** - Editor validates final output format
-8. **Commit to Git** - Committer commits the Hugo markdown file to Azure DevOps Git repository
+8. **Commit to Git** - Committer commits the Hugo markdown file to GitHub Git repository
 
 ## Data Flow
 
@@ -236,7 +236,7 @@ Raw Data (Fabric) → Researcher → Research Summary
                                        ↓
                                Publisher → Hugo Markdown File + Image
                                        ↓
-                                Committer → Azure DevOps Git Repository
+                                Committer → GitHub Git Repository
 ```
 
 ## Configuration System

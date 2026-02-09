@@ -1,45 +1,47 @@
-# Azure DevOps Git Integration Setup Guide
+# GitHub Git Integration Setup Guide
 
-This guide explains how to set up and use the CommitterAgent to automatically commit Hugo markdown blog posts to an Azure DevOps Git repository.
+This guide explains how to set up and use the CommitterAgent to automatically commit Hugo markdown blog posts to a GitHub Git repository.
 
 ## Overview
 
-The CommitterAgent is an optional agent in the Agentic Blog Bird system that automatically commits generated Hugo markdown files to an Azure DevOps Git repository. This enables seamless integration with CI/CD pipelines for automated blog deployment.
+The CommitterAgent is an optional agent in the Agentic Blog Bird system that automatically commits generated Hugo markdown files to a GitHub Git repository. This enables seamless integration with CI/CD pipelines for automated blog deployment.
 
 ## Prerequisites
 
-1. **Azure DevOps Account**: You need an Azure DevOps organization and project
-2. **Git Repository**: A Git repository in your Azure DevOps project for storing blog posts
+1. **GitHub Account**: You need a GitHub account
+2. **Git Repository**: A Git repository on GitHub for storing blog posts (e.g., https://github.com/toddwhitehead/acme-giyt-web)
 3. **Personal Access Token (PAT)**: A PAT with repository write permissions
 4. **Git**: Git must be installed on the system running the agent
 
-## Step 1: Create Azure DevOps Personal Access Token
+## Step 1: Create GitHub Personal Access Token
 
-1. Log in to your Azure DevOps organization: `https://dev.azure.com/{your-organization}`
-2. Click on your profile icon (top right) → **Personal access tokens**
-3. Click **+ New Token**
-4. Configure the token:
-   - **Name**: "Agentic Blog Bird Committer"
-   - **Organization**: Select your organization
+1. Log in to your GitHub account: `https://github.com`
+2. Click on your profile icon (top right) → **Settings**
+3. Scroll down to **Developer settings** (bottom left sidebar)
+4. Click **Personal access tokens** → **Tokens (classic)**
+5. Click **Generate new token** → **Generate new token (classic)**
+6. Configure the token:
+   - **Note**: "Agentic Blog Bird Committer"
    - **Expiration**: Choose an appropriate expiration date (90 days or custom)
-   - **Scopes**: Select **Custom defined**, then:
-     - ✅ **Code** → **Read & Write**
-5. Click **Create**
-6. **Important**: Copy the token immediately - you won't be able to see it again!
+   - **Select scopes**:
+     - ✅ **repo** (Full control of private repositories)
+       - This includes repo:status, repo_deployment, public_repo, repo:invite, security_events
+7. Click **Generate token**
+8. **Important**: Copy the token immediately - you won't be able to see it again!
 
 ## Step 2: Configure Environment Variables
 
-Add the Azure DevOps Personal Access Token to your `.env` file:
+Add the GitHub Personal Access Token to your `.env` file:
 
 ```bash
-# Azure DevOps Git Configuration (Committer Agent)
-AZURE_DEVOPS_PAT=your_personal_access_token_here
+# GitHub Configuration (Committer Agent)
+GITHUB_TOKEN=your_personal_access_token_here
 ```
 
 Example `.env` file:
 ```bash
 # Required for CommitterAgent
-AZURE_DEVOPS_PAT=abcdef1234567890abcdef1234567890abcdef1234567890
+GITHUB_TOKEN=ghp_abcdef1234567890abcdef1234567890abcdef
 
 # Other environment variables...
 AZURE_AI_PROJECT_CONNECTION_STRING=...
@@ -48,13 +50,13 @@ AZURE_STORAGE_CONNECTION_STRING=...
 
 ## Step 3: Configure Repository Settings
 
-Edit `config/config.yaml` to specify your Azure DevOps repository:
+Edit `config/config.yaml` to specify your GitHub repository:
 
 ```yaml
 # Committer Agent Configuration
 committer:
-  # Azure DevOps Git settings
-  azure_devops_repo_url: "https://dev.azure.com/{organization}/{project}/_git/{repository}"
+  # GitHub Git settings
+  github_repo_url: "https://github.com/toddwhitehead/acme-giyt-web"
   repo_path: "content/posts"  # Path within the repository
   branch: "main"  # Target branch
   
@@ -71,7 +73,7 @@ committer:
 
 | Parameter | Description | Example |
 |-----------|-------------|---------|
-| `azure_devops_repo_url` | Full URL to your Azure DevOps Git repository | `https://dev.azure.com/myorg/myblog/_git/blog-content` |
+| `github_repo_url` | Full URL to your GitHub Git repository | `https://github.com/toddwhitehead/acme-giyt-web` |
 | `repo_path` | Directory path within the repository where posts should be committed | `content/posts` or `hugo/content/posts` |
 | `branch` | Target branch for commits | `main`, `master`, or `develop` |
 | `author_name` | Git commit author name | `Backyard Bird AI` |
@@ -94,7 +96,7 @@ CommitterAgent Test Script
 
 1. Initializing CommitterAgent...
    ✓ Agent: Committer
-   ✓ Repo URL: https://dev.azure.com/myorg/myproject/_git/myrepo
+   ✓ Repo URL: https://github.com/toddwhitehead/acme-giyt-web
    ✓ Target path: content/posts
    ✓ Branch: main
 
@@ -104,9 +106,9 @@ CommitterAgent Test Script
 3. Creating test Hugo markdown file...
    ✓ Created: /tmp/test-post-xxx.md
 
-4. Committing to Azure DevOps repository...
+4. Committing to GitHub repository...
    Status: completed
-   ✓ Successfully committed to Azure DevOps!
+   ✓ Successfully committed to GitHub!
    Commit SHA: abc1234def567890
    Target path: content/posts/test-post-xxx.md
    Message: Test commit from CommitterAgent - 2024-01-15 10:30:00
@@ -123,7 +125,7 @@ Test completed
 Generate and commit a blog post:
 
 ```bash
-# Generate blog post for today and commit to Azure DevOps
+# Generate blog post for today and commit to GitHub
 python main.py
 
 # Generate blog post for a specific date
@@ -135,7 +137,7 @@ The workflow will:
 2. Create engaging blog content
 3. Generate cartoon-style images
 4. Format as Hugo markdown
-5. **Commit to Azure DevOps Git repository** (NEW!)
+5. **Commit to GitHub Git repository** (NEW!)
 
 ## Workflow Steps
 
@@ -149,32 +151,32 @@ Step 4: Editorial Review
 Step 5: Image Generation Phase
 Step 6: Publishing Phase
 Step 7: Final Validation
-Step 8: Commit to Azure DevOps ← NEW!
+Step 8: Commit to GitHub ← NEW!
 ```
 
 ## Troubleshooting
 
-### Error: "Azure DevOps Personal Access Token not found"
+### Error: "GitHub Personal Access Token not found"
 
-**Solution**: Ensure `AZURE_DEVOPS_PAT` is set in your `.env` file
+**Solution**: Ensure `GITHUB_TOKEN` is set in your `.env` file
 
 ```bash
 # Check if environment variable is set
-echo $AZURE_DEVOPS_PAT
+echo $GITHUB_TOKEN
 
 # If empty, add it to .env file
-echo "AZURE_DEVOPS_PAT=your_token_here" >> config/.env
+echo "GITHUB_TOKEN=your_token_here" >> config/.env
 ```
 
 ### Error: "Failed to clone repository: authentication required"
 
 **Solutions**:
-1. Verify your PAT has **Code (Read & Write)** permissions
+1. Verify your PAT has **repo** permissions
 2. Check that your PAT hasn't expired
 3. Ensure the repository URL is correct
 4. Test authentication manually:
    ```bash
-   git clone https://{PAT}@dev.azure.com/{org}/{project}/_git/{repo}
+   git clone https://{TOKEN}@github.com/{owner}/{repo}
    ```
 
 ### Error: "Failed to push: remote rejected"
@@ -182,7 +184,7 @@ echo "AZURE_DEVOPS_PAT=your_token_here" >> config/.env
 **Solutions**:
 1. Ensure the branch exists in the remote repository
 2. Check that you have write permissions to the branch
-3. Verify branch policies allow direct pushes (or use pull requests)
+3. Verify branch protection rules allow direct pushes (or use pull requests)
 4. Check repository size limits
 
 ### Commit Skipped: "No changes to commit"
@@ -198,7 +200,7 @@ committer:
   enable_auto_commit: false
 ```
 
-The agent will still publish the Hugo markdown file locally but won't commit it to Azure DevOps.
+The agent will still publish the Hugo markdown file locally but won't commit it to GitHub.
 
 ## Security Best Practices
 
@@ -207,16 +209,16 @@ The agent will still publish the Hugo markdown file locally but won't commit it 
    - Add `.env` to your `.gitignore` file
 
 2. **Use minimal PAT permissions**
-   - Only grant **Code (Read & Write)** permissions
+   - Only grant **repo** permissions for the specific repository
    - Don't grant unnecessary scopes
 
 3. **Rotate PATs regularly**
    - Set reasonable expiration dates (90 days recommended)
    - Rotate tokens before they expire
 
-4. **Use service accounts for automation**
-   - Consider using a dedicated service account for the agent
-   - Don't use personal user accounts in production
+4. **Use fine-grained tokens when possible**
+   - GitHub offers fine-grained personal access tokens
+   - These can be restricted to specific repositories
 
 ## Advanced Configuration
 
@@ -250,32 +252,48 @@ committer:
 
 ## CI/CD Integration
 
-Once posts are committed to Azure DevOps, you can trigger automated builds:
+Once posts are committed to GitHub, you can trigger automated builds:
 
-1. **Azure Pipelines**: Set up a pipeline to build and deploy Hugo site
-2. **GitHub Actions**: Mirror the repo to GitHub and use Actions
-3. **Manual Deployment**: Pull changes and run Hugo locally
+1. **GitHub Actions**: Set up a workflow to build and deploy Hugo site
+2. **GitHub Pages**: Deploy directly from the repository
+3. **Netlify/Vercel**: Connect your repository for automatic deployments
 
-Example Azure Pipeline trigger:
+Example GitHub Actions workflow:
 
 ```yaml
-trigger:
-  branches:
-    include:
+name: Deploy Hugo Site
+
+on:
+  push:
+    branches:
       - main
-  paths:
-    include:
-      - content/posts/*
+    paths:
+      - 'content/posts/**'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+      - name: Build
+        run: hugo --minify
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
 ```
 
 ## Support and Troubleshooting
 
 For additional help:
-1. Check the [Azure DevOps Git Documentation](https://docs.microsoft.com/en-us/azure/devops/repos/git/)
+1. Check the [GitHub Documentation](https://docs.github.com/)
 2. Review the CommitterAgent source code: `src/agents/committer.py`
 3. Run the test script with verbose output for debugging
 4. Check git logs in the temporary directory during operations
 
 ## Summary
 
-The CommitterAgent enables seamless integration between the Agentic Blog Bird multi-agent system and Azure DevOps Git repositories. By following this guide, you can automate the entire workflow from bird detection data to published blog posts in your repository.
+The CommitterAgent enables seamless integration between the Agentic Blog Bird multi-agent system and GitHub Git repositories. By following this guide, you can automate the entire workflow from bird detection data to published blog posts in your repository.
