@@ -32,8 +32,8 @@ The agents are powered by **Microsoft Agent Framework** running on **Azure AI Fo
 ### Prerequisites
 
 - Python 3.8 or higher
-- Azure subscription with Azure AI Foundry access
-- Azure Blob Storage account with bird detection data files
+- Azure subscription with Azure AI Foundry access (optional - can run with local sample data)
+- Azure Blob Storage account with bird detection data files (optional - sample data provided)
 
 ### Setup Steps
 
@@ -48,26 +48,40 @@ cd agentic-blog-bird
 pip install -r requirements.txt
 ```
 
-3. Configure your Azure AI Foundry environment:
+4. Configure your Azure AI Foundry environment (optional for demo):
 ```bash
 cp config/.env.template config/.env
 # Edit config/.env with your Azure AI Foundry credentials and API keys
 ```
 
+**Note:** The system includes sample bird detection data in the `sample-data` folder. 
+You can run the demo and test the system without Azure credentials using local sample data.
+
 Required environment variables:
-- `AZURE_AI_PROJECT_CONNECTION_STRING` - Your Azure AI Foundry project connection string
-- `AZURE_AI_PROJECT_NAME` - Your Azure AI Foundry project name
-- `AZURE_AI_DEPLOYMENT_NAME` - Your model deployment name
-- `AZURE_STORAGE_CONNECTION_STRING` - Azure Storage connection string for blob storage
-- `AZURE_STORAGE_ACCOUNT_NAME` - Azure Storage account name
-- `BLOB_CONTAINER_NAME` - Blob container name (default: bird-detection-data)
+- `AZURE_AI_PROJECT_CONNECTION_STRING` - Your Azure AI Foundry project connection string (optional with sample data)
+- `AZURE_AI_PROJECT_NAME` - Your Azure AI Foundry project name (optional with sample data)
+- `AZURE_AI_DEPLOYMENT_NAME` - Your model deployment name (optional with sample data)
+- `AZURE_STORAGE_CONNECTION_STRING` - Azure Storage connection string for blob storage (optional - falls back to local sample data)
+- `AZURE_STORAGE_ACCOUNT_NAME` - Azure Storage account name (optional)
+- `BLOB_CONTAINER_NAME` - Blob container name (default: bird-detection-data, optional with sample data)
 - `OPENAI_API_KEY` or `AZURE_OPENAI_API_KEY` - API key for image generation (optional)
 - `AZURE_DEVOPS_PAT` - Personal Access Token for Azure DevOps Git (optional)
 
 4. Update configuration (optional):
 ```bash
 # Edit config/config.yaml to customize agent behavior
+# The system will automatically use sample-data folder when Azure Blob Storage is not configured
 ```
+
+## Sample Data
+
+The repository includes sample bird detection event data in the `sample-data` folder for testing and demonstration:
+
+- **bird-events-2024-01-15.json** - Full day of observations (Cardinals, Blue Jays, Robins, etc.)
+- **bird-events-2024-01-16.json** - Observations with rare species and courtship behaviors
+- **bird-events-2024-01-17.csv** - CSV format data with winter species
+
+The Researcher agent automatically uses local sample data when Azure Blob Storage is not configured, allowing you to test the system without cloud dependencies. See `sample-data/README.md` for details.
 
 ## Usage
 
@@ -151,11 +165,12 @@ Required environment variables:
 - Tracks workflow history
 
 **Researcher Agent** (`src/agents/researcher.py`)
-- Retrieves bird detection data from Azure Blob Storage
+- Retrieves bird detection data from Azure Blob Storage or local sample-data folder
 - Supports multiple data file formats (JSON, CSV)
 - Analyzes patterns and trends
 - Generates research summaries
 - Identifies notable events
+- Falls back to local sample data when blob storage is unavailable
 
 **CopyWriter Agent** (`src/agents/copywriter.py`)
 - Creates engaging headlines
@@ -240,13 +255,19 @@ agentic-blog-bird/
 │   │   ├── researcher.py    # Researcher agent
 │   │   ├── copywriter.py    # CopyWriter agent
 │   │   ├── artist.py        # Artist agent (image generation)
-│   │   └── publisher.py     # Publisher agent
+│   │   ├── publisher.py     # Publisher agent
+│   │   └── committer.py     # Committer agent
 │   └── utils/
 │       ├── __init__.py
 │       └── config.py         # Configuration management
 ├── config/
 │   ├── config.yaml           # Main configuration
 │   └── .env.template         # Environment template
+├── sample-data/              # Sample bird event data
+│   ├── README.md            # Sample data documentation
+│   ├── bird-events-2024-01-15.json
+│   ├── bird-events-2024-01-16.json
+│   └── bird-events-2024-01-17.csv
 ├── examples/
 │   └── demo.py               # Demo script
 ├── content/
@@ -320,10 +341,12 @@ Contributions are welcome! Please feel free to submit pull requests or open issu
 ## Documentation
 
 - [Architecture Overview](docs/ARCHITECTURE.md) - Detailed system architecture and agent specifications
+- [Model Recommendations](docs/MODEL_RECOMMENDATIONS.md) - Azure AI Foundry model selection guide for each agent
 - [Setup Guide](docs/SETUP.md) - General setup and configuration instructions
 - [Azure DevOps Git Integration](docs/AZURE_DEVOPS_SETUP.md) - Setup guide for CommitterAgent
 - [Blob Storage Guide](docs/BLOB_STORAGE_GUIDE.md) - Azure Blob Storage configuration
 - [Migration Guide](docs/MIGRATION.md) - Migration information
+- [Sample Data](sample-data/README.md) - Sample bird event data documentation
 
 ## License
 

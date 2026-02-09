@@ -1,0 +1,131 @@
+{
+  "date": "2024-01-16",
+  "total_detections": 52,
+  "species": ["Northern Cardinal", "Blue Jay", "Mourning Dove", "Tufted Titmouse", "Downy Woodpecker", "House Finch"],
+  "detections": [
+    {
+      "species": "Mourning Dove",
+      "time": "06:45:15",
+      "confidence": 0.95,
+      "behavior": "feeding",
+      "location": "ground_feeder"
+    },
+    {
+      "species": "Tufted Titmouse",
+      "time": "07:10:30",
+      "confidence": 0.93,
+      "behavior": "acrobatic_feeding",
+      "location": "suet_feeder"
+    },
+    {
+      "species": "Northern Cardinal",
+      "time": "07:20:45",
+      "confidence": 0.97,
+      "behavior": "feeding",
+      "location": "main_feeder"
+    },
+    {
+      "species": "Downy Woodpecker",
+      "time": "08:15:20",
+      "confidence": 0.96,
+      "behavior": "drilling",
+      "location": "dead_tree_snag"
+    },
+    {
+      "species": "Blue Jay",
+      "time": "08:30:55",
+      "confidence": 0.94,
+      "behavior": "alarm_calling",
+      "location": "oak_tree"
+    },
+    {
+      "species": "House Finch",
+      "time": "09:05:10",
+      "confidence": 0.92,
+      "behavior": "feeding",
+      "location": "nyjer_feeder"
+    },
+    {
+      "species": "Mourning Dove",
+      "time": "10:20:35",
+      "confidence": 0.94,
+      "behavior": "sunbathing",
+      "location": "garden_wall"
+    },
+    {
+      "species": "Tufted Titmouse",
+      "time": "11:15:42",
+      "confidence": 0.95,
+      "behavior": "caching_seeds",
+      "location": "maple_tree"
+    },
+    {
+      "species": "Downy Woodpecker",
+      "time": "12:30:18",
+      "confidence": 0.97,
+      "behavior": "feeding",
+      "location": "suet_feeder"
+    },
+    {
+      "species": "Northern Cardinal",
+      "time": "13:45:25",
+      "confidence": 0.98,
+      "behavior": "pair_bonding",
+      "location": "pine_tree"
+    },
+    {
+      "species": "Blue Jay",
+      "time": "14:10:50",
+      "confidence": 0.93,
+      "behavior": "mobbing_behavior",
+      "location": "oak_tree"
+    },
+    {
+      "species": "House Finch",
+      "time": "15:25:30",
+      "confidence": 0.91,
+      "behavior": "singing",
+      "location": "roof_edge"
+    },
+    {
+      "species": "Mourning Dove",
+      "time": "16:40:15",
+      "confidence": 0.96,
+      "behavior": "feeding",
+      "location": "ground_feeder"
+    },
+    {
+      "species": "Tufted Titmouse",
+      "time": "17:15:40",
+      "confidence": 0.94,
+      "behavior": "feeding",
+      "location": "main_feeder"
+    },
+    {
+      "species": "Northern Cardinal",
+      "time": "17:50:20",
+      "confidence": 0.97,
+      "behavior": "evening_song",
+      "location": "oak_tree"
+    }
+  ],
+  "notable_events": [
+    "Rare Downy Woodpecker spotted drilling on dead snag - excellent habitat indicator",
+    "Blue Jay alarm calls indicated possible hawk presence at 8:30 AM",
+    "Cardinal pair observed engaging in courtship behavior - early mating season activity",
+    "Tufted Titmouse demonstrated seed caching behavior for winter storage",
+    "House Finch singing persistently from roof - likely establishing territory"
+  ],
+  "environmental_conditions": {
+    "temperature": "38F",
+    "weather": "sunny and clear",
+    "wind_speed": "3-5 mph",
+    "visibility": "excellent",
+    "moon_phase": "waxing crescent"
+  },
+  "equipment_status": {
+    "camera_uptime": "100%",
+    "total_images_captured": 523,
+    "ai_processing_time_avg_ms": 118
+  }
+}
