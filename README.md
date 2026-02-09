@@ -115,8 +115,13 @@ The configuration file controls all aspects of the agent system:
 - **CopyWriter**: Writing style, tone, word count targets
 - **Artist**: Image generation settings, cartoon style preferences
 - **Publisher**: Hugo settings, output paths, metadata
+- **Committer**: Azure DevOps Git repository settings, auto-commit options
 - **Editor**: Quality thresholds, workflow settings
 - **LLM**: Azure AI Foundry configuration (deployment name, parameters)
+
+### Azure DevOps Git Integration
+
+To enable automatic commits to Azure DevOps, see the [Azure DevOps Setup Guide](docs/AZURE_DEVOPS_SETUP.md) for detailed configuration instructions.
 
 ### Environment Variables (`.env`)
 
@@ -311,6 +316,14 @@ Blue Jay,09:15:00,0.92
 ## Contributing
 
 Contributions are welcome! Please feel free to submit pull requests or open issues for bugs and feature requests.
+
+## Documentation
+
+- [Architecture Overview](docs/ARCHITECTURE.md) - Detailed system architecture and agent specifications
+- [Setup Guide](docs/SETUP.md) - General setup and configuration instructions
+- [Azure DevOps Git Integration](docs/AZURE_DEVOPS_SETUP.md) - Setup guide for CommitterAgent
+- [Blob Storage Guide](docs/BLOB_STORAGE_GUIDE.md) - Azure Blob Storage configuration
+- [Migration Guide](docs/MIGRATION.md) - Migration information
 
 ## License
 
