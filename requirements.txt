@@ -1,15 +1,15 @@
 # Microsoft Agent Framework
-azure-ai-agent>=0.1.0
-azure-ai-projects>=1.0.0
-azure-identity>=1.15.0
+azure-ai-agents>=1.1.0
+azure-ai-projects>=2.0.1
+azure-identity>=1.25.3
 
 # Core dependencies
-python-dotenv>=1.0.0
-pyyaml>=6.0.0
-requests>=2.31.0
+python-dotenv>=1.2.2
+pyyaml>=6.0.3
+requests>=2.33.1
 
 # Azure AI Foundry integration
-azure-ai-inference>=1.0.0
+azure-ai-inference>=1.0.0b9
 
 # Azure Blob Storage
-azure-storage-blob>=12.19.0
+azure-storage-blob>=12.28.0

@@ -1,0 +1,2928 @@
+[
+  {
+    "timestamp": "2026-04-08T07:00:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 17.6,
+    "humidity_percent": 78,
+    "pressure_hpa": 1009.1,
+    "wind": {
+      "speed_kph": 10.0,
+      "direction": "NE"
+    },
+    "uv_index": 1.4,
+    "light_level": "dawn",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T07:05:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 17.9,
+    "humidity_percent": 73,
+    "pressure_hpa": 1009.5,
+    "wind": {
+      "speed_kph": 9.8,
+      "direction": "NE"
+    },
+    "uv_index": 0.8,
+    "light_level": "dawn",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T07:10:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 17.7,
+    "humidity_percent": 74,
+    "pressure_hpa": 1016.7,
+    "wind": {
+      "speed_kph": 5.8,
+      "direction": "NE"
+    },
+    "uv_index": 0.7,
+    "light_level": "dawn",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T07:15:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 17.9,
+    "humidity_percent": 74,
+    "pressure_hpa": 1012.4,
+    "wind": {
+      "speed_kph": 6.7,
+      "direction": "NE"
+    },
+    "uv_index": 0.7,
+    "light_level": "dawn",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T07:20:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 18.3,
+    "humidity_percent": 75,
+    "pressure_hpa": 1013.6,
+    "wind": {
+      "speed_kph": 10.7,
+      "direction": "NE"
+    },
+    "uv_index": 0.9,
+    "light_level": "dawn",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T07:25:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 18.6,
+    "humidity_percent": 76,
+    "pressure_hpa": 1011.6,
+    "wind": {
+      "speed_kph": 10.9,
+      "direction": "NE"
+    },
+    "uv_index": 1.1,
+    "light_level": "dawn",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T07:30:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 18.6,
+    "humidity_percent": 74,
+    "pressure_hpa": 1011.2,
+    "wind": {
+      "speed_kph": 6.4,
+      "direction": "NE"
+    },
+    "uv_index": 0.6,
+    "light_level": "dawn",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T07:35:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 18.9,
+    "humidity_percent": 75,
+    "pressure_hpa": 1016.9,
+    "wind": {
+      "speed_kph": 8.4,
+      "direction": "NE"
+    },
+    "uv_index": 1.0,
+    "light_level": "dawn",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T07:40:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 18.9,
+    "humidity_percent": 72,
+    "pressure_hpa": 1008.5,
+    "wind": {
+      "speed_kph": 10.3,
+      "direction": "NE"
+    },
+    "uv_index": 0.8,
+    "light_level": "dawn",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T07:45:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 18.4,
+    "humidity_percent": 74,
+    "pressure_hpa": 1013.2,
+    "wind": {
+      "speed_kph": 9.5,
+      "direction": "NE"
+    },
+    "uv_index": 0.7,
+    "light_level": "dawn",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T07:50:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 19.0,
+    "humidity_percent": 72,
+    "pressure_hpa": 1008.2,
+    "wind": {
+      "speed_kph": 10.4,
+      "direction": "NE"
+    },
+    "uv_index": 0.8,
+    "light_level": "dawn",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T07:55:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 19.1,
+    "humidity_percent": 75,
+    "pressure_hpa": 1010.1,
+    "wind": {
+      "speed_kph": 9.2,
+      "direction": "NE"
+    },
+    "uv_index": 0.6,
+    "light_level": "dawn",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T08:00:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 19.4,
+    "humidity_percent": 73,
+    "pressure_hpa": 1013.8,
+    "wind": {
+      "speed_kph": 11.7,
+      "direction": "NE"
+    },
+    "uv_index": 2.2,
+    "light_level": "morning",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T08:05:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 19.0,
+    "humidity_percent": 74,
+    "pressure_hpa": 1010.4,
+    "wind": {
+      "speed_kph": 12.0,
+      "direction": "NE"
+    },
+    "uv_index": 1.8,
+    "light_level": "morning",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T08:10:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 19.7,
+    "humidity_percent": 71,
+    "pressure_hpa": 1008.1,
+    "wind": {
+      "speed_kph": 10.5,
+      "direction": "NE"
+    },
+    "uv_index": 2.3,
+    "light_level": "morning",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T08:15:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 19.6,
+    "humidity_percent": 71,
+    "pressure_hpa": 1014.9,
+    "wind": {
+      "speed_kph": 8.8,
+      "direction": "NE"
+    },
+    "uv_index": 1.7,
+    "light_level": "morning",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T08:20:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 19.7,
+    "humidity_percent": 70,
+    "pressure_hpa": 1014.9,
+    "wind": {
+      "speed_kph": 6.6,
+      "direction": "NE"
+    },
+    "uv_index": 2.4,
+    "light_level": "morning",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T08:25:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 20.1,
+    "humidity_percent": 75,
+    "pressure_hpa": 1016.1,
+    "wind": {
+      "speed_kph": 7.3,
+      "direction": "NE"
+    },
+    "uv_index": 1.6,
+    "light_level": "morning",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T08:30:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 20.5,
+    "humidity_percent": 73,
+    "pressure_hpa": 1017.0,
+    "wind": {
+      "speed_kph": 11.2,
+      "direction": "NE"
+    },
+    "uv_index": 2.1,
+    "light_level": "morning",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T08:35:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 20.4,
+    "humidity_percent": 70,
+    "pressure_hpa": 1010.7,
+    "wind": {
+      "speed_kph": 7.3,
+      "direction": "NE"
+    },
+    "uv_index": 2.4,
+    "light_level": "morning",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T08:40:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 20.8,
+    "humidity_percent": 72,
+    "pressure_hpa": 1015.8,
+    "wind": {
+      "speed_kph": 10.2,
+      "direction": "NE"
+    },
+    "uv_index": 1.9,
+    "light_level": "morning",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T08:45:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 20.1,
+    "humidity_percent": 70,
+    "pressure_hpa": 1013.1,
+    "wind": {
+      "speed_kph": 12.7,
+      "direction": "NE"
+    },
+    "uv_index": 1.6,
+    "light_level": "morning",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T08:50:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 20.5,
+    "humidity_percent": 67,
+    "pressure_hpa": 1011.0,
+    "wind": {
+      "speed_kph": 7.7,
+      "direction": "NE"
+    },
+    "uv_index": 1.5,
+    "light_level": "morning",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T08:55:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 20.9,
+    "humidity_percent": 72,
+    "pressure_hpa": 1009.3,
+    "wind": {
+      "speed_kph": 8.0,
+      "direction": "NE"
+    },
+    "uv_index": 1.8,
+    "light_level": "morning",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T09:00:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 21.4,
+    "humidity_percent": 67,
+    "pressure_hpa": 1017.7,
+    "wind": {
+      "speed_kph": 11.9,
+      "direction": "NE"
+    },
+    "uv_index": 3.7,
+    "light_level": "morning",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T09:05:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 21.3,
+    "humidity_percent": 72,
+    "pressure_hpa": 1010.5,
+    "wind": {
+      "speed_kph": 7.5,
+      "direction": "NE"
+    },
+    "uv_index": 4.2,
+    "light_level": "morning",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T09:10:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 21.4,
+    "humidity_percent": 70,
+    "pressure_hpa": 1008.4,
+    "wind": {
+      "speed_kph": 8.8,
+      "direction": "NE"
+    },
+    "uv_index": 4.4,
+    "light_level": "morning",
+    "weather": "partly_cloudy"
+  },
+  {
+    "timestamp": "2026-04-08T09:15:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 21.0,
+    "humidity_percent": 71,
+    "pressure_hpa": 1012.6,
+    "wind": {
+      "speed_kph": 9.4,
+      "direction": "NE"
+    },
+    "uv_index": 3.6,
+    "light_level": "morning",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T09:20:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 21.8,
+    "humidity_percent": 65,
+    "pressure_hpa": 1015.6,
+    "wind": {
+      "speed_kph": 13.1,
+      "direction": "NE"
+    },
+    "uv_index": 3.7,
+    "light_level": "morning",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T09:25:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 21.7,
+    "humidity_percent": 65,
+    "pressure_hpa": 1010.0,
+    "wind": {
+      "speed_kph": 12.6,
+      "direction": "NE"
+    },
+    "uv_index": 3.6,
+    "light_level": "morning",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T09:30:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 22.3,
+    "humidity_percent": 69,
+    "pressure_hpa": 1015.6,
+    "wind": {
+      "speed_kph": 11.9,
+      "direction": "NE"
+    },
+    "uv_index": 4.0,
+    "light_level": "morning",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T09:35:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 21.9,
+    "humidity_percent": 67,
+    "pressure_hpa": 1009.1,
+    "wind": {
+      "speed_kph": 13.0,
+      "direction": "NE"
+    },
+    "uv_index": 3.5,
+    "light_level": "morning",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T09:40:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 22.8,
+    "humidity_percent": 68,
+    "pressure_hpa": 1015.4,
+    "wind": {
+      "speed_kph": 11.9,
+      "direction": "NE"
+    },
+    "uv_index": 4.4,
+    "light_level": "morning",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T09:45:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 22.7,
+    "humidity_percent": 65,
+    "pressure_hpa": 1009.2,
+    "wind": {
+      "speed_kph": 13.4,
+      "direction": "NE"
+    },
+    "uv_index": 3.6,
+    "light_level": "morning",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T09:50:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 23.1,
+    "humidity_percent": 66,
+    "pressure_hpa": 1008.5,
+    "wind": {
+      "speed_kph": 9.5,
+      "direction": "NE"
+    },
+    "uv_index": 4.2,
+    "light_level": "morning",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T09:55:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 23.1,
+    "humidity_percent": 65,
+    "pressure_hpa": 1014.5,
+    "wind": {
+      "speed_kph": 13.0,
+      "direction": "NE"
+    },
+    "uv_index": 3.7,
+    "light_level": "morning",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T10:00:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 23.0,
+    "humidity_percent": 64,
+    "pressure_hpa": 1011.7,
+    "wind": {
+      "speed_kph": 13.7,
+      "direction": "NE"
+    },
+    "uv_index": 6.5,
+    "light_level": "midday",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T10:05:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 23.2,
+    "humidity_percent": 62,
+    "pressure_hpa": 1014.9,
+    "wind": {
+      "speed_kph": 10.6,
+      "direction": "NE"
+    },
+    "uv_index": 6.4,
+    "light_level": "midday",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T10:10:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 23.2,
+    "humidity_percent": 65,
+    "pressure_hpa": 1011.3,
+    "wind": {
+      "speed_kph": 11.2,
+      "direction": "NE"
+    },
+    "uv_index": 6.1,
+    "light_level": "midday",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T10:15:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 23.7,
+    "humidity_percent": 61,
+    "pressure_hpa": 1017.1,
+    "wind": {
+      "speed_kph": 10.8,
+      "direction": "NE"
+    },
+    "uv_index": 5.9,
+    "light_level": "midday",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T10:20:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 24.0,
+    "humidity_percent": 61,
+    "pressure_hpa": 1015.9,
+    "wind": {
+      "speed_kph": 14.0,
+      "direction": "NE"
+    },
+    "uv_index": 5.6,
+    "light_level": "midday",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T10:25:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 24.0,
+    "humidity_percent": 59,
+    "pressure_hpa": 1014.7,
+    "wind": {
+      "speed_kph": 10.3,
+      "direction": "NE"
+    },
+    "uv_index": 6.3,
+    "light_level": "midday",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T10:30:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 24.1,
+    "humidity_percent": 59,
+    "pressure_hpa": 1012.7,
+    "wind": {
+      "speed_kph": 9.6,
+      "direction": "NE"
+    },
+    "uv_index": 5.9,
+    "light_level": "midday",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T10:35:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 24.3,
+    "humidity_percent": 59,
+    "pressure_hpa": 1011.4,
+    "wind": {
+      "speed_kph": 14.5,
+      "direction": "NE"
+    },
+    "uv_index": 5.9,
+    "light_level": "midday",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T10:40:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 24.8,
+    "humidity_percent": 61,
+    "pressure_hpa": 1017.5,
+    "wind": {
+      "speed_kph": 12.9,
+      "direction": "NE"
+    },
+    "uv_index": 6.4,
+    "light_level": "midday",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T10:45:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 24.3,
+    "humidity_percent": 62,
+    "pressure_hpa": 1017.0,
+    "wind": {
+      "speed_kph": 12.3,
+      "direction": "NE"
+    },
+    "uv_index": 5.5,
+    "light_level": "midday",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T10:50:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 24.5,
+    "humidity_percent": 60,
+    "pressure_hpa": 1013.1,
+    "wind": {
+      "speed_kph": 15.0,
+      "direction": "NE"
+    },
+    "uv_index": 5.6,
+    "light_level": "midday",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T10:55:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 25.1,
+    "humidity_percent": 62,
+    "pressure_hpa": 1011.9,
+    "wind": {
+      "speed_kph": 14.1,
+      "direction": "NE"
+    },
+    "uv_index": 5.8,
+    "light_level": "midday",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T11:00:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 24.8,
+    "humidity_percent": 62,
+    "pressure_hpa": 1008.3,
+    "wind": {
+      "speed_kph": 12.4,
+      "direction": "NE"
+    },
+    "uv_index": 8.3,
+    "light_level": "midday",
+    "weather": "partly_cloudy"
+  },
+  {
+    "timestamp": "2026-04-08T11:05:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 24.9,
+    "humidity_percent": 58,
+    "pressure_hpa": 1008.7,
+    "wind": {
+      "speed_kph": 15.3,
+      "direction": "NE"
+    },
+    "uv_index": 7.6,
+    "light_level": "midday",
+    "weather": "overcast"
+  },
+  {
+    "timestamp": "2026-04-08T11:10:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 25.1,
+    "humidity_percent": 58,
+    "pressure_hpa": 1018.0,
+    "wind": {
+      "speed_kph": 11.8,
+      "direction": "NE"
+    },
+    "uv_index": 7.7,
+    "light_level": "midday",
+    "weather": "partly_cloudy"
+  },
+  {
+    "timestamp": "2026-04-08T11:15:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 25.4,
+    "humidity_percent": 57,
+    "pressure_hpa": 1015.8,
+    "wind": {
+      "speed_kph": 10.9,
+      "direction": "NE"
+    },
+    "uv_index": 8.3,
+    "light_level": "midday",
+    "weather": "partly_cloudy"
+  },
+  {
+    "timestamp": "2026-04-08T11:20:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 25.9,
+    "humidity_percent": 56,
+    "pressure_hpa": 1014.4,
+    "wind": {
+      "speed_kph": 10.7,
+      "direction": "NE"
+    },
+    "uv_index": 7.8,
+    "light_level": "midday",
+    "weather": "overcast"
+  },
+  {
+    "timestamp": "2026-04-08T11:25:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 25.6,
+    "humidity_percent": 59,
+    "pressure_hpa": 1017.5,
+    "wind": {
+      "speed_kph": 16.2,
+      "direction": "NE"
+    },
+    "uv_index": 7.7,
+    "light_level": "midday",
+    "weather": "partly_cloudy"
+  },
+  {
+    "timestamp": "2026-04-08T11:30:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 25.6,
+    "humidity_percent": 57,
+    "pressure_hpa": 1009.5,
+    "wind": {
+      "speed_kph": 13.7,
+      "direction": "NE"
+    },
+    "uv_index": 8.1,
+    "light_level": "midday",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T11:35:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 25.8,
+    "humidity_percent": 59,
+    "pressure_hpa": 1013.5,
+    "wind": {
+      "speed_kph": 12.3,
+      "direction": "NE"
+    },
+    "uv_index": 7.9,
+    "light_level": "midday",
+    "weather": "partly_cloudy"
+  },
+  {
+    "timestamp": "2026-04-08T11:40:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 26.2,
+    "humidity_percent": 59,
+    "pressure_hpa": 1014.3,
+    "wind": {
+      "speed_kph": 14.1,
+      "direction": "NE"
+    },
+    "uv_index": 8.1,
+    "light_level": "midday",
+    "weather": "partly_cloudy"
+  },
+  {
+    "timestamp": "2026-04-08T11:45:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 26.6,
+    "humidity_percent": 55,
+    "pressure_hpa": 1014.0,
+    "wind": {
+      "speed_kph": 15.0,
+      "direction": "NE"
+    },
+    "uv_index": 7.6,
+    "light_level": "midday",
+    "weather": "partly_cloudy"
+  },
+  {
+    "timestamp": "2026-04-08T11:50:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 26.6,
+    "humidity_percent": 56,
+    "pressure_hpa": 1008.9,
+    "wind": {
+      "speed_kph": 16.8,
+      "direction": "NE"
+    },
+    "uv_index": 7.7,
+    "light_level": "midday",
+    "weather": "partly_cloudy"
+  },
+  {
+    "timestamp": "2026-04-08T11:55:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 27.2,
+    "humidity_percent": 57,
+    "pressure_hpa": 1015.8,
+    "wind": {
+      "speed_kph": 14.5,
+      "direction": "NE"
+    },
+    "uv_index": 8.5,
+    "light_level": "midday",
+    "weather": "partly_cloudy"
+  },
+  {
+    "timestamp": "2026-04-08T12:00:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 27.0,
+    "humidity_percent": 56,
+    "pressure_hpa": 1012.8,
+    "wind": {
+      "speed_kph": 11.2,
+      "direction": "NE"
+    },
+    "uv_index": 8.5,
+    "light_level": "midday",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T12:05:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 27.3,
+    "humidity_percent": 53,
+    "pressure_hpa": 1017.2,
+    "wind": {
+      "speed_kph": 11.8,
+      "direction": "NE"
+    },
+    "uv_index": 8.7,
+    "light_level": "midday",
+    "weather": "partly_cloudy"
+  },
+  {
+    "timestamp": "2026-04-08T12:10:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 26.8,
+    "humidity_percent": 53,
+    "pressure_hpa": 1015.0,
+    "wind": {
+      "speed_kph": 16.9,
+      "direction": "NE"
+    },
+    "uv_index": 9.4,
+    "light_level": "midday",
+    "weather": "partly_cloudy"
+  },
+  {
+    "timestamp": "2026-04-08T12:15:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 27.2,
+    "humidity_percent": 56,
+    "pressure_hpa": 1012.7,
+    "wind": {
+      "speed_kph": 13.7,
+      "direction": "NE"
+    },
+    "uv_index": 9.2,
+    "light_level": "midday",
+    "weather": "partly_cloudy"
+  },
+  {
+    "timestamp": "2026-04-08T12:20:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 27.6,
+    "humidity_percent": 57,
+    "pressure_hpa": 1014.3,
+    "wind": {
+      "speed_kph": 11.2,
+      "direction": "NE"
+    },
+    "uv_index": 8.9,
+    "light_level": "midday",
+    "weather": "partly_cloudy"
+  },
+  {
+    "timestamp": "2026-04-08T12:25:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 27.0,
+    "humidity_percent": 57,
+    "pressure_hpa": 1008.4,
+    "wind": {
+      "speed_kph": 14.9,
+      "direction": "NE"
+    },
+    "uv_index": 8.6,
+    "light_level": "midday",
+    "weather": "partly_cloudy"
+  },
+  {
+    "timestamp": "2026-04-08T12:30:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 27.2,
+    "humidity_percent": 57,
+    "pressure_hpa": 1009.7,
+    "wind": {
+      "speed_kph": 15.1,
+      "direction": "NE"
+    },
+    "uv_index": 9.3,
+    "light_level": "midday",
+    "weather": "partly_cloudy"
+  },
+  {
+    "timestamp": "2026-04-08T12:35:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 27.8,
+    "humidity_percent": 57,
+    "pressure_hpa": 1015.2,
+    "wind": {
+      "speed_kph": 12.7,
+      "direction": "NE"
+    },
+    "uv_index": 8.6,
+    "light_level": "midday",
+    "weather": "partly_cloudy"
+  },
+  {
+    "timestamp": "2026-04-08T12:40:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 28.0,
+    "humidity_percent": 54,
+    "pressure_hpa": 1014.3,
+    "wind": {
+      "speed_kph": 16.8,
+      "direction": "NE"
+    },
+    "uv_index": 8.9,
+    "light_level": "midday",
+    "weather": "partly_cloudy"
+  },
+  {
+    "timestamp": "2026-04-08T12:45:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 27.5,
+    "humidity_percent": 52,
+    "pressure_hpa": 1015.7,
+    "wind": {
+      "speed_kph": 13.7,
+      "direction": "NE"
+    },
+    "uv_index": 9.3,
+    "light_level": "midday",
+    "weather": "partly_cloudy"
+  },
+  {
+    "timestamp": "2026-04-08T12:50:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 28.2,
+    "humidity_percent": 53,
+    "pressure_hpa": 1011.7,
+    "wind": {
+      "speed_kph": 15.2,
+      "direction": "NE"
+    },
+    "uv_index": 9.4,
+    "light_level": "midday",
+    "weather": "partly_cloudy"
+  },
+  {
+    "timestamp": "2026-04-08T12:55:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 27.8,
+    "humidity_percent": 53,
+    "pressure_hpa": 1008.9,
+    "wind": {
+      "speed_kph": 16.5,
+      "direction": "NE"
+    },
+    "uv_index": 9.4,
+    "light_level": "midday",
+    "weather": "partly_cloudy"
+  },
+  {
+    "timestamp": "2026-04-08T13:00:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 28.0,
+    "humidity_percent": 52,
+    "pressure_hpa": 1009.0,
+    "wind": {
+      "speed_kph": 11.3,
+      "direction": "NE"
+    },
+    "uv_index": 9.2,
+    "light_level": "midday",
+    "weather": "partly_cloudy"
+  },
+  {
+    "timestamp": "2026-04-08T13:05:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 28.0,
+    "humidity_percent": 53,
+    "pressure_hpa": 1014.8,
+    "wind": {
+      "speed_kph": 16.7,
+      "direction": "NE"
+    },
+    "uv_index": 9.5,
+    "light_level": "midday",
+    "weather": "partly_cloudy"
+  },
+  {
+    "timestamp": "2026-04-08T13:10:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 28.2,
+    "humidity_percent": 53,
+    "pressure_hpa": 1008.4,
+    "wind": {
+      "speed_kph": 12.1,
+      "direction": "NE"
+    },
+    "uv_index": 9.5,
+    "light_level": "midday",
+    "weather": "partly_cloudy"
+  },
+  {
+    "timestamp": "2026-04-08T13:15:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 27.6,
+    "humidity_percent": 51,
+    "pressure_hpa": 1010.9,
+    "wind": {
+      "speed_kph": 16.5,
+      "direction": "NE"
+    },
+    "uv_index": 8.6,
+    "light_level": "midday",
+    "weather": "partly_cloudy"
+  },
+  {
+    "timestamp": "2026-04-08T13:20:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 28.3,
+    "humidity_percent": 51,
+    "pressure_hpa": 1009.9,
+    "wind": {
+      "speed_kph": 15.1,
+      "direction": "NE"
+    },
+    "uv_index": 9.1,
+    "light_level": "midday",
+    "weather": "partly_cloudy"
+  },
+  {
+    "timestamp": "2026-04-08T13:25:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 28.3,
+    "humidity_percent": 52,
+    "pressure_hpa": 1008.1,
+    "wind": {
+      "speed_kph": 16.5,
+      "direction": "NE"
+    },
+    "uv_index": 9.2,
+    "light_level": "midday",
+    "weather": "partly_cloudy"
+  },
+  {
+    "timestamp": "2026-04-08T13:30:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 28.5,
+    "humidity_percent": 55,
+    "pressure_hpa": 1016.6,
+    "wind": {
+      "speed_kph": 11.7,
+      "direction": "NE"
+    },
+    "uv_index": 8.6,
+    "light_level": "midday",
+    "weather": "partly_cloudy"
+  },
+  {
+    "timestamp": "2026-04-08T13:35:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 28.2,
+    "humidity_percent": 55,
+    "pressure_hpa": 1012.5,
+    "wind": {
+      "speed_kph": 12.6,
+      "direction": "NE"
+    },
+    "uv_index": 8.9,
+    "light_level": "midday",
+    "weather": "partly_cloudy"
+  },
+  {
+    "timestamp": "2026-04-08T13:40:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 27.7,
+    "humidity_percent": 51,
+    "pressure_hpa": 1009.4,
+    "wind": {
+      "speed_kph": 16.7,
+      "direction": "NE"
+    },
+    "uv_index": 8.7,
+    "light_level": "midday",
+    "weather": "partly_cloudy"
+  },
+  {
+    "timestamp": "2026-04-08T13:45:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 28.4,
+    "humidity_percent": 54,
+    "pressure_hpa": 1016.6,
+    "wind": {
+      "speed_kph": 14.9,
+      "direction": "NE"
+    },
+    "uv_index": 8.8,
+    "light_level": "midday",
+    "weather": "partly_cloudy"
+  },
+  {
+    "timestamp": "2026-04-08T13:50:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 27.7,
+    "humidity_percent": 49,
+    "pressure_hpa": 1011.0,
+    "wind": {
+      "speed_kph": 14.9,
+      "direction": "NE"
+    },
+    "uv_index": 9.4,
+    "light_level": "midday",
+    "weather": "partly_cloudy"
+  },
+  {
+    "timestamp": "2026-04-08T13:55:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 27.7,
+    "humidity_percent": 52,
+    "pressure_hpa": 1017.0,
+    "wind": {
+      "speed_kph": 16.3,
+      "direction": "NE"
+    },
+    "uv_index": 8.9,
+    "light_level": "midday",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T14:00:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 27.5,
+    "humidity_percent": 52,
+    "pressure_hpa": 1010.0,
+    "wind": {
+      "speed_kph": 12.6,
+      "direction": "NE"
+    },
+    "uv_index": 7.9,
+    "light_level": "afternoon",
+    "weather": "partly_cloudy"
+  },
+  {
+    "timestamp": "2026-04-08T14:05:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 27.7,
+    "humidity_percent": 54,
+    "pressure_hpa": 1009.0,
+    "wind": {
+      "speed_kph": 15.7,
+      "direction": "NE"
+    },
+    "uv_index": 7.6,
+    "light_level": "afternoon",
+    "weather": "partly_cloudy"
+  },
+  {
+    "timestamp": "2026-04-08T14:10:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 28.2,
+    "humidity_percent": 53,
+    "pressure_hpa": 1010.3,
+    "wind": {
+      "speed_kph": 12.5,
+      "direction": "NE"
+    },
+    "uv_index": 8.4,
+    "light_level": "afternoon",
+    "weather": "partly_cloudy"
+  },
+  {
+    "timestamp": "2026-04-08T14:15:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 27.7,
+    "humidity_percent": 50,
+    "pressure_hpa": 1013.8,
+    "wind": {
+      "speed_kph": 16.4,
+      "direction": "NE"
+    },
+    "uv_index": 7.6,
+    "light_level": "afternoon",
+    "weather": "partly_cloudy"
+  },
+  {
+    "timestamp": "2026-04-08T14:20:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 27.6,
+    "humidity_percent": 52,
+    "pressure_hpa": 1013.1,
+    "wind": {
+      "speed_kph": 14.4,
+      "direction": "NE"
+    },
+    "uv_index": 8.4,
+    "light_level": "afternoon",
+    "weather": "partly_cloudy"
+  },
+  {
+    "timestamp": "2026-04-08T14:25:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 27.6,
+    "humidity_percent": 50,
+    "pressure_hpa": 1008.2,
+    "wind": {
+      "speed_kph": 14.9,
+      "direction": "NE"
+    },
+    "uv_index": 7.9,
+    "light_level": "afternoon",
+    "weather": "partly_cloudy"
+  },
+  {
+    "timestamp": "2026-04-08T14:30:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 27.8,
+    "humidity_percent": 52,
+    "pressure_hpa": 1009.3,
+    "wind": {
+      "speed_kph": 16.3,
+      "direction": "NE"
+    },
+    "uv_index": 8.1,
+    "light_level": "afternoon",
+    "weather": "partly_cloudy"
+  },
+  {
+    "timestamp": "2026-04-08T14:35:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 27.2,
+    "humidity_percent": 52,
+    "pressure_hpa": 1016.0,
+    "wind": {
+      "speed_kph": 17.3,
+      "direction": "NE"
+    },
+    "uv_index": 8.5,
+    "light_level": "afternoon",
+    "weather": "partly_cloudy"
+  },
+  {
+    "timestamp": "2026-04-08T14:40:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 27.8,
+    "humidity_percent": 54,
+    "pressure_hpa": 1016.7,
+    "wind": {
+      "speed_kph": 16.3,
+      "direction": "NE"
+    },
+    "uv_index": 7.6,
+    "light_level": "afternoon",
+    "weather": "partly_cloudy"
+  },
+  {
+    "timestamp": "2026-04-08T14:45:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 27.0,
+    "humidity_percent": 51,
+    "pressure_hpa": 1013.8,
+    "wind": {
+      "speed_kph": 11.7,
+      "direction": "NE"
+    },
+    "uv_index": 8.0,
+    "light_level": "afternoon",
+    "weather": "partly_cloudy"
+  },
+  {
+    "timestamp": "2026-04-08T14:50:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 27.6,
+    "humidity_percent": 56,
+    "pressure_hpa": 1016.8,
+    "wind": {
+      "speed_kph": 11.7,
+      "direction": "NE"
+    },
+    "uv_index": 7.9,
+    "light_level": "afternoon",
+    "weather": "partly_cloudy"
+  },
+  {
+    "timestamp": "2026-04-08T14:55:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 26.6,
+    "humidity_percent": 51,
+    "pressure_hpa": 1015.5,
+    "wind": {
+      "speed_kph": 13.7,
+      "direction": "NE"
+    },
+    "uv_index": 8.5,
+    "light_level": "afternoon",
+    "weather": "partly_cloudy"
+  },
+  {
+    "timestamp": "2026-04-08T15:00:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 26.5,
+    "humidity_percent": 52,
+    "pressure_hpa": 1012.1,
+    "wind": {
+      "speed_kph": 13.8,
+      "direction": "NE"
+    },
+    "uv_index": 5.7,
+    "light_level": "afternoon",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T15:05:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 27.1,
+    "humidity_percent": 53,
+    "pressure_hpa": 1012.0,
+    "wind": {
+      "speed_kph": 13.9,
+      "direction": "NE"
+    },
+    "uv_index": 6.5,
+    "light_level": "afternoon",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T15:10:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 27.1,
+    "humidity_percent": 54,
+    "pressure_hpa": 1016.8,
+    "wind": {
+      "speed_kph": 15.9,
+      "direction": "NE"
+    },
+    "uv_index": 6.1,
+    "light_level": "afternoon",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T15:15:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 27.0,
+    "humidity_percent": 54,
+    "pressure_hpa": 1011.5,
+    "wind": {
+      "speed_kph": 11.5,
+      "direction": "NE"
+    },
+    "uv_index": 6.4,
+    "light_level": "afternoon",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T15:20:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 26.5,
+    "humidity_percent": 52,
+    "pressure_hpa": 1008.7,
+    "wind": {
+      "speed_kph": 16.0,
+      "direction": "NE"
+    },
+    "uv_index": 5.7,
+    "light_level": "afternoon",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T15:25:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 27.1,
+    "humidity_percent": 52,
+    "pressure_hpa": 1018.0,
+    "wind": {
+      "speed_kph": 15.9,
+      "direction": "NE"
+    },
+    "uv_index": 5.6,
+    "light_level": "afternoon",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T15:30:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 26.1,
+    "humidity_percent": 56,
+    "pressure_hpa": 1011.4,
+    "wind": {
+      "speed_kph": 10.1,
+      "direction": "NE"
+    },
+    "uv_index": 5.7,
+    "light_level": "afternoon",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T15:35:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 26.4,
+    "humidity_percent": 57,
+    "pressure_hpa": 1012.1,
+    "wind": {
+      "speed_kph": 15.3,
+      "direction": "NE"
+    },
+    "uv_index": 5.7,
+    "light_level": "afternoon",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T15:40:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 26.5,
+    "humidity_percent": 54,
+    "pressure_hpa": 1011.1,
+    "wind": {
+      "speed_kph": 12.5,
+      "direction": "NE"
+    },
+    "uv_index": 6.1,
+    "light_level": "afternoon",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T15:45:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 25.9,
+    "humidity_percent": 53,
+    "pressure_hpa": 1016.5,
+    "wind": {
+      "speed_kph": 11.5,
+      "direction": "NE"
+    },
+    "uv_index": 5.9,
+    "light_level": "afternoon",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T15:50:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 26.1,
+    "humidity_percent": 54,
+    "pressure_hpa": 1017.0,
+    "wind": {
+      "speed_kph": 13.2,
+      "direction": "NE"
+    },
+    "uv_index": 6.4,
+    "light_level": "afternoon",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T15:55:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 26.5,
+    "humidity_percent": 54,
+    "pressure_hpa": 1015.5,
+    "wind": {
+      "speed_kph": 13.0,
+      "direction": "NE"
+    },
+    "uv_index": 5.7,
+    "light_level": "afternoon",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T16:00:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 25.7,
+    "humidity_percent": 56,
+    "pressure_hpa": 1011.0,
+    "wind": {
+      "speed_kph": 12.7,
+      "direction": "NE"
+    },
+    "uv_index": 3.6,
+    "light_level": "afternoon",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T16:05:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 26.3,
+    "humidity_percent": 56,
+    "pressure_hpa": 1013.3,
+    "wind": {
+      "speed_kph": 9.7,
+      "direction": "NE"
+    },
+    "uv_index": 4.0,
+    "light_level": "afternoon",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T16:10:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 25.7,
+    "humidity_percent": 55,
+    "pressure_hpa": 1011.8,
+    "wind": {
+      "speed_kph": 11.2,
+      "direction": "NE"
+    },
+    "uv_index": 3.6,
+    "light_level": "afternoon",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T16:15:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 25.5,
+    "humidity_percent": 61,
+    "pressure_hpa": 1013.9,
+    "wind": {
+      "speed_kph": 12.1,
+      "direction": "NE"
+    },
+    "uv_index": 4.3,
+    "light_level": "afternoon",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T16:20:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 25.4,
+    "humidity_percent": 58,
+    "pressure_hpa": 1014.5,
+    "wind": {
+      "speed_kph": 10.7,
+      "direction": "NE"
+    },
+    "uv_index": 4.4,
+    "light_level": "afternoon",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T16:25:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 25.3,
+    "humidity_percent": 60,
+    "pressure_hpa": 1011.4,
+    "wind": {
+      "speed_kph": 12.2,
+      "direction": "NE"
+    },
+    "uv_index": 4.3,
+    "light_level": "afternoon",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T16:30:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 24.7,
+    "humidity_percent": 59,
+    "pressure_hpa": 1015.9,
+    "wind": {
+      "speed_kph": 12.7,
+      "direction": "NE"
+    },
+    "uv_index": 3.5,
+    "light_level": "afternoon",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T16:35:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 25.0,
+    "humidity_percent": 57,
+    "pressure_hpa": 1015.2,
+    "wind": {
+      "speed_kph": 9.5,
+      "direction": "NE"
+    },
+    "uv_index": 4.0,
+    "light_level": "afternoon",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T16:40:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 25.1,
+    "humidity_percent": 59,
+    "pressure_hpa": 1017.6,
+    "wind": {
+      "speed_kph": 9.7,
+      "direction": "NE"
+    },
+    "uv_index": 3.9,
+    "light_level": "afternoon",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T16:45:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 24.1,
+    "humidity_percent": 62,
+    "pressure_hpa": 1014.6,
+    "wind": {
+      "speed_kph": 12.5,
+      "direction": "NE"
+    },
+    "uv_index": 4.3,
+    "light_level": "afternoon",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T16:50:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 24.4,
+    "humidity_percent": 63,
+    "pressure_hpa": 1011.5,
+    "wind": {
+      "speed_kph": 9.1,
+      "direction": "NE"
+    },
+    "uv_index": 3.5,
+    "light_level": "afternoon",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T16:55:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 24.1,
+    "humidity_percent": 59,
+    "pressure_hpa": 1014.2,
+    "wind": {
+      "speed_kph": 10.4,
+      "direction": "NE"
+    },
+    "uv_index": 3.9,
+    "light_level": "afternoon",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T17:00:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 23.9,
+    "humidity_percent": 62,
+    "pressure_hpa": 1015.0,
+    "wind": {
+      "speed_kph": 8.6,
+      "direction": "NE"
+    },
+    "uv_index": 2.0,
+    "light_level": "evening",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T17:05:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 24.1,
+    "humidity_percent": 64,
+    "pressure_hpa": 1015.8,
+    "wind": {
+      "speed_kph": 11.5,
+      "direction": "NE"
+    },
+    "uv_index": 2.3,
+    "light_level": "evening",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T17:10:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 24.0,
+    "humidity_percent": 62,
+    "pressure_hpa": 1008.2,
+    "wind": {
+      "speed_kph": 9.0,
+      "direction": "NE"
+    },
+    "uv_index": 1.8,
+    "light_level": "evening",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T17:15:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 24.2,
+    "humidity_percent": 59,
+    "pressure_hpa": 1011.5,
+    "wind": {
+      "speed_kph": 7.2,
+      "direction": "NE"
+    },
+    "uv_index": 1.8,
+    "light_level": "evening",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T17:20:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 24.4,
+    "humidity_percent": 63,
+    "pressure_hpa": 1012.8,
+    "wind": {
+      "speed_kph": 9.4,
+      "direction": "NE"
+    },
+    "uv_index": 2.2,
+    "light_level": "evening",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T17:25:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 23.9,
+    "humidity_percent": 59,
+    "pressure_hpa": 1014.6,
+    "wind": {
+      "speed_kph": 11.8,
+      "direction": "NE"
+    },
+    "uv_index": 1.8,
+    "light_level": "evening",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T17:30:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 23.6,
+    "humidity_percent": 60,
+    "pressure_hpa": 1014.2,
+    "wind": {
+      "speed_kph": 7.8,
+      "direction": "NE"
+    },
+    "uv_index": 2.1,
+    "light_level": "evening",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T17:35:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 24.3,
+    "humidity_percent": 59,
+    "pressure_hpa": 1016.8,
+    "wind": {
+      "speed_kph": 8.2,
+      "direction": "NE"
+    },
+    "uv_index": 2.4,
+    "light_level": "evening",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T17:40:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 24.0,
+    "humidity_percent": 61,
+    "pressure_hpa": 1016.1,
+    "wind": {
+      "speed_kph": 12.9,
+      "direction": "NE"
+    },
+    "uv_index": 2.2,
+    "light_level": "evening",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T17:45:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 23.6,
+    "humidity_percent": 64,
+    "pressure_hpa": 1012.4,
+    "wind": {
+      "speed_kph": 7.5,
+      "direction": "NE"
+    },
+    "uv_index": 2.5,
+    "light_level": "evening",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T17:50:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 23.5,
+    "humidity_percent": 62,
+    "pressure_hpa": 1012.3,
+    "wind": {
+      "speed_kph": 10.7,
+      "direction": "NE"
+    },
+    "uv_index": 1.8,
+    "light_level": "evening",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T17:55:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 23.7,
+    "humidity_percent": 59,
+    "pressure_hpa": 1011.5,
+    "wind": {
+      "speed_kph": 8.6,
+      "direction": "NE"
+    },
+    "uv_index": 1.9,
+    "light_level": "evening",
+    "weather": "clear"
+  },
+  {
+    "timestamp": "2026-04-08T18:00:00+10:00",
+    "location": {
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "Australia",
+      "coordinates": {
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      }
+    },
+    "temperature_celsius": 24.2,
+    "humidity_percent": 61,
+    "pressure_hpa": 1009.3,
+    "wind": {
+      "speed_kph": 7.6,
+      "direction": "NE"
+    },
+    "uv_index": 1.2,
+    "light_level": "evening",
+    "weather": "clear"
+  }
+]

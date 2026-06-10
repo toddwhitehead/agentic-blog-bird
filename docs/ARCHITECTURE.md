@@ -27,7 +27,7 @@ Agentic Blog Bird is a multi-agent system designed to automatically generate blo
         │                    │                    │
         ▼                    ▼                    ▼
 ┌──────────────┐    ┌──────────────┐    ┌──────────────┐
-│  Researcher  │───▶│  CopyWriter  │───▶│   Artist     │
+│  Researcher  │──▶│  CopyWriter  │───▶│   Artist     │
 │    Agent     │    │    Agent     │    │    Agent     │
 │ (BaseAgent)  │    │ (BaseAgent)  │    │ (BaseAgent)  │
 └──────────────┘    └──────────────┘    └──────────────┘
