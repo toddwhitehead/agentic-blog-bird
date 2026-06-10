@@ -1,0 +1,19 @@
+species,time,confidence,behavior,location
+Northern Cardinal,07:05:15,0.96,feeding,main_feeder
+Blue Jay,07:20:30,0.94,perching,oak_tree
+American Goldfinch,07:35:45,0.92,feeding,nyjer_feeder
+Dark-eyed Junco,08:10:20,0.95,ground_feeding,under_bushes
+Northern Cardinal,08:25:35,0.97,singing,pine_tree
+Carolina Wren,09:15:10,0.93,exploring,brush_pile
+Blue Jay,09:40:25,0.91,caching,maple_tree
+American Goldfinch,10:20:50,0.94,feeding,nyjer_feeder
+White-breasted Nuthatch,11:05:15,0.96,upside_down_feeding,tree_trunk
+Dark-eyed Junco,11:30:40,0.93,feeding,ground_feeder
+Northern Cardinal,12:15:55,0.98,bathing,bird_bath
+Carolina Wren,13:20:10,0.95,singing,woodpile
+Blue Jay,14:05:30,0.92,feeding,peanut_feeder
+American Goldfinch,14:45:20,0.91,flock_feeding,nyjer_feeder
+White-breasted Nuthatch,15:30:35,0.97,caching,oak_tree
+Dark-eyed Junco,16:10:50,0.94,foraging,leaf_litter
+Northern Cardinal,16:45:15,0.96,evening_feeding,main_feeder
+Carolina Wren,17:20:25,0.93,roosting_prep,hedge

@@ -1,0 +1,131 @@
+{
+  "date": "2024-01-15",
+  "total_detections": 47,
+  "species": ["Northern Cardinal", "Blue Jay", "American Robin", "House Sparrow", "Black-capped Chickadee"],
+  "detections": [
+    {
+      "species": "Northern Cardinal",
+      "time": "07:15:23",
+      "confidence": 0.96,
+      "behavior": "feeding",
+      "location": "main_feeder"
+    },
+    {
+      "species": "Blue Jay",
+      "time": "07:22:45",
+      "confidence": 0.94,
+      "behavior": "perching",
+      "location": "oak_tree"
+    },
+    {
+      "species": "Northern Cardinal",
+      "time": "07:28:12",
+      "confidence": 0.97,
+      "behavior": "feeding",
+      "location": "main_feeder"
+    },
+    {
+      "species": "House Sparrow",
+      "time": "08:05:30",
+      "confidence": 0.91,
+      "behavior": "bathing",
+      "location": "bird_bath"
+    },
+    {
+      "species": "Black-capped Chickadee",
+      "time": "08:15:45",
+      "confidence": 0.95,
+      "behavior": "feeding",
+      "location": "suet_feeder"
+    },
+    {
+      "species": "American Robin",
+      "time": "09:30:10",
+      "confidence": 0.93,
+      "behavior": "foraging",
+      "location": "lawn"
+    },
+    {
+      "species": "Blue Jay",
+      "time": "10:12:33",
+      "confidence": 0.92,
+      "behavior": "caching",
+      "location": "maple_tree"
+    },
+    {
+      "species": "Northern Cardinal",
+      "time": "11:45:22",
+      "confidence": 0.98,
+      "behavior": "singing",
+      "location": "oak_tree"
+    },
+    {
+      "species": "House Sparrow",
+      "time": "12:20:15",
+      "confidence": 0.89,
+      "behavior": "feeding",
+      "location": "ground_feeder"
+    },
+    {
+      "species": "Black-capped Chickadee",
+      "time": "13:05:40",
+      "confidence": 0.94,
+      "behavior": "feeding",
+      "location": "main_feeder"
+    },
+    {
+      "species": "Blue Jay",
+      "time": "14:30:55",
+      "confidence": 0.96,
+      "behavior": "territorial_display",
+      "location": "oak_tree"
+    },
+    {
+      "species": "American Robin",
+      "time": "15:15:20",
+      "confidence": 0.92,
+      "behavior": "foraging",
+      "location": "garden"
+    },
+    {
+      "species": "Northern Cardinal",
+      "time": "16:45:10",
+      "confidence": 0.97,
+      "behavior": "feeding",
+      "location": "main_feeder"
+    },
+    {
+      "species": "House Sparrow",
+      "time": "17:10:25",
+      "confidence": 0.90,
+      "behavior": "roosting",
+      "location": "hedge"
+    },
+    {
+      "species": "Black-capped Chickadee",
+      "time": "17:35:50",
+      "confidence": 0.93,
+      "behavior": "feeding",
+      "location": "suet_feeder"
+    }
+  ],
+  "notable_events": [
+    "First Cardinal sighting occurred at dawn (7:15 AM)",
+    "Blue Jay exhibited territorial behavior in the afternoon",
+    "Peak activity period observed between 7-9 AM with 15 detections",
+    "American Robin spotted foraging for worms after morning rain",
+    "Evening feeding frenzy at main feeder with multiple species competing"
+  ],
+  "environmental_conditions": {
+    "temperature": "42F",
+    "weather": "partly cloudy with morning drizzle",
+    "wind_speed": "5-8 mph",
+    "visibility": "good",
+    "moon_phase": "waxing crescent"
+  },
+  "equipment_status": {
+    "camera_uptime": "99.8%",
+    "total_images_captured": 487,
+    "ai_processing_time_avg_ms": 125
+  }
+}

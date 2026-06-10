@@ -2,7 +2,7 @@
 Researcher Agent Module
 
 This agent is responsible for collecting information from Azure Blob Storage
-about bird detection events and data files.
+or local sample-data folder about bird detection events and data files.
 """
 
 import csv
@@ -11,13 +11,15 @@ from typing import Dict, List, Any
 import json
 import os
 from datetime import datetime
+from pathlib import Path
 from azure.storage.blob import BlobServiceClient, BlobClient, ContainerClient
 from .base_agent import BaseAgent
 
 
 class ResearcherAgent(BaseAgent):
     """
-    Researcher agent that collects bird detection data from Azure Blob Storage.
+    Researcher agent that collects bird detection data from Azure Blob Storage
+    or local sample-data folder.
     """
     
     def __init__(self, config: Dict[str, Any] = None):
@@ -30,7 +32,10 @@ class ResearcherAgent(BaseAgent):
         super().__init__(name="Researcher", config=config)
         self._initialize_agent_client()
         self.blob_service_client = None
+        self.use_local_data = False
+        self.local_data_path = None
         self._initialize_blob_storage()
+        self._initialize_local_data()
         
     def _initialize_blob_storage(self):
         """Initialize Azure Blob Storage client."""
@@ -49,13 +54,33 @@ class ResearcherAgent(BaseAgent):
                 self.blob_service_client = None
         else:
             print("Warning: No Azure Storage connection string found. Blob storage access disabled.")
+    
+    def _initialize_local_data(self):
+        """Initialize local sample-data folder as fallback."""
+        # Look for sample-data folder relative to the project root
+        current_dir = Path(__file__).parent.parent.parent  # Go up to project root
+        sample_data_dir = current_dir / "sample-data"
+        
+        # Also check config for custom path
+        config_path = self.config.get("local_data_path")
+        if config_path:
+            sample_data_dir = Path(config_path)
+        
+        if sample_data_dir.exists() and sample_data_dir.is_dir():
+            self.local_data_path = sample_data_dir
+            # Use local data if blob storage is not available
+            if not self.blob_service_client:
+                self.use_local_data = True
+                print(f"Using local sample data from: {self.local_data_path}")
+        else:
+            self.local_data_path = None
         
     def get_system_message(self) -> str:
         """Return the system message for the researcher agent."""
         return """You are a Researcher agent specialized in collecting and analyzing bird detection data.
         
 Your responsibilities:
-1. Retrieve bird detection data files from Azure Blob Storage
+1. Retrieve bird detection data files from Azure Blob Storage or local sample-data folder
 2. Parse and analyze data from JSON/CSV files (detection times, species, counts, images)
 3. Identify interesting patterns or notable events
 4. Compile comprehensive data summaries for the writing team
@@ -79,13 +104,24 @@ Format your research summary with clear structure including:
     
     def list_data_files(self) -> List[str]:
         """
-        List all bird detection data files in blob storage.
+        List all bird detection data files in blob storage or local sample-data folder.
         
         Returns:
-            List of blob names (file paths)
+            List of file names (blob names or local file names)
         """
+        # Try local data first if enabled
+        if self.use_local_data and self.local_data_path:
+            return self._list_local_data_files()
+        
+        # Fall back to blob storage
         if not self.blob_service_client:
-            print("Warning: Blob storage not initialized. Returning empty list.")
+            # If neither is available, try local data as last resort
+            if self.local_data_path:
+                print("Falling back to local sample data...")
+                self.use_local_data = True
+                return self._list_local_data_files()
+            
+            print("Warning: Blob storage not initialized and no local data available. Returning empty list.")
             return []
         
         container_name = self.config.get("blob_container_name", "bird-detection-data")
@@ -105,20 +141,53 @@ Format your research summary with clear structure including:
             return data_files
         except Exception as e:
             print(f"Error listing blobs: {e}")
+            # Try local data as fallback
+            if self.local_data_path:
+                print("Falling back to local sample data...")
+                self.use_local_data = True
+                return self._list_local_data_files()
             return []
     
-    def download_data_file(self, blob_name: str) -> Dict[str, Any]:
+    def _list_local_data_files(self) -> List[str]:
         """
-        Download and parse a bird detection data file from blob storage.
+        List all bird detection data files in local sample-data folder.
+        
+        Returns:
+            List of file names
+        """
+        if not self.local_data_path or not self.local_data_path.exists():
+            return []
+        
+        data_files = []
+        for file_path in self.local_data_path.iterdir():
+            if file_path.is_file() and file_path.suffix in ['.json', '.csv']:
+                data_files.append(file_path.name)
+        
+        return sorted(data_files)
+    
+    def download_data_file(self, file_name: str) -> Dict[str, Any]:
+        """
+        Download and parse a bird detection data file from blob storage or local folder.
         
         Args:
-            blob_name: Name of the blob to download
+            file_name: Name of the file to download
             
         Returns:
             Dictionary containing parsed bird detection data
         """
+        # Try local data first if enabled
+        if self.use_local_data and self.local_data_path:
+            return self._load_local_data_file(file_name)
+        
+        # Fall back to blob storage
         if not self.blob_service_client:
-            print(f"Warning: Blob storage not initialized. Cannot download {blob_name}")
+            # If blob storage not available, try local data
+            if self.local_data_path:
+                print(f"Loading from local sample data: {file_name}")
+                self.use_local_data = True
+                return self._load_local_data_file(file_name)
+            
+            print(f"Warning: Blob storage not initialized and no local data. Cannot download {file_name}")
             return {}
         
         container_name = self.config.get("blob_container_name", "bird-detection-data")
@@ -128,31 +197,78 @@ Format your research summary with clear structure including:
         try:
             blob_client = self.blob_service_client.get_blob_client(
                 container=container_name, 
-                blob=blob_name
+                blob=file_name
             )
             
             # Download blob content
             blob_data = blob_client.download_blob().readall()
             
             # Parse based on file type
-            if blob_name.endswith('.json'):
+            if file_name.endswith('.json'):
                 data = json.loads(blob_data.decode('utf-8'))
-            elif blob_name.endswith('.csv'):
-                # For CSV files, we'll read them as text and convert to simple format
-                # In a real implementation, you might use pandas or csv module
+            elif file_name.endswith('.csv'):
                 data = self._parse_csv_data(blob_data.decode('utf-8'))
             else:
                 data = {}
             
             # Add metadata
             if isinstance(data, dict):
-                data['source_file'] = blob_name
+                data['source_file'] = file_name
                 data['download_timestamp'] = datetime.now().isoformat()
+                data['source_type'] = 'azure_blob_storage'
             
             return data
             
         except Exception as e:
-            print(f"Error downloading blob {blob_name}: {e}")
+            print(f"Error downloading blob {file_name}: {e}")
+            # Try local data as fallback
+            if self.local_data_path:
+                print(f"Falling back to local sample data: {file_name}")
+                self.use_local_data = True
+                return self._load_local_data_file(file_name)
+            return {}
+    
+    def _load_local_data_file(self, file_name: str) -> Dict[str, Any]:
+        """
+        Load and parse a bird detection data file from local sample-data folder.
+        
+        Args:
+            file_name: Name of the file to load
+            
+        Returns:
+            Dictionary containing parsed bird detection data
+        """
+        if not self.local_data_path:
+            return {}
+        
+        file_path = self.local_data_path / file_name
+        
+        if not file_path.exists():
+            print(f"Warning: Local file not found: {file_path}")
+            return {}
+        
+        try:
+            # Read and parse based on file type
+            if file_name.endswith('.json'):
+                with open(file_path, 'r') as f:
+                    data = json.load(f)
+            elif file_name.endswith('.csv'):
+                with open(file_path, 'r') as f:
+                    csv_content = f.read()
+                    data = self._parse_csv_data(csv_content)
+            else:
+                data = {}
+            
+            # Add metadata
+            if isinstance(data, dict):
+                data['source_file'] = file_name
+                data['download_timestamp'] = datetime.now().isoformat()
+                data['source_type'] = 'local_sample_data'
+            
+            return data
+            
+        except Exception as e:
+            print(f"Error loading local file {file_name}: {e}")
             return {}
     
     def _parse_csv_data(self, csv_content: str) -> Dict[str, Any]:

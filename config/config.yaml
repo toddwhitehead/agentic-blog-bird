@@ -8,6 +8,10 @@ researcher:
   blob_container_name: "bird-detection-data"
   blob_storage_connection_string: ""
   
+  # Local sample data path (used when blob storage is not configured)
+  # Defaults to 'sample-data' folder in project root
+  local_data_path: ""  # Leave empty to use default 'sample-data' folder
+  
   # Microsoft Fabric connection settings (legacy - now using blob storage)
   fabric_workspace: ""
   fabric_endpoint: ""
