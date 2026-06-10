@@ -183,8 +183,8 @@ meets publication standards.
             "validation_result": validation
         })
         
-        # Step 8: Commit to Azure DevOps
-        print("\nStep 8: Commit to Azure DevOps")
+        # Step 8: Commit to GitHub
+        print("\nStep 8: Commit to GitHub")
         print("-" * 60)
         commit_result = self._commit_to_repository(published_path, blog_post)
         workflow_result["steps"].append({
@@ -312,8 +312,8 @@ meets publication standards.
                 print("-" * 60)
                 validation = self._validate_output(published_path)
                 
-                # Step 8: Commit to Azure DevOps
-                print("\nStep 8: Commit to Azure DevOps")
+                # Step 8: Commit to GitHub
+                print("\nStep 8: Commit to GitHub")
                 print("-" * 60)
                 commit_result = self._commit_to_repository(published_path, blog_post)
                 
@@ -460,7 +460,7 @@ meets publication standards.
         return validation
     
     def _commit_to_repository(self, published_path: str, blog_post: Dict[str, Any]) -> Dict[str, Any]:
-        """Commit the published post to Azure DevOps repository."""
+        """Commit the published post to GitHub repository."""
         print("Editor: Requesting commit from Committer agent...")
         
         # Check if auto-commit is enabled
@@ -494,7 +494,7 @@ meets publication standards.
         commit_result = self.committer.commit_post(published_path, commit_message)
         
         if commit_result['status'] == 'completed':
-            print(f"Editor: Successfully committed to Azure DevOps!")
+            print(f"Editor: Successfully committed to GitHub!")
             print(f"Editor: Commit SHA: {commit_result.get('commit_sha', 'N/A')}")
             print(f"Editor: Target path: {commit_result.get('target_path', 'N/A')}")
         elif commit_result['status'] == 'skipped':

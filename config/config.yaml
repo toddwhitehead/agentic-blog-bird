@@ -75,8 +75,8 @@ publisher:
 
 # Committer Agent Configuration
 committer:
-  # Azure DevOps Git settings
-  azure_devops_repo_url: ""  # e.g., https://dev.azure.com/{organization}/{project}/_git/{repository}
+  # GitHub Git settings
+  github_repo_url: ""  # e.g., https://github.com/{owner}/{repository}
   repo_path: "content/posts"  # Path within the repository to commit files
   branch: "main"  # Target branch for commits
   

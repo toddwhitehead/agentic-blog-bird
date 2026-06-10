@@ -279,7 +279,7 @@ Enable Azure Application Insights for monitoring:
 2. **Add Real Data**: Integrate with your actual bird detection system via Microsoft Fabric
 3. **Enhance Content**: Leverage Azure AI models for better content generation
 4. **Automate**: Set up Azure Functions or Logic Apps to run on a schedule
-5. **Deploy**: Use Azure DevOps or GitHub Actions for CI/CD
+5. **Deploy**: Use GitHub Actions for CI/CD
 6. **Monitor**: Set up alerts and dashboards in Application Insights
 
 ## Security Best Practices

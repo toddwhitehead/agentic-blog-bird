@@ -2,11 +2,11 @@
 Test script for CommitterAgent
 
 This script demonstrates the CommitterAgent functionality for committing
-Hugo markdown files to an Azure DevOps Git repository.
+Hugo markdown files to a GitHub Git repository.
 
 Prerequisites:
-- Azure DevOps repository URL configured
-- AZURE_DEVOPS_PAT environment variable set with a Personal Access Token
+- GitHub repository URL configured
+- GITHUB_TOKEN environment variable set with a Personal Access Token
 - Git installed on the system
 
 Usage:
@@ -74,9 +74,9 @@ def main():
     
     # Configuration
     config = {
-        'azure_devops_repo_url': os.getenv(
-            'AZURE_DEVOPS_REPO_URL',
-            'https://dev.azure.com/myorg/myproject/_git/myrepo'
+        'github_repo_url': os.getenv(
+            'GITHUB_REPO_URL',
+            'https://github.com/toddwhitehead/acme-giyt-web'
         ),
         'repo_path': 'content/posts',
         'branch': 'main',
@@ -88,7 +88,7 @@ def main():
     print("1. Initializing CommitterAgent...")
     agent = CommitterAgent(config)
     print(f"   ✓ Agent: {agent.name}")
-    print(f"   ✓ Repo URL: {config['azure_devops_repo_url']}")
+    print(f"   ✓ Repo URL: {config['github_repo_url']}")
     print(f"   ✓ Target path: {config['repo_path']}")
     print(f"   ✓ Branch: {config['branch']}\n")
     
@@ -110,9 +110,9 @@ def main():
     if not validation['valid']:
         print("\n❌ Configuration is invalid. Please fix the errors above.")
         print("\nRequired environment variables:")
-        print("  - AZURE_DEVOPS_PAT: Personal Access Token for Azure DevOps")
+        print("  - GITHUB_TOKEN: Personal Access Token for GitHub")
         print("\nOptional environment variables:")
-        print("  - AZURE_DEVOPS_REPO_URL: Override default repository URL")
+        print("  - GITHUB_REPO_URL: Override default repository URL")
         return 1
     
     print("   ✓ Configuration is valid\n")
@@ -124,7 +124,7 @@ def main():
     
     try:
         # Commit the file
-        print("4. Committing to Azure DevOps repository...")
+        print("4. Committing to GitHub repository...")
         commit_message = f"Test commit from CommitterAgent - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
         
         result = agent.commit_post(test_file, commit_message)
@@ -132,7 +132,7 @@ def main():
         print(f"   Status: {result['status']}")
         
         if result['status'] == 'completed':
-            print("   ✓ Successfully committed to Azure DevOps!")
+            print("   ✓ Successfully committed to GitHub!")
             print(f"   Commit SHA: {result.get('commit_sha', 'N/A')}")
             print(f"   Target path: {result.get('target_path', 'N/A')}")
             print(f"   Message: {result.get('commit_message', 'N/A')}")
